@@ -15,6 +15,7 @@ class ViewController: UITabBarController{
         
         
         navigationItem.hidesBackButton = true
+        navigationItem.backButtonTitle = ""
             
     }
 

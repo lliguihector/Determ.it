@@ -24,12 +24,7 @@ class AccountVC: UITableViewController{
     
     var sectionTitles = ["Profile","Security","Notification Prefrence","Help & Policies"]
     
-    
-    
-    
-    
-    
-    
+
     override func viewDidLoad() {
         
         super.viewDidLoad()
