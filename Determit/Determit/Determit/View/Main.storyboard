@@ -90,7 +90,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3jD-nu-Zdw" userLabel="ResetPassWord">
-                                <rect key="frame" x="70" y="847.5" width="274.5" height="34.5"/>
+                                <rect key="frame" x="70" y="827.5" width="274.5" height="34.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot your Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeX-sT-Iwv">
                                         <rect key="frame" x="0.0" y="0.0" width="129.5" height="34.5"/>
@@ -112,7 +112,6 @@
                         <constraints>
                             <constraint firstItem="6FR-jN-f85" firstAttribute="top" secondItem="Qbe-Co-7NJ" secondAttribute="bottom" constant="40" id="33c-Eu-XKN"/>
                             <constraint firstItem="ZDD-3Z-CC8" firstAttribute="top" secondItem="Ho8-XE-dZS" secondAttribute="bottom" constant="5" id="GUl-DP-kqT"/>
-                            <constraint firstItem="3jD-nu-Zdw" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="20" id="Gqm-0z-JXr"/>
                             <constraint firstItem="6FR-jN-f85" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="J56-MF-hf5"/>
                             <constraint firstItem="J2T-hq-6c2" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Na9-8H-HkW"/>
                             <constraint firstItem="J2T-hq-6c2" firstAttribute="top" secondItem="ZDD-3Z-CC8" secondAttribute="bottom" constant="40" id="ROt-aC-xP2"/>
@@ -122,6 +121,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Qbe-Co-7NJ" secondAttribute="trailing" constant="20" id="kSz-Tx-Ba7"/>
                             <constraint firstItem="Ho8-XE-dZS" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="topMargin" constant="10" id="lkn-CY-RyR"/>
                             <constraint firstItem="Ho8-XE-dZS" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="o6G-Db-TWj"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="3jD-nu-Zdw" secondAttribute="bottom" id="oHw-Ee-0uA"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6FR-jN-f85" secondAttribute="trailing" constant="20" id="p9I-az-PQl"/>
                             <constraint firstItem="ZDD-3Z-CC8" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="wpI-i3-P3z"/>
                         </constraints>
@@ -220,7 +220,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="sR8-1l-dto">
                         <barButtonItem key="rightBarButtonItem" image="barcode.viewfinder" catalog="system" id="lEa-ck-Nv3">
-                            <color key="tintColor" red="0.20222151360000001" green="0.77795493199999999" blue="0.96085778060000004" alpha="0.93217094369999998" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>

@@ -6,13 +6,12 @@
 //
 
 import Foundation
+import AVFoundation
 import UIKit
 
 //Sample Item class
 
 class item{
-
-
     var id: String
     var name: String
 
@@ -20,19 +19,10 @@ class item{
         self.id = id
         self.name = name
     }
-
 }
-
 class InventoryVC: UITableViewController{
-//    let cellHeight: CGFloat = 100.0
-//        let cellSpacing: CGFloat = 20.0
-//        let headerHeight: CGFloat = 20.0
-//        let footerHeight: CGFloat = 20.0
 
     let searchController = UISearchController(searchResultsController: nil)
-    
-
-    
     var items: [item] = []
 
     override func viewDidLoad() {
@@ -42,24 +32,9 @@ class InventoryVC: UITableViewController{
         searchController.searchResultsUpdater = self
         searchController.delegate = self
         
-        
-        
         //Register nib
         tableView.register(UINib(nibName: "InventoryTableViewCell", bundle: nil), forCellReuseIdentifier: "InventoryCell")
 
-        
-        
-        
-        
-        
-        
-        
-        
-        // Apply card-like styling to table view
-        tableView.backgroundColor = .white
-        tableView.separatorStyle = .none
-        
-    
         
         loadDummyData()
     }
@@ -71,46 +46,20 @@ class InventoryVC: UITableViewController{
     //MARK: - UITableViewDataSource
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
         return items.count
     }
     
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //Code
-        
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "InventoryCell", for: indexPath) as! InventoryTableViewCell
-
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "InventoryCell", for: indexPath)
-        
-
-        // Customize the cell appearance
-//           cell.backgroundColor = .clear
-//           cell.selectionStyle = .none
-//           cell.contentView.layer.masksToBounds = true
-//           cell.contentView.layer.cornerRadius = 4.0
-//           cell.contentView.layer.borderWidth = 1.0
-//           cell.contentView.layer.borderColor = UIColor.lightGray.cgColor
-//           cell.contentView.layer.shadowColor = UIColor.black.cgColor
-//           cell.contentView.layer.shadowOffset = CGSize(width: 0, height: 1)
-//           cell.contentView.layer.shadowOpacity = 0.3
-//           cell.contentView.layer.shadowRadius = 4.0
-//
-//
-           
         let item = items[indexPath.row]
-        
         cell.itemName.text = item.name
-//        cell.textLabel?.text = item.name
-        
+
         return cell
         
     }
 
-
-    
 }
 
 //MARK: - Helper Methods
@@ -134,14 +83,10 @@ extension InventoryVC {
         let item13 = item(id: "014", name: "label printer")
         let item14 = item(id: "015", name: "Card Reader")
         let item15 = item(id: "016", name: "Smart table")
-        
-        
         items += [item0,item1,item2,item3,item4,item5,item6,item7,item8,item9,item10,item11,item12,item13,item14,item15]
-        
-        
+
     }
-    
-    
+
 }
 
 
@@ -170,9 +115,9 @@ extension InventoryVC: UISearchResultsUpdating{
             print(searchText)
   
         }
-        
-        
-        
+
     }
 
 }
+
+//MARK: - QR BarCode Method
