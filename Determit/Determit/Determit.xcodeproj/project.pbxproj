@@ -25,7 +25,7 @@
 		290972C728BBC7400004B925 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 290972C628BBC7400004B925 /* Assets.xcassets */; };
 		2966172A2A17B1FD0042D2F9 /* InventoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296617282A17B1FD0042D2F9 /* InventoryTableViewCell.swift */; };
 		2966172B2A17B1FD0042D2F9 /* InventoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 296617292A17B1FD0042D2F9 /* InventoryTableViewCell.xib */; };
-		2966172E2A17C5D30042D2F9 /* dataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2966172C2A17C5D30042D2F9 /* dataModel.xcdatamodeld */; };
+		296617312A17E37D0042D2F9 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2966172F2A17E37D0042D2F9 /* DataModel.xcdatamodeld */; };
 		296867DE28BD6FDD00ECA8FB /* HelpWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296867DD28BD6FDD00ECA8FB /* HelpWebVC.swift */; };
 		296867E128EE970100ECA8FB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 296867E028EE970100ECA8FB /* FirebaseAuth */; };
 		2982BB5B28BBE5C0003CF948 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2982BB5A28BBE5C0003CF948 /* GoogleService-Info.plist */; };
@@ -52,7 +52,7 @@
 		290972CB28BBC7400004B925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		296617282A17B1FD0042D2F9 /* InventoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTableViewCell.swift; sourceTree = "<group>"; };
 		296617292A17B1FD0042D2F9 /* InventoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InventoryTableViewCell.xib; sourceTree = "<group>"; };
-		2966172D2A17C5D30042D2F9 /* dataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dataModel.xcdatamodel; sourceTree = "<group>"; };
+		296617302A17E37D0042D2F9 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		296867DD28BD6FDD00ECA8FB /* HelpWebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpWebVC.swift; sourceTree = "<group>"; };
 		2982BB5A28BBE5C0003CF948 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,7 +118,7 @@
 		290972D228BBC75C0004B925 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2966172C2A17C5D30042D2F9 /* dataModel.xcdatamodeld */,
+				2966172F2A17E37D0042D2F9 /* DataModel.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -227,13 +227,13 @@
 				296867DE28BD6FDD00ECA8FB /* HelpWebVC.swift in Sources */,
 				2966172A2A17B1FD0042D2F9 /* InventoryTableViewCell.swift in Sources */,
 				23AA085228C5293200B1BD99 /* LogInVC.swift in Sources */,
+				296617312A17E37D0042D2F9 /* DataModel.xcdatamodeld in Sources */,
 				23E0F5052975A4DF008E2CA2 /* constant.swift in Sources */,
 				23AA085828C5297200B1BD99 /* AccountVC.swift in Sources */,
 				290972C028BBC73F0004B925 /* SceneDelegate.swift in Sources */,
 				23AA085E28C529CB00B1BD99 /* Alert.swift in Sources */,
 				2398E4292A05FD89001DBAD7 /* InventoryVC.swift in Sources */,
 				23AA085628C5295900B1BD99 /* RegisterVC.swift in Sources */,
-				2966172E2A17C5D30042D2F9 /* dataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,13 +455,14 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		2966172C2A17C5D30042D2F9 /* dataModel.xcdatamodeld */ = {
+		2966172F2A17E37D0042D2F9 /* DataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				2966172D2A17C5D30042D2F9 /* dataModel.xcdatamodel */,
+				296617302A17E37D0042D2F9 /* DataModel.xcdatamodel */,
 			);
-			currentVersion = 2966172D2A17C5D30042D2F9 /* dataModel.xcdatamodel */;
-			path = dataModel.xcdatamodeld;
+			currentVersion = 296617302A17E37D0042D2F9 /* DataModel.xcdatamodel */;
+			name = DataModel.xcdatamodeld;
+			path = ../../DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

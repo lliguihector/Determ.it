@@ -219,7 +219,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="sR8-1l-dto">
-                        <barButtonItem key="rightBarButtonItem" image="barcode.viewfinder" catalog="system" id="lEa-ck-Nv3">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="lEa-ck-Nv3">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
@@ -734,7 +734,6 @@
         <segue reference="EZ4-Qb-M5D"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="barcode.viewfinder" catalog="system" width="128" height="115"/>
         <image name="envelope" catalog="system" width="128" height="93"/>
         <image name="faceid" catalog="system" width="128" height="115"/>
         <image name="hammer" catalog="system" width="128" height="117"/>
@@ -749,6 +748,7 @@
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="roboant" width="149" height="214"/>
         <image name="scroll" catalog="system" width="128" height="114"/>
         <image name="ticket" catalog="system" width="128" height="86"/>

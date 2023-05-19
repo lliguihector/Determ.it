@@ -6,29 +6,24 @@
 //
 
 import Foundation
+import CoreData
 import AVFoundation
 import UIKit
 
-//Sample Item class
-
-class item{
-    var id: String
-    var name: String
-
-     
-    
-    
-    
-    init(id: String, name: String) {
-        self.id = id
-        self.name = name
-    }
-}
 class InventoryVC: UITableViewController{
 
     let searchController = UISearchController(searchResultsController: nil)
-    var items: [item] = []
-
+  
+    
+    var devices: [Device] = []
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        //Search Bar Controller
@@ -39,6 +34,8 @@ class InventoryVC: UITableViewController{
         //Register nib
         tableView.register(UINib(nibName: "InventoryTableViewCell", bundle: nil), forCellReuseIdentifier: "InventoryCell")
 
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        
         
         loadDummyData()
     }
@@ -50,15 +47,20 @@ class InventoryVC: UITableViewController{
     //MARK: - UITableViewDataSource
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return devices.count
     }
     
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InventoryCell", for: indexPath) as! InventoryTableViewCell
-        let item = items[indexPath.row]
-        cell.itemName.text = item.name
+        
+        
+        let device = devices[indexPath.row]
+        cell.itemName.text = device.model
+        cell.itemAccetTag.text = device.processor
+        cell.itemLocation.text = device.brand
+        cell.itemSerialNumber.text = device.serialNumber
 
         return cell
         
@@ -71,24 +73,25 @@ extension InventoryVC {
     
     func loadDummyData(){
         
-        let item0 = item(id: "001", name: "Mac Book Air")
-        let item1 = item(id: "002", name: "Mac Book Pro")
-        let item2 = item(id: "003", name: "Mac Book Mini")
-        let item3 = item(id: "004", name: "iMac")
-        let item4 = item(id: "005", name: "ipad pro")
-        let item5 = item(id: "006", name: "ipad")
-        let item6 = item(id: "007", name: "Cannon printer")
-        let item7 = item(id: "008", name: "smart board")
-        let item8 = item(id: "009", name: "Samsung tv")
-        let item9 = item(id: "010", name: "Ipod touch")
-        let item10 = item(id: "011", name: "Dell Laptop")
-        let item11 = item(id: "012", name: "Crom laptop")
-        let item12 = item(id: "013", name: "HDD")
-        let item13 = item(id: "014", name: "label printer")
-        let item14 = item(id: "015", name: "Card Reader")
-        let item15 = item(id: "016", name: "Smart table")
-        items += [item0,item1,item2,item3,item4,item5,item6,item7,item8,item9,item10,item11,item12,item13,item14,item15]
-
+        
+        
+        let newDevice = Device(context: self.context)
+    
+        newDevice.model = "Mac Book Pro 13-inch"
+        newDevice.serialNumber = "LR089988"
+        newDevice.brand = "Apple"
+        newDevice.processor = "intel Core i13-6100U 2.30GHz"
+        newDevice.deviceID = "From mongo DB"
+        newDevice.imageURL = "http://www.whatever.com"
+        newDevice.memoryRam = 8
+        newDevice.deviceID = "001"
+        
+        self.devices.append(newDevice)
+        self.saveDevices()
+        
+        
+        
+   
     }
 
 }
@@ -125,3 +128,46 @@ extension InventoryVC: UISearchResultsUpdating{
 }
 
 //MARK: - QR BarCode Method
+
+
+//MARK: - Core Data Manipulation Methods
+extension InventoryVC {
+    
+   
+    //READ Data
+    func loadDevices(){
+        
+        let request: NSFetchRequest<Device> = Device.fetchRequest()
+        
+        do{
+            devices = try context.fetch(request)
+        }catch{
+            print("Error fetching data from context \(error)")
+        }
+        
+        
+        self.tableView.reloadData()
+        
+        
+    }
+    
+    
+    
+    
+    //Save Data
+    func saveDevices(){
+        
+        do{
+            try context.save()
+        }catch{
+            print("Error saving context \(error)")
+        }
+        
+        
+        
+        self.tableView.reloadData()
+    }
+    
+    
+    
+}
