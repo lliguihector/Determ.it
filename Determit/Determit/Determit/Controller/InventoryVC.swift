@@ -37,7 +37,7 @@ class InventoryVC: UITableViewController{
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         
         
-        loadDummyData()
+     loadDevices()
     }
     
    
