@@ -24,29 +24,35 @@ class item{
 }
 
 class InventoryVC: UITableViewController{
-   
+//    let cellHeight: CGFloat = 100.0
+//        let cellSpacing: CGFloat = 20.0
+//        let headerHeight: CGFloat = 20.0
+//        let footerHeight: CGFloat = 20.0
 
     let searchController = UISearchController(searchResultsController: nil)
     
+
     
     var items: [item] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       //Search Bar Controller
         navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
-        
-        
         searchController.delegate = self
         
         
+        // Apply card-like styling to table view
+        tableView.backgroundColor = .white
+        tableView.separatorStyle = .none
+        
+    
         
         loadDummyData()
     }
     
-    
-    
+   
     
     
     
@@ -64,7 +70,21 @@ class InventoryVC: UITableViewController{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "InventoryCell", for: indexPath)
         
-        
+
+        // Customize the cell appearance
+//           cell.backgroundColor = .clear
+//           cell.selectionStyle = .none
+//           cell.contentView.layer.masksToBounds = true
+//           cell.contentView.layer.cornerRadius = 4.0
+//           cell.contentView.layer.borderWidth = 1.0
+//           cell.contentView.layer.borderColor = UIColor.lightGray.cgColor
+//           cell.contentView.layer.shadowColor = UIColor.black.cgColor
+//           cell.contentView.layer.shadowOffset = CGSize(width: 0, height: 1)
+//           cell.contentView.layer.shadowOpacity = 0.3
+//           cell.contentView.layer.shadowRadius = 4.0
+//
+//
+           
         let item = items[indexPath.row]
         cell.textLabel?.text = item.name
         
@@ -72,6 +92,8 @@ class InventoryVC: UITableViewController{
         
     }
 
+
+    
 }
 
 //MARK: - Helper Methods
