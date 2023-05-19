@@ -43,6 +43,18 @@ class InventoryVC: UITableViewController{
         searchController.delegate = self
         
         
+        
+        //Register nib
+        tableView.register(UINib(nibName: "InventoryTableViewCell", bundle: nil), forCellReuseIdentifier: "InventoryCell")
+
+        
+        
+        
+        
+        
+        
+        
+        
         // Apply card-like styling to table view
         tableView.backgroundColor = .white
         tableView.separatorStyle = .none
@@ -68,7 +80,10 @@ class InventoryVC: UITableViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //Code
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "InventoryCell", for: indexPath)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "InventoryCell", for: indexPath) as! InventoryTableViewCell
+
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "InventoryCell", for: indexPath)
         
 
         // Customize the cell appearance
@@ -86,7 +101,9 @@ class InventoryVC: UITableViewController{
 //
            
         let item = items[indexPath.row]
-        cell.textLabel?.text = item.name
+        
+        cell.itemName.text = item.name
+//        cell.textLabel?.text = item.name
         
         return cell
         
