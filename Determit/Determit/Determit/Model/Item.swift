@@ -11,9 +11,10 @@ import Foundation
 struct Hardware{
     
     var hardwareId: String // 001
+    var assetTag: String //Addd
     var device: Device //
     var location: String //School
-    var assetTag: String //Addd
+    
     var os: String //MS DOS
     var history: [Ticket]
     
