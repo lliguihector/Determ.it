@@ -24,18 +24,21 @@ class item{
 }
 
 class InventoryVC: UITableViewController{
-    
+   
 
+    let searchController = UISearchController(searchResultsController: nil)
+    
+    
     var items: [item] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.searchController = searchController
+        searchController.searchResultsUpdater = self
         
-//        tableView.delegate = self
-//        
-//        
-//        tableView.dataSource = self
+        
+        searchController.delegate = self
         
         
         
@@ -65,14 +68,10 @@ class InventoryVC: UITableViewController{
         let item = items[indexPath.row]
         cell.textLabel?.text = item.name
         
-        
-        print("method was called")
-        
         return cell
         
     }
-    
-    
+
 }
 
 //MARK: - Helper Methods
@@ -104,4 +103,37 @@ extension InventoryVC {
     }
     
     
+}
+
+
+//MARK: - UISearchController Delegate
+extension InventoryVC: UISearchControllerDelegate{
+    
+    
+}
+
+//MARK: UISearch Redult Updating
+extension InventoryVC: UISearchResultsUpdating{
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+        //Check searchBar.text If it is nill the function does nothing
+        guard let searchText = searchController.searchBar.text else{
+            return
+        }
+        
+        //If the searchText is empty
+        if searchText.isEmpty{
+            //Load Items from Core data If the Text In the search Bar is empty
+            print("Loading Inventory array and reload data in table view")
+        }else{
+            //reload table view data with queried search Text
+            print(searchText)
+  
+        }
+        
+        
+        
+    }
+
 }

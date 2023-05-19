@@ -228,7 +228,11 @@
                             <outlet property="delegate" destination="4GT-Vt-xaV" id="lsq-uK-3Xz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="sR8-1l-dto"/>
+                    <navigationItem key="navigationItem" id="sR8-1l-dto">
+                        <barButtonItem key="rightBarButtonItem" image="barcode.viewfinder" catalog="system" id="lEa-ck-Nv3">
+                            <color key="tintColor" red="0.20222151360000001" green="0.77795493199999999" blue="0.96085778060000004" alpha="0.93217094369999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6d-Kr-yhb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -740,6 +744,7 @@
         <segue reference="EZ4-Qb-M5D"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="barcode.viewfinder" catalog="system" width="128" height="115"/>
         <image name="envelope" catalog="system" width="128" height="93"/>
         <image name="faceid" catalog="system" width="128" height="115"/>
         <image name="hammer" catalog="system" width="128" height="117"/>
