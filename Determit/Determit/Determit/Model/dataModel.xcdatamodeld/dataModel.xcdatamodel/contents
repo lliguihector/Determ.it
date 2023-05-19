@@ -1,2 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="21G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier=""/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="21G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Device" representedClassName=".Device" parentEntity="Hardware" syncable="YES" codeGenerationType="class">
+        <attribute name="brand" attributeType="String"/>
+        <attribute name="deviceID" optional="YES" attributeType="String"/>
+        <attribute name="imageURL" attributeType="String"/>
+        <attribute name="memoryRam" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="model" attributeType="String"/>
+        <attribute name="processor" optional="YES" attributeType="String"/>
+        <attribute name="serialNumber" attributeType="String"/>
+        <attribute name="storageCapacity" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="parentHardware" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Hardware" inverseName="devicee" inverseEntity="Hardware"/>
+    </entity>
+    <entity name="Hardware" representedClassName=".Hardware" syncable="YES" codeGenerationType="class">
+        <attribute name="category" attributeType="String"/>
+        <attribute name="hardwareID" optional="YES" attributeType="String"/>
+        <attribute name="hardwareNumber" attributeType="String"/>
+        <attribute name="location" attributeType="String"/>
+        <attribute name="operatingSystem" attributeType="String"/>
+        <attribute name="purchaseDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="devicee" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Device" inverseName="parentHardware" inverseEntity="Device"/>
+    </entity>
+</model>

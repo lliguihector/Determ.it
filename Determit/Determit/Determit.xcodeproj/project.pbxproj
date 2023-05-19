@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2305663F2983B5500065403D /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2305663E2983B5500065403D /* Validation.swift */; };
-		2398E4272A05E9CD001DBAD7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2398E4262A05E9CD001DBAD7 /* Item.swift */; };
 		2398E4292A05FD89001DBAD7 /* InventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2398E4282A05FD89001DBAD7 /* InventoryVC.swift */; };
 		23A8DF3728C6934F00F59941 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A8DF3628C6934F00F59941 /* Launch Screen.storyboard */; };
 		23AA085228C5293200B1BD99 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA085128C5293100B1BD99 /* LogInVC.swift */; };
@@ -34,7 +33,6 @@
 
 /* Begin PBXFileReference section */
 		2305663E2983B5500065403D /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
-		2398E4262A05E9CD001DBAD7 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		2398E4282A05FD89001DBAD7 /* InventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryVC.swift; sourceTree = "<group>"; };
 		23A8DF3628C6934F00F59941 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		23AA085128C5293100B1BD99 /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 		290972D228BBC75C0004B925 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2398E4262A05E9CD001DBAD7 /* Item.swift */,
 				2966172C2A17C5D30042D2F9 /* dataModel.xcdatamodeld */,
 			);
 			path = Model;
@@ -225,7 +222,6 @@
 				290972BE28BBC73F0004B925 /* AppDelegate.swift in Sources */,
 				23AA085428C5294600B1BD99 /* LocationVC.swift in Sources */,
 				23E0F5032975A45B008E2CA2 /* LoadingView.swift in Sources */,
-				2398E4272A05E9CD001DBAD7 /* Item.swift in Sources */,
 				2305663F2983B5500065403D /* Validation.swift in Sources */,
 				23AA085A28C5298200B1BD99 /* HomeVC.swift in Sources */,
 				296867DE28BD6FDD00ECA8FB /* HelpWebVC.swift in Sources */,
