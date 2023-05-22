@@ -133,8 +133,8 @@
 				23AA085328C5294600B1BD99 /* LocationVC.swift */,
 				23AA085528C5295900B1BD99 /* RegisterVC.swift */,
 				23AA085728C5297200B1BD99 /* AccountVC.swift */,
-				23AA085928C5298200B1BD99 /* HomeVC.swift */,
 				296867DD28BD6FDD00ECA8FB /* HelpWebVC.swift */,
+				23AA085928C5298200B1BD99 /* HomeVC.swift */,
 				2398E4282A05FD89001DBAD7 /* InventoryVC.swift */,
 				296617322A17FECF0042D2F9 /* AddNewDeviceVC.swift */,
 			);
@@ -368,7 +368,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FLMQ8FUJ4T;
 				INFOPLIST_FILE = Determit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -388,7 +388,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FLMQ8FUJ4T;
 				INFOPLIST_FILE = Determit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

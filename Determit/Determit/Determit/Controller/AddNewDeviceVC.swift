@@ -11,7 +11,6 @@ import CoreData
 class AddNewDeviceVC: UIViewController {
 
     //OUTLITS
-    @IBOutlet weak var deviceIDTextField: UITextField!
     @IBOutlet weak var brandTextField: UITextField!
     @IBOutlet weak var modelTextField: UITextField!
     @IBOutlet weak var serialNumberTextField: UITextField!
@@ -19,22 +18,20 @@ class AddNewDeviceVC: UIViewController {
     @IBOutlet weak var memoryCpacityTextField: UITextField!
     @IBOutlet weak var processorDescriptionTextField: UITextField!
     @IBOutlet weak var imageURLTextField: UITextField!
+    @IBOutlet weak var categoryTextField: UITextField!
+    
+    
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+          tapGesture.cancelsTouchesInView = false
+          view.addGestureRecognizer(tapGesture)
 
-        // Do any additional setup after loading the view.
     }
-    
-
-    
-    
-    
-    
-    
-    
     
     /*
     // MARK: - Navigation
@@ -47,12 +44,14 @@ class AddNewDeviceVC: UIViewController {
     */
     
     
-    
-    
+@objc func handleTap() {
+    view.endEditing(true)
+}
+//
     //Built in Method
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        self.view.endEditing(true)
+//    }
 
     
     
@@ -63,7 +62,7 @@ class AddNewDeviceVC: UIViewController {
         
         
         
-        let isEmpty = deviceIDTextField.text?.isEmpty ?? true ||
+        let isEmpty =
                             brandTextField.text?.isEmpty ?? true ||
                             modelTextField.text?.isEmpty ?? true
         ||
@@ -71,16 +70,40 @@ class AddNewDeviceVC: UIViewController {
         storageCapacityTextFiled.text?.isEmpty ?? true ||
         memoryCpacityTextField.text?.isEmpty ?? true ||
         processorDescriptionTextField.text?.isEmpty ?? true ||
-        imageURLTextField.text?.isEmpty ?? true
+        imageURLTextField.text?.isEmpty ?? true ||
+       categoryTextField.text?.isEmpty ?? true
     
 
               if isEmpty {
                   
                   Alert.showBasicAlert(on: self, with: "", message: "One or more fields are missing inputs, Please enter all fields")
+
                   print("One or more text fields are empty. Cannot save.")
+                  
               } else {
                   saveDeviceDataToCoreData()
-                  Alert.showBasicAlert(on: self, with: "", message: "New Device Info was successfuly added to database")
+                  
+                  let alertController = UIAlertController(title: "Success!", message: "new device data was successfuly added.", preferredStyle: .alert)
+
+                  let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
+                             // Code to handle the OK action
+                             print("OK button pressed")
+                             
+//                      self.navigationController?.popViewController(animated: true)
+                      DispatchQueue.main.async {
+                          
+                          self.navigationController?.popViewController(animated: true)
+                         
+                      }
+                      
+                  }
+                  
+                  
+                  alertController.addAction(okAction)
+                  present(alertController, animated: true, completion: nil)
+                         
+                  
+                  
               }
           }
         
@@ -95,7 +118,7 @@ class AddNewDeviceVC: UIViewController {
         
        
         let newDevice = Device(context: self.context)
-        newDevice.deviceID = deviceIDTextField.text
+        newDevice.deviceID = "001"
         newDevice.brand = brandTextField.text
         newDevice.model = modelTextField.text
         newDevice.serialNumber = serialNumberTextField.text

@@ -29,7 +29,7 @@ class AccountVC: UITableViewController{
         
         super.viewDidLoad()
 
-        title = "Gorilla GYM"
+      
         navigationItem.hidesBackButton = true
         //Style sign out button
         signOutButton.layer.cornerRadius = 10

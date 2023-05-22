@@ -8,18 +8,15 @@
 import Foundation
 import UIKit
 
-class HomeVC: UIViewController{
-    
-    
-    
-    
+class HomeVC:  UINavigationController{
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
       
-        
+
         navigationItem.hidesBackButton = true
+        navigationItem.backButtonTitle = ""
     }
 
     

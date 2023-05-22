@@ -14,16 +14,11 @@ class InventoryVC: UITableViewController{
 
     let searchController = UISearchController(searchResultsController: nil)
   
-    
     var devices: [Device] = []
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    
-    
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
        //Search Bar Controller
