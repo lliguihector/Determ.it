@@ -12,7 +12,9 @@ import LocalAuthentication
 
 class AccountVC: UITableViewController{
     
+    let defaults = UserDefaults.standard
     
+ 
     //OUTLETS
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
@@ -41,6 +43,16 @@ class AccountVC: UITableViewController{
         profileInitialLabel.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0).cgColor
         profileInitialLabel.layer.masksToBounds = true
         profileInitialLabel.layer.borderWidth = 1
+        
+        
+        
+        
+        if let savedUserEmail = defaults.string(forKey: "UserEmail"){
+            
+            emailLabel.text = savedUserEmail
+        }else{
+            emailLabel.text = ""
+        }
     }
     
 
@@ -51,7 +63,7 @@ override func tableView(_ tableView: UITableView, viewForHeaderInSection section
      
      let view = UIView()
      view.frame = CGRect(x: 0, y: 0, width: 266, height: 30)
-     view.backgroundColor = UIColor(red: 241/255.0, green: 242/255.0, blue: 242/255.0, alpha: 1.0)
+     view.backgroundColor = UIColor(red: 255/255.0, green: 255/255.0, blue: 255/255.0, alpha: 1.0)
      
     let label = UILabel()
  

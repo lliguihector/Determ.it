@@ -11,36 +11,36 @@ import AVFoundation
 import UIKit
 
 class InventoryVC: UITableViewController{
-
+    
     let searchController = UISearchController(searchResultsController: nil)
-  
+    
     var devices: [Device] = []
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       //Search Bar Controller
+        //Search Bar Controller
         navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
         searchController.delegate = self
         
         //Register nib
         tableView.register(UINib(nibName: "InventoryTableViewCell", bundle: nil), forCellReuseIdentifier: "InventoryCell")
-
+        
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         
         
-     loadDevices()
+        loadDevices()
     }
     
-   
+    
     
     
     
     //MARK: - UITableViewDataSource
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return devices.count
     }
@@ -53,15 +53,41 @@ class InventoryVC: UITableViewController{
         
         let device = devices[indexPath.row]
         cell.itemName.text = device.model
-        cell.itemAccetTag.text = device.processor
-        cell.itemLocation.text = device.brand
-        cell.itemSerialNumber.text = device.serialNumber
-
+        cell.ManufactureBrandLabel.text = device.brand
+        cell.categoryLabel.text = device.imageURL
+        cell.serialNumberLabel.text = device.serialNumber
+     
         return cell
         
     }
+    
+    
+    
+    
+    //MARK: - UITableViewDelegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        
+        self.performSegue(withIdentifier: "viewDeviceCompleteDetails", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
 
+        let destinationVC = segue.destination as! DeviceDetailsVC
+        
+        if let indexPath = tableView.indexPathForSelectedRow{
+            
+        destinationVC.selectedDevice = devices[indexPath.row]
+            
+            print(devices[indexPath.row])
+            
+        }
+        
+    }
 }
+
+
+
+
 
 //MARK: - Helper Methods
 extension InventoryVC {

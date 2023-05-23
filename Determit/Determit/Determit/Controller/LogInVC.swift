@@ -18,6 +18,8 @@ class LogInVC: UIViewController,Loadable {
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var registerBtn: UIButton!
 
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -53,6 +55,10 @@ class LogInVC: UIViewController,Loadable {
                     Alert.showBasicAlert(on: self, with: "", message: "\(e.localizedDescription)")
  
                 }else{
+                    
+                    
+                    //save the user name to user defaults
+                    self.defaults.set(self.emailTextField.text, forKey: "UserEmail")
                     self.performSegue(withIdentifier: "loginToHome", sender: self)
                     self.hideLoadingView()
                 }

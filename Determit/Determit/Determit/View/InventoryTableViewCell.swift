@@ -9,14 +9,11 @@ import UIKit
 
 class InventoryTableViewCell: UITableViewCell {
 //OUTLITS
-    @IBOutlet weak var itemImage: UIImageView!
+
     @IBOutlet weak var itemName: UILabel!
-    @IBOutlet weak var itemLocation: UILabel!
-    @IBOutlet weak var itemAccetTag: UILabel!
-    @IBOutlet weak var itemSerialNumber: UILabel!
-    
-    
-    
+    @IBOutlet weak var ManufactureBrandLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var serialNumberLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -20,6 +20,9 @@ class RegisterVC: UIViewController,Loadable{
     @IBOutlet weak var signUpBtn: UIButton!
     
     
+    
+    let defaults = UserDefaults.standard
+    
     var validation = Validation()
     
     override func viewDidLoad() {
@@ -74,41 +77,28 @@ class RegisterVC: UIViewController,Loadable{
     
     func signUpUserToFirebase(){
         if let email = emailTextField.text,let password = passwordTextField.text {
-            
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 
                 if let e = error{
-                    
                     self.hideLoadingView()
-                    
-    
-                    
                     Alert.showBasicAlert(on: self, with: "", message: "\(e.localizedDescription)")
-                  
-                                
+           
                 }else {
-                    
+                    //save the user name to user defaults
+                    self.defaults.set(self.emailTextField.text, forKey: "UserEmail")
+        
                     //Let User Know Account was created
-                    
                     DispatchQueue.main.async {
-                    Alert.showBasicAlert(on: self, with: "", message: "Account successfully created")
-                    }
-                    
-                    DispatchQueue.main.async {
-                    //navigate to home Screen
-                    self.performSegue(withIdentifier: "RegisterToHome", sender: self)
-//                    self.hideLoadingView()
+                        Alert.showBasicAlert(on: self, with: "", message: "Account successfully created")
+                        self.performSegue(withIdentifier: "RegisterToHome", sender: self)
                         
                     }
                 }
-           
             }
 
         }else{
             Alert.showBasicAlert(on: self, with: "", message: "Please enter all fields")
         }
-        
-       
         
     }
     
