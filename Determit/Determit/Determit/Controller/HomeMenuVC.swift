@@ -9,14 +9,9 @@ import UIKit
 
 class HomeMenuVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
     
-    
-    
 
-  
-    
-    
-    let menuItems = ["Inventory","Assignments","Logs","Other"]
-    let sfSymbolTitle = ["laptopcomputer.and.iphone","ticket","macbook.and.iphone","macbook.and.iphone"]
+    let menuItems = ["Inventory","IT Requests","Technicians","Clients"]
+    let sfSymbolTitle = ["laptopcomputer.and.iphone","ticket","person.text.rectangle","person.3.sequence"]
     
   
     
@@ -63,7 +58,7 @@ class HomeMenuVC: UIViewController, UICollectionViewDataSource, UICollectionView
         
         if indexPath.row == 0 {
             print("Device")
-            self.performSegue(withIdentifier: "toInventory", sender: self)
+//            self.performSegue(withIdentifier: "toInventory", sender: self)
             
         }else if indexPath.row == 1{
             
