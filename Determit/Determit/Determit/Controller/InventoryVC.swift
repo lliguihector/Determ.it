@@ -25,7 +25,7 @@ class InventoryVC: UITableViewController{
         navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
         searchController.delegate = self
-        
+        navigationItem.hidesSearchBarWhenScrolling = false
         //Register nib
         tableView.register(UINib(nibName: "InventoryTableViewCell", bundle: nil), forCellReuseIdentifier: "InventoryCell")
         
@@ -73,7 +73,6 @@ class InventoryVC: UITableViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
 
         let destinationVC = segue.destination as! DeviceDetailsVC
-        
         if let indexPath = tableView.indexPathForSelectedRow{
             
         destinationVC.selectedDevice = devices[indexPath.row]

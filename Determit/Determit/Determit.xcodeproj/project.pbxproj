@@ -31,6 +31,9 @@
 		296867E128EE970100ECA8FB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 296867E028EE970100ECA8FB /* FirebaseAuth */; };
 		2982BB5B28BBE5C0003CF948 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2982BB5A28BBE5C0003CF948 /* GoogleService-Info.plist */; };
 		299D94772A1D38C300C50149 /* DeviceDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D94762A1D38C300C50149 /* DeviceDetailsVC.swift */; };
+		299D947A2A21527700C50149 /* HomeMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D94792A21527700C50149 /* HomeMenuVC.swift */; };
+		299D947D2A21538500C50149 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D947B2A21538500C50149 /* MenuCollectionViewCell.swift */; };
+		299D947E2A21538500C50149 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299D947C2A21538500C50149 /* MenuCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +62,9 @@
 		296867DD28BD6FDD00ECA8FB /* HelpWebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpWebVC.swift; sourceTree = "<group>"; };
 		2982BB5A28BBE5C0003CF948 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		299D94762A1D38C300C50149 /* DeviceDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailsVC.swift; sourceTree = "<group>"; };
+		299D94792A21527700C50149 /* HomeMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuVC.swift; sourceTree = "<group>"; };
+		299D947B2A21538500C50149 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		299D947C2A21538500C50149 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,8 @@
 				23AA085B28C529A300B1BD99 /* Main.storyboard */,
 				296617282A17B1FD0042D2F9 /* InventoryTableViewCell.swift */,
 				296617292A17B1FD0042D2F9 /* InventoryTableViewCell.xib */,
+				299D947B2A21538500C50149 /* MenuCollectionViewCell.swift */,
+				299D947C2A21538500C50149 /* MenuCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -137,6 +145,7 @@
 				2398E4282A05FD89001DBAD7 /* InventoryVC.swift */,
 				296617322A17FECF0042D2F9 /* AddNewDeviceVC.swift */,
 				299D94762A1D38C300C50149 /* DeviceDetailsVC.swift */,
+				299D94792A21527700C50149 /* HomeMenuVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -218,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2966172B2A17B1FD0042D2F9 /* InventoryTableViewCell.xib in Resources */,
+				299D947E2A21538500C50149 /* MenuCollectionViewCell.xib in Resources */,
 				2982BB5B28BBE5C0003CF948 /* GoogleService-Info.plist in Resources */,
 				290972C728BBC7400004B925 /* Assets.xcassets in Resources */,
 				23A8DF3728C6934F00F59941 /* Launch Screen.storyboard in Resources */,
@@ -232,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				299D947A2A21527700C50149 /* HomeMenuVC.swift in Sources */,
 				290972C228BBC73F0004B925 /* ViewController.swift in Sources */,
 				299D94772A1D38C300C50149 /* DeviceDetailsVC.swift in Sources */,
 				290972BE28BBC73F0004B925 /* AppDelegate.swift in Sources */,
@@ -250,6 +261,7 @@
 				296617332A17FECF0042D2F9 /* AddNewDeviceVC.swift in Sources */,
 				2398E4292A05FD89001DBAD7 /* InventoryVC.swift in Sources */,
 				23AA085628C5295900B1BD99 /* RegisterVC.swift in Sources */,
+				299D947D2A21538500C50149 /* MenuCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +392,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FLMQ8FUJ4T;
 				INFOPLIST_FILE = Determit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -400,7 +412,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FLMQ8FUJ4T;
 				INFOPLIST_FILE = Determit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

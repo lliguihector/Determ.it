@@ -38,6 +38,7 @@ class DeviceDetailsVC: UIViewController {
             processorLabel.text = device.processor
             storageLabel.text = device.storageCapacity
             ramLabel.text = "9"
+            navigationItem.title = device.model
 //            
         }else{
            

@@ -17,6 +17,12 @@ class HomeVC:  UINavigationController{
 
         navigationItem.hidesBackButton = true
         navigationItem.backButtonTitle = ""
+        
+        // Make navigation bar transparent
+           navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+           navigationController?.navigationBar.shadowImage = UIImage()
+           navigationController?.navigationBar.isTranslucent = true
+           navigationController?.view.backgroundColor = .clear
     }
 
     

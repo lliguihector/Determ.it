@@ -21,8 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Customize the appearance of the back button
                 UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -200, vertical: 0), for: .default)
                 
-        
-        
+     
         FirebaseApp.configure()
         Thread.sleep(forTimeInterval: 0.5)
         return true
