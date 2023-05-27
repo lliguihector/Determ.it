@@ -58,7 +58,7 @@ class HomeMenuVC: UIViewController, UICollectionViewDataSource, UICollectionView
         
         if indexPath.row == 0 {
             print("Device")
-//            self.performSegue(withIdentifier: "toInventory", sender: self)
+            self.performSegue(withIdentifier: "menuToinHouseInventory", sender: self)
             
         }else if indexPath.row == 1{
             

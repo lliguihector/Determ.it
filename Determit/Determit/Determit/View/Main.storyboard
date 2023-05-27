@@ -159,7 +159,7 @@
                                 <color key="backgroundColor" red="0.2008791566" green="0.44737952949999998" blue="0.88632291559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="laptopcomputer.and.iphone" catalog="system" title="View Device Inventory"/>
+                                <buttonConfiguration key="configuration" style="plain" image="laptopcomputer" catalog="system" title="View Device Inventory"/>
                                 <connections>
                                     <segue destination="4GT-Vt-xaV" kind="show" id="mEe-Zu-pf4"/>
                                 </connections>
@@ -221,6 +221,9 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="location.circle" catalog="system" title="Client Locations"/>
+                                <connections>
+                                    <segue destination="PdP-hg-aAm" kind="show" id="GdM-Yt-jvn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Glr-wS-UKD">
                                 <rect key="frame" x="10" y="612.5" width="394" height="34.5"/>
@@ -287,6 +290,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="6e2-ZF-rja" id="CSF-2l-RKH"/>
+                        <segue destination="PdP-hg-aAm" kind="show" identifier="menuToinHouseInventory" id="uby-Ln-1Qg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JEq-uV-TNu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -438,7 +442,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F2Q-a6-lk6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5321.4953271028035" y="-502.15982721382295"/>
+            <point key="canvasLocation" x="4678" y="-837"/>
         </scene>
         <!--Devices-->
         <scene sceneID="4zK-bB-PpP">
@@ -464,7 +468,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6d-Kr-yhb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6261" y="84"/>
+            <point key="canvasLocation" x="5442" y="-837"/>
         </scene>
         <!--Add New Device-->
         <scene sceneID="AcO-9z-LN4">
@@ -608,6 +612,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ETG-l9-zKs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6986" y="123"/>
+        </scene>
+        <!--Inventory-->
+        <scene sceneID="ZTq-r7-SZK">
+            <objects>
+                <tableViewController id="PdP-hg-aAm" customClass="InHouseInventoryVC" customModule="Determit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="MSY-JY-Raw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="PdP-hg-aAm" id="Ehc-Bx-cRt"/>
+                            <outlet property="delegate" destination="PdP-hg-aAm" id="eq0-Km-Ocp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Inventory" id="ZVn-G4-eKm"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JPW-mO-iUm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5661" y="66"/>
         </scene>
         <!--Destinations-->
         <scene sceneID="fA2-fF-a2J">
@@ -1133,13 +1156,14 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="EZ4-Qb-M5D"/>
+        <segue reference="uby-Ln-1Qg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="envelope" catalog="system" width="128" height="93"/>
         <image name="faceid" catalog="system" width="128" height="115"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
-        <image name="laptopcomputer.and.iphone" catalog="system" width="128" height="73"/>
+        <image name="laptopcomputer" catalog="system" width="128" height="71"/>
         <image name="lifepreserver" catalog="system" width="128" height="123"/>
         <image name="location.circle" catalog="system" width="128" height="123"/>
         <image name="location.square" catalog="system" width="128" height="114"/>

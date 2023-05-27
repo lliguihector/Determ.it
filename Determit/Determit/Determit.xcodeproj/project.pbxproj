@@ -30,6 +30,9 @@
 		296867DE28BD6FDD00ECA8FB /* HelpWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296867DD28BD6FDD00ECA8FB /* HelpWebVC.swift */; };
 		296867E128EE970100ECA8FB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 296867E028EE970100ECA8FB /* FirebaseAuth */; };
 		2982BB5B28BBE5C0003CF948 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2982BB5A28BBE5C0003CF948 /* GoogleService-Info.plist */; };
+		298F6EC32A217DA0006965C4 /* InHouseInventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298F6EC22A217DA0006965C4 /* InHouseInventoryVC.swift */; };
+		298F6EC62A217DD3006965C4 /* inHouseInventoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298F6EC42A217DD3006965C4 /* inHouseInventoryTableViewCell.swift */; };
+		298F6EC72A217DD3006965C4 /* inHouseInventoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 298F6EC52A217DD3006965C4 /* inHouseInventoryTableViewCell.xib */; };
 		299D94772A1D38C300C50149 /* DeviceDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D94762A1D38C300C50149 /* DeviceDetailsVC.swift */; };
 		299D947A2A21527700C50149 /* HomeMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D94792A21527700C50149 /* HomeMenuVC.swift */; };
 		299D947D2A21538500C50149 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D947B2A21538500C50149 /* MenuCollectionViewCell.swift */; };
@@ -61,6 +64,9 @@
 		296617322A17FECF0042D2F9 /* AddNewDeviceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewDeviceVC.swift; sourceTree = "<group>"; };
 		296867DD28BD6FDD00ECA8FB /* HelpWebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpWebVC.swift; sourceTree = "<group>"; };
 		2982BB5A28BBE5C0003CF948 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		298F6EC22A217DA0006965C4 /* InHouseInventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InHouseInventoryVC.swift; sourceTree = "<group>"; };
+		298F6EC42A217DD3006965C4 /* inHouseInventoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inHouseInventoryTableViewCell.swift; sourceTree = "<group>"; };
+		298F6EC52A217DD3006965C4 /* inHouseInventoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = inHouseInventoryTableViewCell.xib; sourceTree = "<group>"; };
 		299D94762A1D38C300C50149 /* DeviceDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailsVC.swift; sourceTree = "<group>"; };
 		299D94792A21527700C50149 /* HomeMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuVC.swift; sourceTree = "<group>"; };
 		299D947B2A21538500C50149 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -120,6 +126,8 @@
 				296617292A17B1FD0042D2F9 /* InventoryTableViewCell.xib */,
 				299D947B2A21538500C50149 /* MenuCollectionViewCell.swift */,
 				299D947C2A21538500C50149 /* MenuCollectionViewCell.xib */,
+				298F6EC42A217DD3006965C4 /* inHouseInventoryTableViewCell.swift */,
+				298F6EC52A217DD3006965C4 /* inHouseInventoryTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -146,6 +154,7 @@
 				296617322A17FECF0042D2F9 /* AddNewDeviceVC.swift */,
 				299D94762A1D38C300C50149 /* DeviceDetailsVC.swift */,
 				299D94792A21527700C50149 /* HomeMenuVC.swift */,
+				298F6EC22A217DA0006965C4 /* InHouseInventoryVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -229,6 +238,7 @@
 				2966172B2A17B1FD0042D2F9 /* InventoryTableViewCell.xib in Resources */,
 				299D947E2A21538500C50149 /* MenuCollectionViewCell.xib in Resources */,
 				2982BB5B28BBE5C0003CF948 /* GoogleService-Info.plist in Resources */,
+				298F6EC72A217DD3006965C4 /* inHouseInventoryTableViewCell.xib in Resources */,
 				290972C728BBC7400004B925 /* Assets.xcassets in Resources */,
 				23A8DF3728C6934F00F59941 /* Launch Screen.storyboard in Resources */,
 				23AA085C28C529A300B1BD99 /* Main.storyboard in Resources */,
@@ -254,10 +264,12 @@
 				2966172A2A17B1FD0042D2F9 /* InventoryTableViewCell.swift in Sources */,
 				23AA085228C5293200B1BD99 /* LogInVC.swift in Sources */,
 				296617312A17E37D0042D2F9 /* DataModel.xcdatamodeld in Sources */,
+				298F6EC62A217DD3006965C4 /* inHouseInventoryTableViewCell.swift in Sources */,
 				23E0F5052975A4DF008E2CA2 /* constant.swift in Sources */,
 				23AA085828C5297200B1BD99 /* AccountVC.swift in Sources */,
 				290972C028BBC73F0004B925 /* SceneDelegate.swift in Sources */,
 				23AA085E28C529CB00B1BD99 /* Alert.swift in Sources */,
+				298F6EC32A217DA0006965C4 /* InHouseInventoryVC.swift in Sources */,
 				296617332A17FECF0042D2F9 /* AddNewDeviceVC.swift in Sources */,
 				2398E4292A05FD89001DBAD7 /* InventoryVC.swift in Sources */,
 				23AA085628C5295900B1BD99 /* RegisterVC.swift in Sources */,
