@@ -6,6 +6,7 @@
         <attribute name="imageURL" optional="YES" attributeType="String"/>
         <attribute name="memoryRam" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="model" optional="YES" attributeType="String"/>
+        <attribute name="os" optional="YES" attributeType="String"/>
         <attribute name="processor" optional="YES" attributeType="String"/>
         <attribute name="serialNumber" optional="YES" attributeType="String"/>
         <attribute name="storageCapacity" optional="YES" attributeType="String"/>

@@ -19,7 +19,7 @@ class AddNewDeviceVC: UIViewController {
     @IBOutlet weak var processorDescriptionTextField: UITextField!
     @IBOutlet weak var imageURLTextField: UITextField!
     @IBOutlet weak var categoryTextField: UITextField!
-    
+    @IBOutlet weak var osTextField: UITextField!
     
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -71,8 +71,8 @@ class AddNewDeviceVC: UIViewController {
         memoryCpacityTextField.text?.isEmpty ?? true ||
         processorDescriptionTextField.text?.isEmpty ?? true ||
         imageURLTextField.text?.isEmpty ?? true ||
-       categoryTextField.text?.isEmpty ?? true
-    
+       categoryTextField.text?.isEmpty ?? true ||
+        osTextField.text?.isEmpty ?? true
 
               if isEmpty {
                   
@@ -126,7 +126,7 @@ class AddNewDeviceVC: UIViewController {
         newDevice.memoryRam = 8
         newDevice.processor = processorDescriptionTextField.text
         newDevice.imageURL = imageURLTextField.text
-    
+        newDevice.os = osTextField.text
         saveDevices()
     }
 

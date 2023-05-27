@@ -20,6 +20,7 @@ class DeviceDetailsVC: UIViewController {
     @IBOutlet weak var storageLabel: UILabel!
     @IBOutlet weak var ramLabel: UILabel!
     
+    @IBOutlet weak var osLabel: UILabel!
     
     
     var selectedDevice : Device?{
@@ -32,14 +33,14 @@ class DeviceDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let device = selectedDevice {
-            
+            navigationItem.title = device.model
             brandLabel.text = device.brand
             categoryLabel.text = "Laptop"
             serialNumberLabel.text = device.serialNumber
             processorLabel.text = device.processor
             storageLabel.text = device.storageCapacity
             ramLabel.text = "9"
-            navigationItem.title = device.model
+            osLabel.text = device.os
 //            
         }else{
            
