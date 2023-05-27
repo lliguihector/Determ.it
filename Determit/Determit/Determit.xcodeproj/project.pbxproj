@@ -23,6 +23,9 @@
 		290972C028BBC73F0004B925 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290972BF28BBC73F0004B925 /* SceneDelegate.swift */; };
 		290972C228BBC73F0004B925 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290972C128BBC73F0004B925 /* ViewController.swift */; };
 		290972C728BBC7400004B925 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 290972C628BBC7400004B925 /* Assets.xcassets */; };
+		295142262A21B2F5008DC91D /* AddNewAssetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295142252A21B2F5008DC91D /* AddNewAssetVC.swift */; };
+		295142292A21B3F4008DC91D /* deviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295142272A21B3F4008DC91D /* deviceTableViewCell.swift */; };
+		2951422A2A21B3F4008DC91D /* deviceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295142282A21B3F4008DC91D /* deviceTableViewCell.xib */; };
 		2966172A2A17B1FD0042D2F9 /* InventoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296617282A17B1FD0042D2F9 /* InventoryTableViewCell.swift */; };
 		2966172B2A17B1FD0042D2F9 /* InventoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 296617292A17B1FD0042D2F9 /* InventoryTableViewCell.xib */; };
 		296617312A17E37D0042D2F9 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2966172F2A17E37D0042D2F9 /* DataModel.xcdatamodeld */; };
@@ -58,6 +61,9 @@
 		290972C128BBC73F0004B925 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		290972C628BBC7400004B925 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		290972CB28BBC7400004B925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		295142252A21B2F5008DC91D /* AddNewAssetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAssetVC.swift; sourceTree = "<group>"; };
+		295142272A21B3F4008DC91D /* deviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deviceTableViewCell.swift; sourceTree = "<group>"; };
+		295142282A21B3F4008DC91D /* deviceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = deviceTableViewCell.xib; sourceTree = "<group>"; };
 		296617282A17B1FD0042D2F9 /* InventoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTableViewCell.swift; sourceTree = "<group>"; };
 		296617292A17B1FD0042D2F9 /* InventoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InventoryTableViewCell.xib; sourceTree = "<group>"; };
 		296617302A17E37D0042D2F9 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -128,6 +134,8 @@
 				299D947C2A21538500C50149 /* MenuCollectionViewCell.xib */,
 				298F6EC42A217DD3006965C4 /* inHouseInventoryTableViewCell.swift */,
 				298F6EC52A217DD3006965C4 /* inHouseInventoryTableViewCell.xib */,
+				295142272A21B3F4008DC91D /* deviceTableViewCell.swift */,
+				295142282A21B3F4008DC91D /* deviceTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -152,6 +160,7 @@
 				23AA085928C5298200B1BD99 /* HomeVC.swift */,
 				2398E4282A05FD89001DBAD7 /* InventoryVC.swift */,
 				296617322A17FECF0042D2F9 /* AddNewDeviceVC.swift */,
+				295142252A21B2F5008DC91D /* AddNewAssetVC.swift */,
 				299D94762A1D38C300C50149 /* DeviceDetailsVC.swift */,
 				299D94792A21527700C50149 /* HomeMenuVC.swift */,
 				298F6EC22A217DA0006965C4 /* InHouseInventoryVC.swift */,
@@ -238,6 +247,7 @@
 				2966172B2A17B1FD0042D2F9 /* InventoryTableViewCell.xib in Resources */,
 				299D947E2A21538500C50149 /* MenuCollectionViewCell.xib in Resources */,
 				2982BB5B28BBE5C0003CF948 /* GoogleService-Info.plist in Resources */,
+				2951422A2A21B3F4008DC91D /* deviceTableViewCell.xib in Resources */,
 				298F6EC72A217DD3006965C4 /* inHouseInventoryTableViewCell.xib in Resources */,
 				290972C728BBC7400004B925 /* Assets.xcassets in Resources */,
 				23A8DF3728C6934F00F59941 /* Launch Screen.storyboard in Resources */,
@@ -260,12 +270,14 @@
 				23E0F5032975A45B008E2CA2 /* LoadingView.swift in Sources */,
 				2305663F2983B5500065403D /* Validation.swift in Sources */,
 				23AA085A28C5298200B1BD99 /* HomeVC.swift in Sources */,
+				295142262A21B2F5008DC91D /* AddNewAssetVC.swift in Sources */,
 				296867DE28BD6FDD00ECA8FB /* HelpWebVC.swift in Sources */,
 				2966172A2A17B1FD0042D2F9 /* InventoryTableViewCell.swift in Sources */,
 				23AA085228C5293200B1BD99 /* LogInVC.swift in Sources */,
 				296617312A17E37D0042D2F9 /* DataModel.xcdatamodeld in Sources */,
 				298F6EC62A217DD3006965C4 /* inHouseInventoryTableViewCell.swift in Sources */,
 				23E0F5052975A4DF008E2CA2 /* constant.swift in Sources */,
+				295142292A21B3F4008DC91D /* deviceTableViewCell.swift in Sources */,
 				23AA085828C5297200B1BD99 /* AccountVC.swift in Sources */,
 				290972C028BBC73F0004B925 /* SceneDelegate.swift in Sources */,
 				23AA085E28C529CB00B1BD99 /* Alert.swift in Sources */,
