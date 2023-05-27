@@ -11,7 +11,7 @@ class InHouseInventoryVC: UITableViewController{
  
 
     
-    var testing = ["nfjr","fndjfd","shbfsu"]
+    var testing = ["iPad Pro","MacBook Air","Mac Book Pro"]
     
     
     override func viewDidLoad() {

@@ -617,7 +617,7 @@
         <scene sceneID="ZTq-r7-SZK">
             <objects>
                 <tableViewController id="PdP-hg-aAm" customClass="InHouseInventoryVC" customModule="Determit" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="MSY-JY-Raw">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="MSY-JY-Raw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -626,7 +626,12 @@
                             <outlet property="delegate" destination="PdP-hg-aAm" id="eq0-Km-Ocp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Inventory" id="ZVn-G4-eKm"/>
+                    <navigationItem key="navigationItem" title="Inventory" id="ZVn-G4-eKm">
+                        <rightBarButtonItems>
+                            <barButtonItem image="plus" catalog="system" id="1Yq-io-Hcs"/>
+                            <barButtonItem image="magnifyingglass" catalog="system" id="rJ5-uf-kaw"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JPW-mO-iUm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1170,10 +1175,12 @@
         <image name="location.square.fill" catalog="system" width="128" height="114"/>
         <image name="lock" catalog="system" width="125" height="128"/>
         <image name="macBook Pro" width="820" height="480"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="number.square" catalog="system" width="128" height="114"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="plus.app" catalog="system" width="128" height="114"/>
         <image name="roboant" width="149" height="214"/>
         <image name="scroll" catalog="system" width="128" height="114"/>
