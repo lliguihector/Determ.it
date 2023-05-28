@@ -293,7 +293,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JEq-uV-TNu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4299" y="37"/>
+            <point key="canvasLocation" x="5295" y="36.971830985915496"/>
         </scene>
         <!--Users-->
         <scene sceneID="px2-vb-c59">
@@ -503,7 +503,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F2Q-a6-lk6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4678" y="-837"/>
+            <point key="canvasLocation" x="5673.75" y="-837.67605633802816"/>
         </scene>
         <!--Devices-->
         <scene sceneID="4zK-bB-PpP">
@@ -529,7 +529,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6d-Kr-yhb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5442" y="-837"/>
+            <point key="canvasLocation" x="6438.75" y="-837.67605633802816"/>
         </scene>
         <!--Add New Device-->
         <scene sceneID="AcO-9z-LN4">
@@ -964,11 +964,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="Tjf-PT-Znd">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="194"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="118"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="7eG-IT-zJC">
-                                    <rect key="frame" x="81.5" y="46" width="157.5" height="102"/>
+                                    <rect key="frame" x="81.5" y="8" width="157.5" height="102"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PiV-3a-qRX">
                                             <rect key="frame" x="48.5" y="0.5" width="60" height="59"/>
@@ -999,13 +999,16 @@
                             </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="cAK-A0-Joj">
-                            <rect key="frame" x="0.0" y="926" width="320" height="134"/>
+                            <rect key="frame" x="0.0" y="850" width="320" height="54"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QD5-Mr-ZGX">
-                                    <rect key="frame" x="26" y="73" width="84" height="26"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QD5-Mr-ZGX">
+                                    <rect key="frame" x="20" y="20" width="73" height="24"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="73" id="eej-uc-AYV"/>
+                                        <constraint firstAttribute="height" constant="24" id="gDu-Jt-ich"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="4"/>
                                     <inset key="titleEdgeInsets" minX="2" minY="2" maxX="0.0" maxY="0.0"/>
@@ -1019,12 +1022,16 @@
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="QD5-Mr-ZGX" firstAttribute="top" secondItem="cAK-A0-Joj" secondAttribute="top" constant="20" id="Bqk-tD-UV8"/>
+                                <constraint firstItem="QD5-Mr-ZGX" firstAttribute="leading" secondItem="cAK-A0-Joj" secondAttribute="leading" constant="20" id="yy1-5m-4aT"/>
+                            </constraints>
                         </view>
                         <sections>
                             <tableViewSection headerTitle="Profile" id="Kwj-2F-bU4">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="60" id="ELs-Ci-vlj">
-                                        <rect key="frame" x="0.0" y="244" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="168" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ELs-Ci-vlj" id="r0j-xW-272">
                                             <rect key="frame" x="0.0" y="0.0" width="293.5" height="60"/>
@@ -1048,7 +1055,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="60" id="qV4-Qf-ili">
-                                        <rect key="frame" x="0.0" y="304" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="228" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qV4-Qf-ili" id="nBY-cW-UUS">
                                             <rect key="frame" x="0.0" y="0.0" width="293.5" height="60"/>
@@ -1076,7 +1083,7 @@
                             <tableViewSection headerTitle="Security" id="j20-9u-6v4">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="60" id="9lZ-G1-Bi9">
-                                        <rect key="frame" x="0.0" y="442" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="366" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9lZ-G1-Bi9" id="r2b-q2-nfM">
                                             <rect key="frame" x="0.0" y="0.0" width="293.5" height="60"/>
@@ -1103,10 +1110,10 @@
                             <tableViewSection headerTitle="Notification prefrences" id="Y6Z-np-fun">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="60" id="Lka-Zu-IpA">
-                                        <rect key="frame" x="0.0" y="580" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="504" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lka-Zu-IpA" id="BIk-5R-sjy">
-                                            <rect key="frame" x="0.0" y="0.0" width="301.5" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="293.5" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kNd-aP-OxC">
@@ -1130,7 +1137,7 @@
                             <tableViewSection headerTitle="Help &amp; policies" id="ifk-hI-E1b">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="60" id="cgq-X8-lMQ">
-                                        <rect key="frame" x="0.0" y="718" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="642" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cgq-X8-lMQ" id="tfp-qk-RR8">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
@@ -1153,7 +1160,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="60" id="jRe-Tc-Bxw">
-                                        <rect key="frame" x="0.0" y="778" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="702" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="4" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jRe-Tc-Bxw" id="KaX-cl-uPP">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
@@ -1175,7 +1182,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="60" id="nNc-qh-g0N">
-                                        <rect key="frame" x="0.0" y="838" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="762" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="5" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nNc-qh-g0N" id="amt-Mf-2en">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
@@ -1204,7 +1211,7 @@
                             <outlet property="delegate" destination="dyu-Ti-vCm" id="B53-nh-opT"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Account" image="person" catalog="system" selectedImage="person.fill" id="7vX-bZ-bvQ"/>
+                    <navigationItem key="navigationItem" title="Account" style="editor" id="JuV-o5-Egc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="emailLabel" destination="jyw-b2-Xn4" id="FMA-or-qEA"/>
@@ -1215,7 +1222,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5i-Go-ygu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3228.75" y="-600"/>
+            <point key="canvasLocation" x="4226.25" y="-600"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="BYX-LX-pw1">
@@ -1373,7 +1380,7 @@
                     <connections>
                         <segue destination="xNa-Fh-y7p" kind="relationship" relationship="viewControllers" id="wMM-zl-IB4"/>
                         <segue destination="CgR-qc-Ebx" kind="relationship" relationship="viewControllers" id="atm-ST-rpC"/>
-                        <segue destination="dyu-Ti-vCm" kind="relationship" relationship="viewControllers" id="B4d-5b-I7N"/>
+                        <segue destination="Yi4-Db-DrV" kind="relationship" relationship="viewControllers" id="B4d-5b-I7N"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="022-nr-EJ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1399,6 +1406,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jMI-w4-Tho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3259" y="167"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="JjF-jN-Cbh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yi4-Db-DrV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Account" image="person" catalog="system" selectedImage="person.fill" id="7vX-bZ-bvQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="pZU-Sy-nQU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dyu-Ti-vCm" kind="relationship" relationship="rootViewController" id="Bim-O6-HIv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cWk-dC-FFC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3228.75" y="-600"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
