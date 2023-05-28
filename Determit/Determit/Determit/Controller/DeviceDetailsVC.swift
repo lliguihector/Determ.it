@@ -33,13 +33,19 @@ class DeviceDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let device = selectedDevice {
-            navigationItem.title = device.model
+            
+            // Safely unwrap the optional value and provide a default value if it's nil
+            let modelName = device.modelName ?? "No value"
+            let model = device.model ?? "No value"
+            navigationItem.title =  "\(modelName) \(model)"
+            
+            
             brandLabel.text = device.brand
-            categoryLabel.text = "Laptop"
+            categoryLabel.text = device.category
             serialNumberLabel.text = device.serialNumber
             processorLabel.text = device.processor
             storageLabel.text = device.storageCapacity
-            ramLabel.text = "9"
+            ramLabel.text = device.memoryRam
             osLabel.text = device.os
 //            
         }else{

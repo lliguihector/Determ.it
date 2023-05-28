@@ -10,7 +10,7 @@ import UIKit
 class HomeMenuVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
     
 
-    let menuItems = ["Inventory","IT Requests","Technicians","Clients"]
+    let menuItems = ["Accets","IT Requests","Technicians","Clients"]
     let sfSymbolTitle = ["laptopcomputer.and.iphone","ticket","person.text.rectangle","person.3.sequence"]
     
   
@@ -64,12 +64,17 @@ class HomeMenuVC: UIViewController, UICollectionViewDataSource, UICollectionView
             
             
             print("Ticket")
-        }else{
+        }else if indexPath.row == 3 {
             
-            print("Other was pressed")
+            self.performSegue(withIdentifier: "toUsers", sender: self)
+            print("Users")
         }
-    }
-  
+            else{
+                
+                print("Other was pressed")
+            }
+            
+        }
 
 
 }

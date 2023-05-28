@@ -21,6 +21,7 @@ class AddNewDeviceVC: UIViewController {
     @IBOutlet weak var categoryTextField: UITextField!
     @IBOutlet weak var osTextField: UITextField!
     
+    @IBOutlet weak var modelNameTextField: UITextField!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -72,7 +73,9 @@ class AddNewDeviceVC: UIViewController {
         processorDescriptionTextField.text?.isEmpty ?? true ||
         imageURLTextField.text?.isEmpty ?? true ||
        categoryTextField.text?.isEmpty ?? true ||
-        osTextField.text?.isEmpty ?? true
+        osTextField.text?.isEmpty ?? true ||
+        categoryTextField.text?.isEmpty ?? true ||
+        modelNameTextField.text?.isEmpty ?? true
 
               if isEmpty {
                   
@@ -121,11 +124,13 @@ class AddNewDeviceVC: UIViewController {
         newDevice.deviceID = "001"
         newDevice.brand = brandTextField.text
         newDevice.model = modelTextField.text
+        newDevice.modelName = modelNameTextField.text
         newDevice.serialNumber = serialNumberTextField.text
         newDevice.storageCapacity = storageCapacityTextFiled.text
-        newDevice.memoryRam = 8
+        newDevice.memoryRam = memoryCpacityTextField.text
         newDevice.processor = processorDescriptionTextField.text
         newDevice.imageURL = imageURLTextField.text
+        newDevice.category = categoryTextField.text
         newDevice.os = osTextField.text
         saveDevices()
     }

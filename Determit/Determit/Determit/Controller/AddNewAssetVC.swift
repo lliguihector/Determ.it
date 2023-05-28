@@ -95,7 +95,7 @@ class AddNewAssetVC:  UIViewController, UITableViewDelegate, UITableViewDataSour
         let modelID = selectedDevice.model
         
         item = selectedDevice
-        print("model ID \(modelID)... Was selected ")
+//        print("model ID \(modelID)... Was selected ")
         
     }
     @objc func headerTapped() {

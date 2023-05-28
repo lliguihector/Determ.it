@@ -49,12 +49,19 @@ class InventoryVC: UITableViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InventoryCell", for: indexPath) as! InventoryTableViewCell
-        
+    
+    
         
         let device = devices[indexPath.row]
-        cell.itemName.text = device.model
+        
+        
+        // Safely unwrap the optional value and provide a default value if it's nil
+        let modelName = device.modelName ?? "No value"
+        let model = device.model ?? "No value"
+        
+        cell.itemName.text =  "\(modelName) \(model)"
         cell.ManufactureBrandLabel.text = device.brand
-        cell.categoryLabel.text = device.imageURL
+        cell.categoryLabel.text = device.category
         cell.serialNumberLabel.text = device.serialNumber
      
         return cell
@@ -91,28 +98,7 @@ class InventoryVC: UITableViewController{
 //MARK: - Helper Methods
 extension InventoryVC {
     
-    func loadDummyData(){
-        
-        
-        
-        let newDevice = Device(context: self.context)
-    
-        newDevice.model = "Mac Book Pro 13-inch"
-        newDevice.serialNumber = "LR089988"
-        newDevice.brand = "Apple"
-        newDevice.processor = "intel Core i13-6100U 2.30GHz"
-        newDevice.deviceID = "From mongo DB"
-        newDevice.imageURL = "http://www.whatever.com"
-        newDevice.memoryRam = 8
-        newDevice.deviceID = "001"
-        
-        self.devices.append(newDevice)
-        self.saveDevices()
-        
-        
-        
    
-    }
 
 }
 
