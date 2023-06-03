@@ -102,11 +102,16 @@ override func tableView(_ tableView: UITableView, viewForHeaderInSection section
     
 
 func signOutUser(){
-
+print("Signed out user")
     do{
         try Auth.auth().signOut()
         //Takes you to the initial view controller
         navigationController?.popToRootViewController(animated: true)
+        // Navigate back to the initial view controller
+//        if let initialViewController = self.navigationController?.viewControllers.first {
+//                self.navigationController?.popToViewController(initialViewController, animated: true)
+//            }
+//
     }catch let signOutError as NSError{
         print("Error signing out: %@", signOutError)
         
