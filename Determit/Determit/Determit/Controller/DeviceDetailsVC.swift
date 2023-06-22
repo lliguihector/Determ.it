@@ -10,8 +10,6 @@ import Foundation
 
 
 class DeviceDetailsVC: UIViewController {
-
-    
     //OUTLITS
     @IBOutlet weak var brandLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
@@ -19,8 +17,10 @@ class DeviceDetailsVC: UIViewController {
     @IBOutlet weak var processorLabel: UILabel!
     @IBOutlet weak var storageLabel: UILabel!
     @IBOutlet weak var ramLabel: UILabel!
-    
     @IBOutlet weak var osLabel: UILabel!
+    @IBOutlet weak var selectButton: UIButton!
+    
+    var showBttnIsTrue = true
     
     
     var selectedDevice : Device?{
@@ -30,8 +30,20 @@ class DeviceDetailsVC: UIViewController {
            }
        }
        
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        //Hide the select button depending on source of view loading
+        selectButton.isHidden = showBttnIsTrue
+        
+        
         if let device = selectedDevice {
             
             // Safely unwrap the optional value and provide a default value if it's nil

@@ -10,7 +10,17 @@ import CoreData
 import AVFoundation
 import UIKit
 
-class InventoryVC: UITableViewController{
+class InventoryVC: UITableViewController, AddNewAccetVCDelegate{
+    
+    
+    func shouldDisplayButton(_ shouldDisplay: Bool) {
+        
+
+        
+    }
+    
+    
+
     
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -35,8 +45,7 @@ class InventoryVC: UITableViewController{
         loadDevices()
     }
     
-    
-    
+
     
     
     //MARK: - UITableViewDataSource

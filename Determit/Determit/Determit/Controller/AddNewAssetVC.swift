@@ -8,32 +8,30 @@
 import UIKit
 import CoreData
 
+ 
+//Delegate Protocal
+protocol AddNewAccetVCDelegate{
+    func shouldDisplayButton(_ shouldDisplay:  Bool)
+}
+
 class AddNewAssetVC:  UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var item: Device?
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var deviceIDTextField: UITextField!
     
-    
+    var item: Device?
     var modelID: String = ""
-    
     var devices: [Device] = []
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
+    var delegate: AddNewAccetVCDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Register the custom cell class for the table view
-        
         tableView.register(UINib(nibName: "deviceTableViewCell", bundle: nil), forCellReuseIdentifier: "deviceCell")
-        
-        
     }
     
     // MARK: - Table view data source
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return devices.count
@@ -49,7 +47,6 @@ class AddNewAssetVC:  UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return cell
     }
-    
     
     //MARK: - Table View Delegate
     
@@ -85,18 +82,13 @@ class AddNewAssetVC:  UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //when selected row
-        
-        
-        
         let selectedDevice = devices[indexPath.row]
-        
         
         deviceIDTextField.placeholder = selectedDevice.model
         let modelID = selectedDevice.model
         
         item = selectedDevice
 //        print("model ID \(modelID)... Was selected ")
-        
     }
     @objc func headerTapped() {
         // Perform the action when the header section is tapped
@@ -106,7 +98,6 @@ class AddNewAssetVC:  UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func loadData(){
-        
         print("loading Data from Core data")
         DispatchQueue.main.async {
             
@@ -118,19 +109,12 @@ class AddNewAssetVC:  UIViewController, UITableViewDelegate, UITableViewDataSour
                 print("Error fetching data from context \(error)")
             }
             self.tableView.reloadData()
-            
         }
     }
-    
-    
-    
     @IBAction func saveData(_ sender: Any) {
-        
         
         //        Alert.showBasicAlert(on: self, with: "", message: "Is the following data ok to save")
      
-        
-  
         //Action
     }
     
