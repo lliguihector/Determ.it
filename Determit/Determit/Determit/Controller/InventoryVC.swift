@@ -12,6 +12,13 @@ import UIKit
 
 class InventoryVC: UITableViewController,Loadable{
  
+    //Dependencys
+    
+    
+    
+    
+    
+    
     
     
     //MARK: - Properties
@@ -40,18 +47,10 @@ class InventoryVC: UITableViewController,Loadable{
     override func viewDidLoad() {
         super.viewDidLoad()
        
- 
-
-        
-        
-        
-        
         configureUI()
-       
         loadDevices()
         
-        fetchData()
-        
+    
         //        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
     }
     
@@ -64,6 +63,14 @@ class InventoryVC: UITableViewController,Loadable{
             navigationController?.pushViewController(addNewDeviceVC, animated: true)
 
     }
+    
+    
+    @IBAction func loadData(_ sender: Any) {
+        fetchData()
+        
+        
+    }
+    
     
    //MARK: - UI Configuration
     
@@ -308,11 +315,14 @@ extension InventoryVC{
                 
                 DispatchQueue.main.async {
                     self?.apiDevicesData = devices
-                    self?.tableView.reloadData()
+                    
+                    print(self!.apiDevicesData)
+//                    self?.tableView.reloadData()
                 }
                 DispatchQueue.main.async {
                     self?.hideLoadingView()
                 }
+                
             case.failure(let error):
                 switch error{
                     

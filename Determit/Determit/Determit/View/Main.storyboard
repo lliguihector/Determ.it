@@ -511,7 +511,11 @@
                                     <action selector="addNewItem:" destination="4GT-Vt-xaV" id="sk7-iX-BVW"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Item" image="line.3.horizontal.decrease.circle" catalog="system" id="Mx1-K1-EFk"/>
+                            <barButtonItem title="Item" image="line.3.horizontal.decrease.circle" catalog="system" id="Mx1-K1-EFk">
+                                <connections>
+                                    <action selector="loadData:" destination="4GT-Vt-xaV" id="yaX-bF-Po4"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>

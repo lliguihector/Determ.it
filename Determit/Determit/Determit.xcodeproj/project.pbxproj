@@ -128,8 +128,10 @@
 				290972BD28BBC73F0004B925 /* AppDelegate.swift */,
 				290972BF28BBC73F0004B925 /* SceneDelegate.swift */,
 				290972D228BBC75C0004B925 /* Model */,
+				2911E0D02B2EF5990033CC2E /* ViewModel */,
 				290972D128BBC7470004B925 /* View */,
 				290972D328BBC7640004B925 /* Controller */,
+				2911E0D12B2EF65D0033CC2E /* Services */,
 				290972C628BBC7400004B925 /* Assets.xcassets */,
 				23A8DF3628C6934F00F59941 /* Launch Screen.storyboard */,
 				290972CB28BBC7400004B925 /* Info.plist */,
@@ -161,7 +163,6 @@
 			children = (
 				2966172F2A17E37D0042D2F9 /* DataModel.xcdatamodeld */,
 				2911E0CC2B2ECEF10033CC2E /* Device.swift */,
-				2911E0CE2B2ECFD70033CC2E /* deviceManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,6 +188,21 @@
 				2911E0CA2B2ACDE80033CC2E /* scannerVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		2911E0D02B2EF5990033CC2E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2911E0D12B2EF65D0033CC2E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2911E0CE2B2ECFD70033CC2E /* deviceManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		299D94782A1D3A4D00C50149 /* Supporting Files */ = {

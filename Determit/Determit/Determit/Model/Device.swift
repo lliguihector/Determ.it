@@ -11,7 +11,7 @@ import Foundation
 struct device: Codable{
     
     
-let id: String
+let _id: String
 let brand: String
 let deviceName: String
 let model: String
