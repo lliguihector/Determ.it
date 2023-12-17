@@ -5,11 +5,20 @@
 //  Created by Hector Lliguichuzca on 5/26/23.
 //
 
+
+
+import AVFoundation
 import UIKit
 
-class InHouseInventoryVC: UITableViewController{
+
+
+class InHouseInventoryVC: UITableViewController {
  
 
+    
+   
+    
+    
     
     var testing = ["iPad Pro","MacBook Air","Mac Book Pro"]
     
@@ -20,13 +29,20 @@ class InHouseInventoryVC: UITableViewController{
 //        tableView.dataSource = self
 //        tableView.delegate = self
         //Regester NIB
-        
+
        tableView.register(UINib(nibName: "inHouseInventoryTableViewCell", bundle: nil), forCellReuseIdentifier: "inHouseInventoryCell")
         
 
         
     }
 
+    
+    
+    //MARK: - Helper Methods
+    
+    
+  
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

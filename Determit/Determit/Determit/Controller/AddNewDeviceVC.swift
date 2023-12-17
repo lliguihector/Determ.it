@@ -8,6 +8,15 @@
 import UIKit
 import CoreData
 
+
+
+protocol addNewDeviceVCDelegate: AnyObject{
+    func reloadData()
+}
+
+
+
+
 class AddNewDeviceVC: UIViewController {
 
     //OUTLITS
@@ -22,6 +31,16 @@ class AddNewDeviceVC: UIViewController {
     @IBOutlet weak var osTextField: UITextField!
     
     @IBOutlet weak var modelNameTextField: UITextField!
+    
+    
+    
+    
+    
+    weak var delegate: addNewDeviceVCDelegate?
+    
+    
+    
+    
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -85,15 +104,18 @@ class AddNewDeviceVC: UIViewController {
                   
               } else {
                   saveDeviceDataToCoreData()
+                delegate?.reloadData() //Call the delegate method here
+                  
                   
                   let alertController = UIAlertController(title: "Success!", message: "new device data was successfuly added.", preferredStyle: .alert)
 
                   let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
-                             // Code to handle the OK action
-                             print("OK button pressed")
-                             
-//                      self.navigationController?.popViewController(animated: true)
+   
+                      
+                      
+                      
                       DispatchQueue.main.async {
+                          
                           
                           self.navigationController?.popViewController(animated: true)
                          
