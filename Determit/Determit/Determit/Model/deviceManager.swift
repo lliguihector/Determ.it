@@ -13,17 +13,18 @@ enum APIErrors: Error{
     case responseFailed
     case jsonDecodingFailed
     case invalidURL
+    case invalidImageURL
     
 }
 
 
 
 
-struct DeviceManager{
+struct deviceManager{
     
     
 //Get all news Feed
-func getNewsFeed<T:Codable>(url: URL?, expecting: T.Type, completion:
+func getDevices<T:Codable>(url: URL?, expecting: T.Type, completion:
                                     @escaping(Result<T,APIErrors>) -> Void){
         
         //URL STRING ERROR!

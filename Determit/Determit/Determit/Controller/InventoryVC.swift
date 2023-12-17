@@ -10,13 +10,25 @@ import CoreData
 import AVFoundation
 import UIKit
 
-class InventoryVC: UITableViewController{
+class InventoryVC: UITableViewController,Loadable{
  
     
     
     //MARK: - Properties
     let searchController = UISearchController(searchResultsController: nil)
     var devices: [Device] = []
+    
+    //Array to load from API
+    var apiDevicesData:[device] = []
+    
+    
+    //deviceManager
+    var devicesManager = deviceManager()
+    
+    //url
+    static let  deviceUrl = URL(string: "http://localhost:3000/devices")
+    
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     
@@ -30,9 +42,15 @@ class InventoryVC: UITableViewController{
        
  
 
+        
+        
+        
+        
         configureUI()
        
         loadDevices()
+        
+        fetchData()
         
         //        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
     }
@@ -274,3 +292,62 @@ extension InventoryVC {
     
     
 }
+//MARK: - API CALL Method
+extension InventoryVC{
+    
+    
+    func fetchData(){
+        showLoadingView()
+        
+        devicesManager.getDevices(url: InventoryVC.deviceUrl, expecting: [device].self)
+        {[weak self] result in
+            
+            switch result{
+            case.success(let devices):
+                
+                
+                DispatchQueue.main.async {
+                    self?.apiDevicesData = devices
+                    self?.tableView.reloadData()
+                }
+                DispatchQueue.main.async {
+                    self?.hideLoadingView()
+                }
+            case.failure(let error):
+                switch error{
+                    
+                    
+                case .invalidURL:
+                    print("url error")
+                    
+                case.requestFailed:
+                    
+                    DispatchQueue.main.async {
+                        Alert.showBasicAlert(on: self!, with:"", message: "Couldn't connect to the server.")
+                        self?.hideLoadingView()
+                    }
+                    
+                    DispatchQueue.main.async {
+                        self?.hideLoadingView()
+                    }
+                    
+                    print("Network Error")
+                case.responseFailed:
+                    print("Error 400")
+                case.jsonDecodingFailed:
+                    print("Decoding problem")
+                case .invalidImageURL:
+                    print("URL Image Error!")
+                }
+            }
+            
+        }
+        
+        
+    }
+    
+
+    
+}
+
+
