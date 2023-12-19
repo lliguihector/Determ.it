@@ -13,14 +13,7 @@ import UIKit
 class InventoryVC: UITableViewController,Loadable{
  
     //Dependencys
-    
-    
-    
-    
-    
-    
-    
-    
+
     //MARK: - Properties
     let searchController = UISearchController(searchResultsController: nil)
     var devices: [Device] = []

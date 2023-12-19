@@ -18,7 +18,7 @@
 		23AA085C28C529A300B1BD99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23AA085B28C529A300B1BD99 /* Main.storyboard */; };
 		23AA085E28C529CB00B1BD99 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA085D28C529CB00B1BD99 /* Alert.swift */; };
 		23E0F5032975A45B008E2CA2 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E0F5022975A45B008E2CA2 /* LoadingView.swift */; };
-		23E0F5052975A4DF008E2CA2 /* constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E0F5042975A4DF008E2CA2 /* constant.swift */; };
+		23E0F5052975A4DF008E2CA2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E0F5042975A4DF008E2CA2 /* Constants.swift */; };
 		290972BE28BBC73F0004B925 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290972BD28BBC73F0004B925 /* AppDelegate.swift */; };
 		290972C028BBC73F0004B925 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290972BF28BBC73F0004B925 /* SceneDelegate.swift */; };
 		290972C228BBC73F0004B925 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290972C128BBC73F0004B925 /* ViewController.swift */; };
@@ -26,6 +26,7 @@
 		2911E0CB2B2ACDE80033CC2E /* scannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911E0CA2B2ACDE80033CC2E /* scannerVC.swift */; };
 		2911E0CD2B2ECEF10033CC2E /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911E0CC2B2ECEF10033CC2E /* Device.swift */; };
 		2911E0CF2B2ECFD70033CC2E /* deviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911E0CE2B2ECFD70033CC2E /* deviceManager.swift */; };
+		2911E0D52B2EF9CD0033CC2E /* InventoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911E0D42B2EF9CD0033CC2E /* InventoryViewModel.swift */; };
 		2913356E2A228F2800A1646A /* UsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2913356D2A228F2800A1646A /* UsersVC.swift */; };
 		295142262A21B2F5008DC91D /* AddNewAssetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295142252A21B2F5008DC91D /* AddNewAssetVC.swift */; };
 		295142292A21B3F4008DC91D /* deviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295142272A21B3F4008DC91D /* deviceTableViewCell.swift */; };
@@ -61,7 +62,7 @@
 		23AA085B28C529A300B1BD99 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		23AA085D28C529CB00B1BD99 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		23E0F5022975A45B008E2CA2 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		23E0F5042975A4DF008E2CA2 /* constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constant.swift; sourceTree = "<group>"; };
+		23E0F5042975A4DF008E2CA2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		290972BA28BBC73F0004B925 /* Determit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Determit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		290972BD28BBC73F0004B925 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		290972BF28BBC73F0004B925 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +72,7 @@
 		2911E0CA2B2ACDE80033CC2E /* scannerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scannerVC.swift; sourceTree = "<group>"; };
 		2911E0CC2B2ECEF10033CC2E /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		2911E0CE2B2ECFD70033CC2E /* deviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deviceManager.swift; sourceTree = "<group>"; };
+		2911E0D42B2EF9CD0033CC2E /* InventoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewModel.swift; sourceTree = "<group>"; };
 		2913356D2A228F2800A1646A /* UsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersVC.swift; sourceTree = "<group>"; };
 		295142252A21B2F5008DC91D /* AddNewAssetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAssetVC.swift; sourceTree = "<group>"; };
 		295142272A21B3F4008DC91D /* deviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deviceTableViewCell.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 		2911E0D02B2EF5990033CC2E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2911E0D42B2EF9CD0033CC2E /* InventoryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -210,7 +213,7 @@
 			children = (
 				2305663E2983B5500065403D /* Validation.swift */,
 				23E0F5022975A45B008E2CA2 /* LoadingView.swift */,
-				23E0F5042975A4DF008E2CA2 /* constant.swift */,
+				23E0F5042975A4DF008E2CA2 /* Constants.swift */,
 				23AA085D28C529CB00B1BD99 /* Alert.swift */,
 			);
 			path = "Supporting Files";
@@ -318,13 +321,14 @@
 				23AA085228C5293200B1BD99 /* LogInVC.swift in Sources */,
 				296617312A17E37D0042D2F9 /* DataModel.xcdatamodeld in Sources */,
 				298F6EC62A217DD3006965C4 /* inHouseInventoryTableViewCell.swift in Sources */,
-				23E0F5052975A4DF008E2CA2 /* constant.swift in Sources */,
+				23E0F5052975A4DF008E2CA2 /* Constants.swift in Sources */,
 				295142292A21B3F4008DC91D /* deviceTableViewCell.swift in Sources */,
 				23AA085828C5297200B1BD99 /* AccountVC.swift in Sources */,
 				290972C028BBC73F0004B925 /* SceneDelegate.swift in Sources */,
 				23AA085E28C529CB00B1BD99 /* Alert.swift in Sources */,
 				2951422C2A21C822008DC91D /* reviewAssetDataVC.swift in Sources */,
 				298F6EC32A217DA0006965C4 /* InHouseInventoryVC.swift in Sources */,
+				2911E0D52B2EF9CD0033CC2E /* InventoryViewModel.swift in Sources */,
 				296617332A17FECF0042D2F9 /* AddNewDeviceVC.swift in Sources */,
 				2398E4292A05FD89001DBAD7 /* InventoryVC.swift in Sources */,
 				23AA085628C5295900B1BD99 /* RegisterVC.swift in Sources */,
