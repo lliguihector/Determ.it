@@ -27,6 +27,7 @@
 		2911E0CD2B2ECEF10033CC2E /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911E0CC2B2ECEF10033CC2E /* Device.swift */; };
 		2911E0CF2B2ECFD70033CC2E /* DeviceManagerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911E0CE2B2ECFD70033CC2E /* DeviceManagerAPI.swift */; };
 		2911E0D52B2EF9CD0033CC2E /* InventoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911E0D42B2EF9CD0033CC2E /* InventoryViewModel.swift */; };
+		2911E0D72B3271B40033CC2E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911E0D62B3271B40033CC2E /* CoreDataManager.swift */; };
 		2913356E2A228F2800A1646A /* UsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2913356D2A228F2800A1646A /* UsersVC.swift */; };
 		295142262A21B2F5008DC91D /* AddNewAssetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295142252A21B2F5008DC91D /* AddNewAssetVC.swift */; };
 		295142292A21B3F4008DC91D /* deviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295142272A21B3F4008DC91D /* deviceTableViewCell.swift */; };
@@ -73,6 +74,7 @@
 		2911E0CC2B2ECEF10033CC2E /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		2911E0CE2B2ECFD70033CC2E /* DeviceManagerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManagerAPI.swift; sourceTree = "<group>"; };
 		2911E0D42B2EF9CD0033CC2E /* InventoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewModel.swift; sourceTree = "<group>"; };
+		2911E0D62B3271B40033CC2E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		2913356D2A228F2800A1646A /* UsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersVC.swift; sourceTree = "<group>"; };
 		295142252A21B2F5008DC91D /* AddNewAssetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAssetVC.swift; sourceTree = "<group>"; };
 		295142272A21B3F4008DC91D /* deviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deviceTableViewCell.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				2911E0CE2B2ECFD70033CC2E /* DeviceManagerAPI.swift */,
+				2911E0D62B3271B40033CC2E /* CoreDataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				295142262A21B2F5008DC91D /* AddNewAssetVC.swift in Sources */,
 				296867DE28BD6FDD00ECA8FB /* HelpWebVC.swift in Sources */,
 				2911E0CF2B2ECFD70033CC2E /* DeviceManagerAPI.swift in Sources */,
+				2911E0D72B3271B40033CC2E /* CoreDataManager.swift in Sources */,
 				2966172A2A17B1FD0042D2F9 /* InventoryTableViewCell.swift in Sources */,
 				23AA085228C5293200B1BD99 /* LogInVC.swift in Sources */,
 				296617312A17E37D0042D2F9 /* DataModel.xcdatamodeld in Sources */,

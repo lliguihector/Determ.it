@@ -21,7 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Customize the appearance of the back button
                 UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -200, vertical: 0), for: .default)
                 
-     
+        if let storeURL = persistentContainer.persistentStoreCoordinator.persistentStores.first?.url {
+            print("Core Data store URL: \(storeURL)")
+        } else {
+            print("Unable to retrieve Core Data store URL.")
+        }
         FirebaseApp.configure()
         Thread.sleep(forTimeInterval: 0.5)
         return true
