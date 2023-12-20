@@ -16,17 +16,16 @@ class InventoryVC: UITableViewController,Loadable{
 
     //MARK: - Properties
     let searchController = UISearchController(searchResultsController: nil)
+    
+    
+    //Instantiate ViewModelS
+    var ViewModel = InventoryViewModel()
+    
+    
     var devices: [Device] = []
     
-    //Array to load from API
-    var apiDevicesData:[device] = []
     
-    
-    //deviceManager
-    var devicesManager = deviceManager()
-    
-    //url
-    static let  deviceUrl = URL(string: "http://localhost:3000/devices")
+
     
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -43,6 +42,14 @@ class InventoryVC: UITableViewController,Loadable{
         configureUI()
         loadDevices()
         
+        
+        
+        
+        
+        
+        
+        
+        
     
         //        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
     }
@@ -58,12 +65,40 @@ class InventoryVC: UITableViewController,Loadable{
     }
     
     
+    
+    //MARK: - View Model Methods and binding
     @IBAction func loadData(_ sender: Any) {
-        fetchData()
         
+        
+        //
+        bindViewModel()
+        //Load Devices from viewModel
+        ViewModel.fetchData()
         
     }
     
+    
+    
+    func bindViewModel(){
+        
+        ViewModel.onError = { [weak self] errorMessage in
+            
+            Alert.showBasicAlert(on: self!, with: "Error", message: errorMessage)
+        }
+        
+        
+        ViewModel.onDataUpdated = { [weak self] in
+//            self?.tableView.reloadData()
+            
+            
+            Alert.showBasicAlert(on: self!, with: "Success ", message: "\(self!.ViewModel.devices)")
+            
+            
+        }
+        
+        
+        
+    }
     
    //MARK: - UI Configuration
     
@@ -292,65 +327,3 @@ extension InventoryVC {
     
     
 }
-//MARK: - API CALL Method
-extension InventoryVC{
-    
-    
-    func fetchData(){
-        showLoadingView()
-        
-        devicesManager.getDevices(url: InventoryVC.deviceUrl, expecting: [device].self)
-        {[weak self] result in
-            
-            switch result{
-            case.success(let devices):
-                
-                
-                DispatchQueue.main.async {
-                    self?.apiDevicesData = devices
-                    
-                    print(self!.apiDevicesData)
-//                    self?.tableView.reloadData()
-                }
-                DispatchQueue.main.async {
-                    self?.hideLoadingView()
-                }
-                
-            case.failure(let error):
-                switch error{
-                    
-                    
-                case .invalidURL:
-                    print("url error")
-                    
-                case.requestFailed:
-                    
-                    DispatchQueue.main.async {
-                        Alert.showBasicAlert(on: self!, with:"", message: "Couldn't connect to the server.")
-                        self?.hideLoadingView()
-                    }
-                    
-                    DispatchQueue.main.async {
-                        self?.hideLoadingView()
-                    }
-                    
-                    print("Network Error")
-                case.responseFailed:
-                    print("Error 400")
-                case.jsonDecodingFailed:
-                    print("Decoding problem")
-                case .invalidImageURL:
-                    print("URL Image Error!")
-                }
-            }
-            
-        }
-        
-        
-    }
-    
-
-    
-}
-
-

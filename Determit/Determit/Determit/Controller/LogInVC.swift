@@ -61,6 +61,9 @@ class LogInVC: UIViewController,Loadable {
                     self.defaults.set(self.emailTextField.text, forKey: "UserEmail")
                     self.performSegue(withIdentifier: "loginToHome", sender: self)
                     self.hideLoadingView()
+                    
+                    //fetchApiData()
+                    
                 }
             }
         }else{
@@ -73,4 +76,15 @@ class LogInVC: UIViewController,Loadable {
         self.view.endEditing(true)
     }
    
+}
+//MARK: - Helper Methods
+
+extension LogInVC{
+    
+    
+    
+    
+    
+    
+    
 }

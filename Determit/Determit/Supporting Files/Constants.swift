@@ -10,4 +10,10 @@ struct constant{
     
     
     static let loadingViewTag = 1234
+    
+    
+    
+    
+    //MARK: - API URL End Point CallS
+    static let  GET_All_dEVICES = URL(string: "http://localhost:3000/devices")
 }

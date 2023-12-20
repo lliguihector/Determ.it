@@ -17,10 +17,7 @@ enum APIErrors: Error{
     
 }
 
-
-
-
-struct deviceManager{
+struct DeviceManagerAPI{
     
     
 //Get all news Feed
