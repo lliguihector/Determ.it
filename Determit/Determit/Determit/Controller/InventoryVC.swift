@@ -31,16 +31,10 @@ class InventoryVC: UITableViewController,Loadable, UISearchBarDelegate{
         
         //Load Data from API and load it to CoreData
         bindViewModel()
-        
-        
-        
-        
+        self.ViewModel.fetchData()
     
-            self.ViewModel.fetchData()
-    
-        //load data to table View from Core Data
-        ViewModel.loadDevices()
-        
+        //load current CoreData array
+        self.ViewModel.readAllDevicesFromCoreData()
         
         
         
@@ -84,22 +78,14 @@ class InventoryVC: UITableViewController,Loadable, UISearchBarDelegate{
             
             self?.showLoadingView()
             Alert.showBasicAlert(on: self!, with: "Success ", message: "Data loaded successfully")
-            
-         
         
             
-            
             //Read Core data and repopulate table view
-            self?.ViewModel.loadDevices()
+            self?.ViewModel.readAllDevicesFromCoreData()
             
            
              
                 self?.tableView.reloadData()
-                
-         
-            
-
-            
             
             self?.hideLoadingView()
             
@@ -229,13 +215,17 @@ extension InventoryVC: UISearchResultsUpdating{
             //Load Items from Core data If the Text In the search Bar is empty
             print("Empty Search Field Reloading Data...")
             
-            ViewModel.loadDevices()
+            ViewModel.readAllDevicesFromCoreData()
               tableView.reloadData()
         }else{
             
            // reload table view data with queried search Text
             print("Searching for: \(searchText)")
-            ViewModel.searchByTitle(searchText)
+            
+            
+            
+            
+//            ViewModel.searchByTitle(searchText)
 
             
             tableView.reloadData()
@@ -255,7 +245,7 @@ extension InventoryVC: UISearchResultsUpdating{
 extension InventoryVC: addNewDeviceVCDelegate {
     
     func reloadData() {
-        ViewModel.loadDevices()
+        ViewModel.readAllDevicesFromCoreData()
     }
     
     

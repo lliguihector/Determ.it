@@ -33,7 +33,7 @@ class CoreDataManager {
     
     
     //CREATE
-    func CreateDevice(_ device: device){
+    func CreateDevice( _ device: device){
         
         let newDevice = Device(context: self.viewContext)
         
@@ -48,6 +48,8 @@ class CoreDataManager {
         newDevice.imageURL = device.imageURL
         newDevice.category = device.category
         newDevice.os = device.operatingSystem
+        
+        saveContext()
     }
     
     //READ_BY_ID
