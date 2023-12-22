@@ -14,7 +14,7 @@ class InventoryVC: UITableViewController,Loadable, UISearchBarDelegate{
 
     //MARK: - Properties
     let searchController = UISearchController(searchResultsController: nil)
-    
+
     
     //Instantiate ViewModelS
     var ViewModel = InventoryViewModel()
@@ -31,12 +31,17 @@ class InventoryVC: UITableViewController,Loadable, UISearchBarDelegate{
         
         //Load Data from API and load it to CoreData
         bindViewModel()
-        ViewModel.fetchData()
+        
+        
+        
+        
+    
+            self.ViewModel.fetchData()
+    
         //load data to table View from Core Data
         ViewModel.loadDevices()
         
         
-        print("DATA COUNT: \(ViewModel.devicesCoreData.count)")
         
         
         //        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
@@ -77,14 +82,25 @@ class InventoryVC: UITableViewController,Loadable, UISearchBarDelegate{
         
         ViewModel.onDataUpdated = { [weak self] in
             
-            
-            
             self?.showLoadingView()
             Alert.showBasicAlert(on: self!, with: "Success ", message: "Data loaded successfully")
             
+         
+        
+            
+            
             //Read Core data and repopulate table view
             self?.ViewModel.loadDevices()
-            self?.tableView.reloadData()
+            
+           
+             
+                self?.tableView.reloadData()
+                
+         
+            
+
+            
+            
             self?.hideLoadingView()
             
         }

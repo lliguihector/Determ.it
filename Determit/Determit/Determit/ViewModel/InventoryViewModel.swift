@@ -34,7 +34,7 @@ class InventoryViewModel{
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
    
-    
+
 
     
     
@@ -49,21 +49,23 @@ class InventoryViewModel{
             switch result{
                 
             case .success(let devices):
-                DispatchQueue.main.async{
+                
+                
+                
+//                DispatchQueue.main.async{
                     
                     //Store the API array Data in an array named devices
                     self?.devices = devices
-            
-                    
-                    
-                    //Delete All Data From Core Data
-                    self?.deleteAllDevices()
-                    //Write API Data to Core Data
-                    self?.saveDevicesToCoreData()
-                    
-                    
+                //Delete All Data From Core Data
+                self?.deleteAllDevices()
+                //Write API Data to Core Data
+                self?.saveDevicesToCoreData()
+                
+                
+                //The UI Update should happen in the main thread
+                
+                DispatchQueue.main.async{
                     self?.onDataUpdated?()
-                    
                 }
                 
             case.failure(let error):
@@ -243,6 +245,9 @@ private func handleError(_ error: APIErrors){
            case .invalidImageURL:
                errorMessage = "Invalid Image URL"
            }
+    
+    
+    
            DispatchQueue.main.async {
                self.onError?(errorMessage)
            }
