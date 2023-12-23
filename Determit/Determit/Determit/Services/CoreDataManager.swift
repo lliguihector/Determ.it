@@ -19,12 +19,13 @@ class CoreDataManager {
     private init() {}
     
     //Properties
-    var viewContext: NSManagedObjectContext{
-        
-        return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    }
+//    var viewContext: NSManagedObjectContext{
+//
+//        return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//    }
    
-
+    var viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
 
     
 
