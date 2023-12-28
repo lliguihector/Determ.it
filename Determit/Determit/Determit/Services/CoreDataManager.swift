@@ -30,11 +30,11 @@ class CoreDataManager {
     
 
     
-//MARK: - DEVICE
+//MARK: - DEVICE METHODS
     
     
     //CREATE
-    func CreateDevice( _ device: device){
+    func CreateDevice( _ device: APIDevice){
         
         let newDevice = Device(context: self.viewContext)
         
@@ -55,9 +55,8 @@ class CoreDataManager {
     
     //READ_BY_ID
     //READ_ALL
-    func readAllDevices() -> [Device] {
+    func readAllDevices(with request: NSFetchRequest<Device> = Device.fetchRequest()) -> [Device] {
         
-        let request:NSFetchRequest<Device> = Device.fetchRequest()
         
         do{
             let devices = try viewContext.fetch(request)
@@ -89,7 +88,7 @@ class CoreDataManager {
     }
     
     
-   //MATK: - DEVICE QUERY
+
     
     
     
@@ -113,10 +112,34 @@ class CoreDataManager {
     
     
     
+    //MARK: - DEVICE QUERY
     
     
-    
-    
+    //Search by m
+   
+    func customeSearch(_ searchBarString: String) -> [Device] {
+
+   
+           let request : NSFetchRequest<Device> = Device.fetchRequest()
+   
+           let predicate = NSPredicate(format: "modelName CONTAINS[cd] %@", searchBarString)
+   
+           request.predicate = predicate
+   
+           let sortDescriptor = NSSortDescriptor(key: "modelName", ascending: true)
+   
+   
+           request.sortDescriptors = [sortDescriptor]
+   
+        
+        
+        
+        return readAllDevices(with: request)
+        
+        
+   
+       }
+       
     
     
     

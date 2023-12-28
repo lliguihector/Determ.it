@@ -225,7 +225,7 @@ extension InventoryVC: UISearchResultsUpdating{
             
             
             
-//            ViewModel.searchByTitle(searchText)
+            ViewModel.queryDeviceData(searchText)
 
             
             tableView.reloadData()
@@ -245,7 +245,11 @@ extension InventoryVC: UISearchResultsUpdating{
 extension InventoryVC: addNewDeviceVCDelegate {
     
     func reloadData() {
-        ViewModel.readAllDevicesFromCoreData()
+        
+        
+        refreshData()
+        tableView.reloadData()
+        
     }
     
     

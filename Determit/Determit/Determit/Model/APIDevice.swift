@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct device: Codable{
+struct APIDevice: Codable{
     
     
 let _id: String

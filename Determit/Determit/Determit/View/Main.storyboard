@@ -675,6 +675,7 @@
                     <connections>
                         <outlet property="brandTextField" destination="1Hm-iV-nYH" id="7BF-bh-mds"/>
                         <outlet property="categoryTextField" destination="5Bn-Ws-ZsO" id="UY6-FF-QZm"/>
+                        <outlet property="deviceNameTextField" destination="qER-Qw-gqI" id="ixg-GH-bL3"/>
                         <outlet property="imageURLTextField" destination="mt9-vZ-K5c" id="d5j-mk-Xzy"/>
                         <outlet property="memoryCpacityTextField" destination="gun-IP-he3" id="908-wI-eyo"/>
                         <outlet property="modelNameTextField" destination="qER-Qw-gqI" id="cpe-vI-dvv"/>
@@ -1000,13 +1001,13 @@
                                                 <constraint firstAttribute="width" constant="60" id="m2m-Ph-FPj"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Hector Lliguichuzhca" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnU-Bx-CYk">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hector Lliguichuzhca" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnU-Bx-CYk">
                                             <rect key="frame" x="0.0" y="63.999999999999993" width="157.66666666666666" height="19.333333333333336"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Email " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyw-b2-Xn4">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyw-b2-Xn4">
                                             <rect key="frame" x="62.333333333333314" y="87.333333333333343" width="33" height="14.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                             <nil key="textColor"/>

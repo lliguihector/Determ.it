@@ -20,30 +20,39 @@ class InventoryViewModel{
     //API
     private let deviceManager = DeviceManagerAPI()
     //Create an empty array to hold the values loaded from api call
-    var devices:[device] = []
+    var devices:[APIDevice] = []
     //This closure willbe called when data is succesfull update.
     var onError: ((String) -> Void)?
+    var onSuccess:((String) ->Void)?
     //This error closure is used to handle and display errors
     var onDataUpdated: (() -> Void)?
-    
-    
-    
     //Create an empty array to hold Core Data Device entety
     var devicesCoreData: [Device] = []
-    
     let coreDataManager = CoreDataManager.shared
 
-   
-
-
+    //MARK: - API METHODS
+    //CREATE
+    func createData(_ newDevice: APIDevice){
+        deviceManager.createDevice(url: constant.POST_Device, deviceData: newDevice) { [weak self] result in
+            switch result{
+            case .success(let apiStringResponse):
+                print("\(apiStringResponse)")
+                
+    
+                self?.apiStringResponse(apiStringResponse)
+                
+                
+            case.failure(let error):
+                
+                self?.handleError(error)
+            }
+        }
+    }
     
     
-    //MARK: - Methods
-    
-    
-    //Function to GET data from API
+    //READ_ALL
     func fetchData(){
-        deviceManager.getDevices(url: constant.GET_All_dEVICES, expecting: [device].self)
+        deviceManager.getDevices(url: constant.GET_All_dEVICES, expecting: [APIDevice].self)
         {[weak self] result in
             
             switch result{
@@ -75,9 +84,10 @@ class InventoryViewModel{
     
     
     
- //MARK: -  CoreData Helper Methods
+ //MARK: -  CoreData METHODS
     
-    //API Decoded JSON Array Objects is stored in CoreData Device entety
+    
+    //CREATE
     private func  saveDevicesToCoreData(){
         for device in devices{
             let newDevice = device
@@ -85,15 +95,28 @@ class InventoryViewModel{
         }
     }
     
-    //load array of Device entety from core data to empty array
+    //READ_ALL
     public func readAllDevicesFromCoreData(){
         devicesCoreData = coreDataManager.readAllDevices()
     }
     
     
     
+    //Custome Search
     
-//Handel API call errors
+    public func queryDeviceData(_ searcBarString: String){
+        
+        
+        
+      devicesCoreData = coreDataManager.customeSearch(searcBarString)
+        
+        
+        
+        
+    }
+    
+    
+//MARK: - Helper Methods
 private func handleError(_ error: APIErrors){
     
     let errorMessage: String
@@ -117,7 +140,23 @@ private func handleError(_ error: APIErrors){
     
     }
     
-    
+    private func apiStringResponse(_ apiStringResponse: String){
+        
+        
+        let apiMessage = apiStringResponse
+        
+     
+        
+        
+        
+        //Update the UI on Main thread
+               DispatchQueue.main.async {
+                  
+                   self.onSuccess?(apiMessage)
+                   
+                   
+               }
+    }
 
     
 }

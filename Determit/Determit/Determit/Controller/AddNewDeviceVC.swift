@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import CoreData
+
 
 
 
@@ -17,10 +17,11 @@ protocol addNewDeviceVCDelegate: AnyObject{
 
 
 
-class AddNewDeviceVC: UIViewController {
-
+class AddNewDeviceVC: UIViewController,Loadable {
+    
     //OUTLITS
     @IBOutlet weak var brandTextField: UITextField!
+    @IBOutlet weak var deviceNameTextField: UITextField!
     @IBOutlet weak var modelTextField: UITextField!
     @IBOutlet weak var serialNumberTextField: UITextField!
     @IBOutlet weak var storageCapacityTextFiled: UITextField!
@@ -32,47 +33,62 @@ class AddNewDeviceVC: UIViewController {
     
     @IBOutlet weak var modelNameTextField: UITextField!
     
-    
+    var ViewModel = InventoryViewModel()
     
     
     
     weak var delegate: addNewDeviceVCDelegate?
     
     
-    
-    
-    
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        bindViewModel()
+        
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-          tapGesture.cancelsTouchesInView = false
-          view.addGestureRecognizer(tapGesture)
-
+        tapGesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapGesture)
+        
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    
+    @objc func handleTap() {
+        view.endEditing(true)
     }
-    */
-    
-    
-@objc func handleTap() {
-    view.endEditing(true)
-}
-//
+    //
     //Built in Method
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        self.view.endEditing(true)
-//    }
-
+    //    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    //        self.view.endEditing(true)
+    //    }
+    
+    
+    
+    
+    
+    func bindViewModel(){
+        
+        ViewModel.onError = { [weak self] errorMessage in
+            
+            Alert.showBasicAlert(on: self!, with: "Error", message: errorMessage)
+            
+        }
+        
+        ViewModel.onSuccess = { [weak self] apiMessage in
+            //THIRD
+            
+            DispatchQueue.main.async {
+                
+                Alert.showBasicAlert(on: self!, with: "Success", message: apiMessage)
+                
+            }
+                
+                
+      
+        }
+    }
     
     
     
@@ -83,97 +99,59 @@ class AddNewDeviceVC: UIViewController {
         
         
         let isEmpty =
-                            brandTextField.text?.isEmpty ?? true ||
-                            modelTextField.text?.isEmpty ?? true
+        brandTextField.text?.isEmpty ?? true ||
+        modelTextField.text?.isEmpty ?? true
         ||
         serialNumberTextField.text?.isEmpty ?? true ||
         storageCapacityTextFiled.text?.isEmpty ?? true ||
         memoryCpacityTextField.text?.isEmpty ?? true ||
         processorDescriptionTextField.text?.isEmpty ?? true ||
         imageURLTextField.text?.isEmpty ?? true ||
-       categoryTextField.text?.isEmpty ?? true ||
+        deviceNameTextField.text?.isEmpty ?? true ||
         osTextField.text?.isEmpty ?? true ||
-        categoryTextField.text?.isEmpty ?? true ||
-        modelNameTextField.text?.isEmpty ?? true
-
-              if isEmpty {
-                  
-                  Alert.showBasicAlert(on: self, with: "", message: "One or more fields are missing inputs, Please enter all fields")
-
-                  print("One or more text fields are empty. Cannot save.")
-                  
-              } else {
-                  saveDeviceDataToCoreData()
-                delegate?.reloadData() //Call the delegate method here
-                  
-                  
-                  let alertController = UIAlertController(title: "Success!", message: "new device data was successfuly added.", preferredStyle: .alert)
-
-                  let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
-   
-                      
-                      
-                      
-                      DispatchQueue.main.async {
-                          
-                          
-                          self.navigationController?.popViewController(animated: true)
-                         
-                      }
-                      
-                  }
-                  
-                  
-                  alertController.addAction(okAction)
-                  present(alertController, animated: true, completion: nil)
-                         
-                  
-                  
-              }
-          }
+        categoryTextField.text?.isEmpty ?? true
         
-        
-        
-        
-        
-        
-        
-    func saveDeviceDataToCoreData(){
-        
-        
+        if isEmpty {
+            
+            Alert.showBasicAlert(on: self, with: "", message: "One or more fields are missing inputs, Please enter all fields")
+            
+            print("One or more text fields are empty. Cannot save.")
+            
+        } else {
+            
+            
+            
+            //Store Data to databse
+            
+            let newDevice = APIDevice(_id: "", brand: brandTextField.text!, deviceName: deviceNameTextField.text!, model: modelTextField.text!, serialNumber: serialNumberTextField.text!, storage: storageCapacityTextFiled.text!, memory: memoryCpacityTextField.text!, processor: processorDescriptionTextField.text!, imageURL: imageURLTextField.text!, category: categoryTextField.text!, operatingSystem: osTextField.text!)
+            
+            
+    
+            
+            
+            //Call the API
+            ViewModel.createData(newDevice)
+            
+            
+            self.navigationController!.popViewController(animated: true)
        
-        let newDevice = Device(context: self.context)
-        newDevice.deviceID = "001"
-        newDevice.brand = brandTextField.text
-        newDevice.model = modelTextField.text
-        newDevice.modelName = modelNameTextField.text
-        newDevice.serialNumber = serialNumberTextField.text
-        newDevice.storageCapacity = storageCapacityTextFiled.text
-        newDevice.memoryRam = memoryCpacityTextField.text
-        newDevice.processor = processorDescriptionTextField.text
-        newDevice.imageURL = imageURLTextField.text
-        newDevice.category = categoryTextField.text
-        newDevice.os = osTextField.text
-        saveDevices()
-    }
-
-        
-        
+            self.delegate!.reloadData() //Call the delegate method here
+            }
+            
+         
+            
+            
+                
     
-    //Save Data
-    func saveDevices(){
-        
-        do{
-            try context.save()
-        }catch{
-            print("Error saving context \(error)")
+            
+            
+            
         }
-        
-        
     }
     
-        
-        
-    }
+    
+    
+    
+
     
     
