@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1366 768" style="enable-background:new 0 0 1366 768;" xml:space="preserve">
+<style type="text/css">
+	.st0{stroke:#000000;stroke-miterlimit:10;}
+	.st1{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st2{fill:none;}
+	.st3{font-family:'HelveticaNeue';}
+	.st4{font-size:200px;}
+</style>
+<g id="Icon">
+	<path id="right_antena_00000128448073416199515780000010371976462812041619_" class="st0" d="M1082.29,329.87
+		c1.04,1.02,6.27-7.52,19.05-11.03c7.66-2.1,13.41-1.13,17.54-6.02c0.57-0.68,3.03-3.58,2.51-7.02c-0.56-3.64-4.22-6.27-6.52-7.02
+		C1102.75,294.87,1080.19,327.83,1082.29,329.87z"/>
+	<path id="left_antena_00000146483197922616293520000008050167373365136010_" class="st0" d="M1066.25,328.87
+		c4.12-2.08-9.17-45.48-20.55-45.11c-1.61,0.05-3.54,0.99-4.51,2.51c-2.24,3.49,1.07,9.39,6.02,17.04
+		C1058.62,320.99,1064.33,329.84,1066.25,328.87z"/>
+	
+		<ellipse id="head_00000147926891225545351400000009858801733947865746_" class="st0" cx="1067.01" cy="372.06" rx="62.51" ry="45.03"/>
+	<path id="torso_00000183231203675401418990000002812612069609372073_" class="st0" d="M1037.88,420.31
+		c4.89-3.28,11.84,2.49,31.33,1.5c17.55-0.89,23.01-6.12,27.19-3.51c11.81,7.38-8.51,63.77-30.15,63.66
+		C1045.26,481.86,1025.54,428.58,1037.88,420.31z"/>
+	<path class="st0" d="M1067.85,432.79"/>
+	<circle id="left_hand_00000088813277391126171640000013620929971246153864_" class="st0" cx="1019.09" cy="449.77" r="11.18"/>
+	<path class="st0" d="M982.86,491.85"/>
+	
+		<ellipse id="left_eye_00000134943447997476659570000011831844766248245942_" class="st1" cx="1041.66" cy="369.85" rx="14.45" ry="16.16"/>
+	
+		<ellipse id="right_eye_00000065051462240184911890000002553512732344120749_" class="st1" cx="1099.37" cy="368.05" rx="14.45" ry="16.16"/>
+	<circle id="left_hand_00000152946209253902023210000015689992524732163764_" class="st0" cx="1113.82" cy="449.77" r="11.18"/>
+</g>
+<g id="Logo">
+	<rect x="215.09" y="333.71" class="st2" width="767.6" height="167.73"/>
+	<text transform="matrix(1 0 0 1 215.0943 476.5101)" class="st3 st4">Determit</text>
+	<rect x="510.85" y="620.18" class="st2" width="2.26" height="0"/>
+</g>
+<g id="Layer_3">
+</g>
+</svg>

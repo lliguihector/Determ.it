@@ -31,18 +31,20 @@ class AccountVC: UITableViewController{
         
         super.viewDidLoad()
 
-      
+      //Hide the back Button on navigation bar
         navigationItem.hidesBackButton = true
-        //Style sign out button
+        
+        
+        //STYLE sign out button
         signOutButton.layer.cornerRadius = 10
         signOutButton.layer.borderWidth = 1
-        signOutButton.layer.borderColor = CGColor(srgbRed:0/225, green: 0/225, blue: 0/225, alpha: 1)
+        signOutButton.layer.borderColor = CGColor(srgbRed:0/225, green: 122/225, blue: 255/225, alpha: 1)
         
         //Round of Profile Initials Label
-        profileInitialLabel.layer.cornerRadius = profileInitialLabel.frame.size.height / 2
-        profileInitialLabel.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0).cgColor
-        profileInitialLabel.layer.masksToBounds = true
-        profileInitialLabel.layer.borderWidth = 1
+//        profileInitialLabel.layer.cornerRadius = profileInitialLabel.frame.size.height / 2
+//        profileInitialLabel.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0).cgColor
+//        profileInitialLabel.layer.masksToBounds = true
+//        profileInitialLabel.layer.borderWidth = 1
         
         
         
@@ -65,7 +67,7 @@ override func tableView(_ tableView: UITableView, viewForHeaderInSection section
      view.frame = CGRect(x: 0, y: 0, width: 266, height: 30)
      view.backgroundColor = UIColor(red: 255/255.0, green: 255/255.0, blue: 255/255.0, alpha: 1.0)
      
-    let label = UILabel()
+     let label = UILabel()
  
      label.textColor = UIColor(red: 77/255.0, green: 77/255.0, blue: 77/255.0, alpha: 1.0)
      label.font = UIFont.boldSystemFont(ofSize: 16)
@@ -100,11 +102,16 @@ override func tableView(_ tableView: UITableView, viewForHeaderInSection section
     
 
 func signOutUser(){
-
+print("Signed out user")
     do{
         try Auth.auth().signOut()
         //Takes you to the initial view controller
         navigationController?.popToRootViewController(animated: true)
+        // Navigate back to the initial view controller
+//        if let initialViewController = self.navigationController?.viewControllers.first {
+//                self.navigationController?.popToViewController(initialViewController, animated: true)
+//            }
+//
     }catch let signOutError as NSError{
         print("Error signing out: %@", signOutError)
         

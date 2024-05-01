@@ -10,120 +10,200 @@ import CoreData
 import AVFoundation
 import UIKit
 
-class InventoryVC: UITableViewController{
-    
+class InventoryVC: UITableViewController,Loadable, UISearchBarDelegate{
+
+    //MARK: - Properties
     let searchController = UISearchController(searchResultsController: nil)
+
     
-    var devices: [Device] = []
+    //Instantiate ViewModelS
+    var ViewModel = InventoryViewModel()
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    @IBOutlet weak var filterButton: UIBarButtonItem!
     
     
+    //MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Search Bar Controller
-        navigationItem.searchController = searchController
-        searchController.searchResultsUpdater = self
-        searchController.delegate = self
-        navigationItem.hidesSearchBarWhenScrolling = false
-        //Register nib
-        tableView.register(UINib(nibName: "InventoryTableViewCell", bundle: nil), forCellReuseIdentifier: "InventoryCell")
+       
+        configureUI()
         
-//        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        //Load Data from API and load it to CoreData
+        bindViewModel()
+        self.ViewModel.fetchData()
+    
+        //load current CoreData array
+        self.ViewModel.readAllDevicesFromCoreData()
         
         
-        loadDevices()
+        
+        //        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+    }
+    
+    
+    //MARK: - ACTIONS
+    @IBAction func addNewItem(_ sender: Any) {
+
+            let addNewDeviceVC = storyboard?.instantiateViewController(withIdentifier: "AddNewDeviceVC") as! AddNewDeviceVC
+            addNewDeviceVC.delegate = self
+            navigationController?.pushViewController(addNewDeviceVC, animated: true)
+
     }
     
     
     
+    //MARK: - View Model Methods and binding
+    @IBAction func loadData(_ sender: Any) {
+        bindViewModel()
+        //Load Devices from viewModel
+        ViewModel.fetchData()
+        
+    }
     
+    func bindViewModel(){
+        
+        ViewModel.onError = { [weak self] errorMessage in
+            
+            
+            self?.showLoadingView()
+            
+            Alert.showBasicAlert(on: self!, with: "Error", message: errorMessage)
+            
+            self?.hideLoadingView()
+        }
+        
+        
+        ViewModel.onDataUpdated = { [weak self] in
+            
+            self?.showLoadingView()
+            Alert.showBasicAlert(on: self!, with: "Success ", message: "Data loaded successfully")
+        
+            
+            //Read Core data and repopulate table view
+            self?.ViewModel.readAllDevicesFromCoreData()
+            
+           
+             
+                self?.tableView.reloadData()
+            
+            self?.hideLoadingView()
+            
+        }
+        
+        
+        
+    }
+    
+   //MARK: - UI Configuration
+    
+    func configureUI(){
+        registerNib()
+        refreshControlSetUp()
+        configureSearchCotroller()
+    }
+
+    
+func registerNib(){
+    tableView.register(UINib(nibName: "InventoryTableViewCell", bundle: nil), forCellReuseIdentifier: "InventoryCell")
+    }
+    
+func refreshControlSetUp(){
+        //Add Refresh Controll to UIScrollView object
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(self, action:
+                                           #selector(refreshData),
+                                           for: .valueChanged)
+    }
+    
+    //MARK: - Data Refresh
+@objc func refreshData(){
+        // For example, you might reload your data from a server or fetch new data snipit: data = fetchDataFromServer()
+    
+    
+    DispatchQueue.main.async{ [self] in
+        ViewModel.fetchData()
+    }
+    
+    
+    print("SLIDE VIEW WAS SLIDEDED>>>>")
+    
+    DispatchQueue.main.async{
+        self.tableView.refreshControl?.endRefreshing()
+    }
+      
+    }
+    
+    
+
+    
+    //MARK - Search Controller
+    func configureSearchCotroller(){
+        
+        //Search Bar Controller
+        navigationItem.searchController = searchController
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        navigationItem.hidesSearchBarWhenScrolling = false
+    }
+    
+    
+    
+    //Activated when the scrollview isdraged
+    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        searchController.searchBar.resignFirstResponder()
+    }
     
     //MARK: - UITableViewDataSource
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return devices.count
+        return ViewModel.devicesCoreData.count
     }
-    
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InventoryCell", for: indexPath) as! InventoryTableViewCell
+    
+        let device = ViewModel.devicesCoreData[indexPath.row]
         
+        // Safely unwrap the optional value and provide a default value if it's nil
+        let modelName = device.modelName ?? "No value"
+        let model = device.model ?? "No value"
         
-        let device = devices[indexPath.row]
-        cell.itemName.text = device.model
+        cell.itemName.text =  "\(modelName) \(model)"
         cell.ManufactureBrandLabel.text = device.brand
-        cell.categoryLabel.text = device.imageURL
+        cell.categoryLabel.text = device.category
         cell.serialNumberLabel.text = device.serialNumber
      
-        return cell
+
         
+        
+        return cell
     }
-    
-    
-    
-    
     //MARK: - UITableViewDelegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        
-        self.performSegue(withIdentifier: "viewDeviceCompleteDetails", sender: self)
+        self.performSegue(withIdentifier: "deviceDetails", sender: self)
+        print([indexPath.row])
     }
     
+//Performe before segue is display
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
 
-        let destinationVC = segue.destination as! DeviceDetailsVC
-        if let indexPath = tableView.indexPathForSelectedRow{
+        if segue.identifier == "deviceDetails"{
             
-        destinationVC.selectedDevice = devices[indexPath.row]
-            
-            print(devices[indexPath.row])
+            let destinationVC = segue.destination as! DeviceDetailsVC
+            if let indexPath = tableView.indexPathForSelectedRow{
+
+            destinationVC.selectedDevice = ViewModel.devicesCoreData[indexPath.row]
             
         }
-        
+            print("DestinationVC type: \(type(of: destinationVC))")
+
+        }
+
     }
 }
 
-
-
-
-
-//MARK: - Helper Methods
-extension InventoryVC {
-    
-    func loadDummyData(){
-        
-        
-        
-        let newDevice = Device(context: self.context)
-    
-        newDevice.model = "Mac Book Pro 13-inch"
-        newDevice.serialNumber = "LR089988"
-        newDevice.brand = "Apple"
-        newDevice.processor = "intel Core i13-6100U 2.30GHz"
-        newDevice.deviceID = "From mongo DB"
-        newDevice.imageURL = "http://www.whatever.com"
-        newDevice.memoryRam = 8
-        newDevice.deviceID = "001"
-        
-        self.devices.append(newDevice)
-        self.saveDevices()
-        
-        
-        
-   
-    }
-
-}
-
-
-//MARK: - UISearchController Delegate
-extension InventoryVC: UISearchControllerDelegate{
-    
-    
-}
-
-//MARK: UISearch Redult Updating
+//MARK: - UISearchResultUpdating
 extension InventoryVC: UISearchResultsUpdating{
     
     func updateSearchResults(for searchController: UISearchController) {
@@ -136,58 +216,47 @@ extension InventoryVC: UISearchResultsUpdating{
         //If the searchText is empty
         if searchText.isEmpty{
             //Load Items from Core data If the Text In the search Bar is empty
-            print("Loading Inventory array and reload data in table view")
+            print("Empty Search Field Reloading Data...")
+            
+            ViewModel.readAllDevicesFromCoreData()
+              tableView.reloadData()
         }else{
-            //reload table view data with queried search Text
-            print(searchText)
+            
+           // reload table view data with queried search Text
+            print("Searching for: \(searchText)")
+            
+            
+            
+            
+            ViewModel.queryDeviceData(searchText)
+
+            
+            tableView.reloadData()
+            
+            
   
         }
-
+       
     }
 
 }
 
-//MARK: - QR BarCode Method
 
 
-//MARK: - Core Data Manipulation Methods
-extension InventoryVC {
+
+//MARK: - AddNewDeviceVCDelegate
+extension InventoryVC: addNewDeviceVCDelegate {
     
-   
-    //READ Data
-    func loadDevices(){
-        
-        let request: NSFetchRequest<Device> = Device.fetchRequest()
-        
-        do{
-            devices = try context.fetch(request)
-        }catch{
-            print("Error fetching data from context \(error)")
-        }
+    func reloadData() {
         
         
-        self.tableView.reloadData()
-        
+        refreshData()
+        tableView.reloadData()
         
     }
     
     
-    
-    
-    //Save Data
-    func saveDevices(){
-        
-        do{
-            try context.save()
-        }catch{
-            print("Error saving context \(error)")
-        }
-        
-        
-        
-        self.tableView.reloadData()
-    }
-    
-    
+
     
 }
+
