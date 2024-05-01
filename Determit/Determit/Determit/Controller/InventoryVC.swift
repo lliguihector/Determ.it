@@ -174,6 +174,9 @@ func refreshControlSetUp(){
         cell.categoryLabel.text = device.category
         cell.serialNumberLabel.text = device.serialNumber
      
+
+        
+        
         return cell
     }
     //MARK: - UITableViewDelegate

@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+
 class InventoryTableViewCell: UITableViewCell {
 //OUTLITS
 
@@ -14,6 +16,19 @@ class InventoryTableViewCell: UITableViewCell {
     @IBOutlet weak var ManufactureBrandLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var serialNumberLabel: UILabel!
+  
+
+    
+
+    
+    
+   
+    
+
+
+    
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -810,6 +810,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Select device to add"/>
+                                <connections>
+                                    <segue destination="4GT-Vt-xaV" kind="show" id="SVN-SX-AJ9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TXu-81-BKg"/>
@@ -1447,6 +1450,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="vE9-YM-5Zz"/>
+        <segue reference="SVN-SX-AJ9"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="DetermitLogoSVG" width="1366" height="768"/>
