@@ -132,12 +132,9 @@ class CoreDataManager {
            request.sortDescriptors = [sortDescriptor]
    
         
-        
-        
         return readAllDevices(with: request)
         
-        
-   
+
        }
        
     

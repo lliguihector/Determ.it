@@ -52,7 +52,7 @@ class InventoryViewModel{
     
     //READ_ALL
     func fetchData(){
-        deviceManager.getDevices(url: constant.GET_All_dEVICES, expecting: [APIDevice].self)
+        deviceManager.getDevices(url: constant.GET_All_Device, expecting: [APIDevice].self)
         {[weak self] result in
             
             switch result{

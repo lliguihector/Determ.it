@@ -15,8 +15,16 @@ struct constant{
     
     
     //MARK: - API URL End Point CallS
-    static let  GET_All_dEVICES = URL(string: "http://localhost:3000/devices")
+    
+    
+    //Devices
+    static let  GET_All_Device = URL(string: "http://localhost:3000/devices")
     static let  POST_Device = URL(string: "http://localhost:3000/devices")
+    
+    //Assets
+    static let GET_ALL_ASSETS = URL(string: "http://localhost:3000/devices")
+    static let POST_Asset = URL(string: "http://localhost:3000/devices")
+    
     
     
 }
