@@ -49,6 +49,7 @@
 		299D947E2A21538500C50149 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299D947C2A21538500C50149 /* MenuCollectionViewCell.xib */; };
 		29BAC4E82A228B36004369F1 /* usersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BAC4E62A228B36004369F1 /* usersTableViewCell.swift */; };
 		29BAC4E92A228B36004369F1 /* usersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29BAC4E72A228B36004369F1 /* usersTableViewCell.xib */; };
+		C66AF5802BE4517100CE56DF /* AssetsCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66AF57F2BE4517100CE56DF /* AssetsCoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,7 @@
 		299D947C2A21538500C50149 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
 		29BAC4E62A228B36004369F1 /* usersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usersTableViewCell.swift; sourceTree = "<group>"; };
 		29BAC4E72A228B36004369F1 /* usersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = usersTableViewCell.xib; sourceTree = "<group>"; };
+		C66AF57F2BE4517100CE56DF /* AssetsCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsCoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 			children = (
 				2911E0CE2B2ECFD70033CC2E /* DeviceManagerAPI.swift */,
 				2911E0D62B3271B40033CC2E /* CoreDataManager.swift */,
+				C66AF57F2BE4517100CE56DF /* AssetsCoreDataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				299D94772A1D38C300C50149 /* DeviceDetailsVC.swift in Sources */,
 				290972BE28BBC73F0004B925 /* AppDelegate.swift in Sources */,
 				23AA085428C5294600B1BD99 /* LocationVC.swift in Sources */,
+				C66AF5802BE4517100CE56DF /* AssetsCoreDataManager.swift in Sources */,
 				23E0F5032975A45B008E2CA2 /* LoadingView.swift in Sources */,
 				2911E0CB2B2ACDE80033CC2E /* scannerVC.swift in Sources */,
 				2305663F2983B5500065403D /* Validation.swift in Sources */,
