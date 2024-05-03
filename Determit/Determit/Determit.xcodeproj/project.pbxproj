@@ -49,6 +49,7 @@
 		299D947E2A21538500C50149 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299D947C2A21538500C50149 /* MenuCollectionViewCell.xib */; };
 		29BAC4E82A228B36004369F1 /* usersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BAC4E62A228B36004369F1 /* usersTableViewCell.swift */; };
 		29BAC4E92A228B36004369F1 /* usersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29BAC4E72A228B36004369F1 /* usersTableViewCell.xib */; };
+		52F40D462BE4A5E2002FA5AD /* APIAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F40D452BE4A5E2002FA5AD /* APIAssets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,7 @@
 		299D947C2A21538500C50149 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
 		29BAC4E62A228B36004369F1 /* usersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usersTableViewCell.swift; sourceTree = "<group>"; };
 		29BAC4E72A228B36004369F1 /* usersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = usersTableViewCell.xib; sourceTree = "<group>"; };
+		52F40D452BE4A5E2002FA5AD /* APIAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAssets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			children = (
 				2966172F2A17E37D0042D2F9 /* DataModel.xcdatamodeld */,
 				2911E0CC2B2ECEF10033CC2E /* APIDevice.swift */,
+				52F40D452BE4A5E2002FA5AD /* APIAssets.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				23AA085A28C5298200B1BD99 /* HomeVC.swift in Sources */,
 				29BAC4E82A228B36004369F1 /* usersTableViewCell.swift in Sources */,
 				2911E0CD2B2ECEF10033CC2E /* APIDevice.swift in Sources */,
+				52F40D462BE4A5E2002FA5AD /* APIAssets.swift in Sources */,
 				295142262A21B2F5008DC91D /* AddNewAssetVC.swift in Sources */,
 				296867DE28BD6FDD00ECA8FB /* HelpWebVC.swift in Sources */,
 				2911E0CF2B2ECFD70033CC2E /* DeviceManagerAPI.swift in Sources */,
