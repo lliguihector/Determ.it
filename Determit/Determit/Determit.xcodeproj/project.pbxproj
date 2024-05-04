@@ -49,6 +49,8 @@
 		299D947E2A21538500C50149 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299D947C2A21538500C50149 /* MenuCollectionViewCell.xib */; };
 		29BAC4E82A228B36004369F1 /* usersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BAC4E62A228B36004369F1 /* usersTableViewCell.swift */; };
 		29BAC4E92A228B36004369F1 /* usersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29BAC4E72A228B36004369F1 /* usersTableViewCell.xib */; };
+		C64BBDBF2BE5B68100D2DBAF /* AssetCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDBE2BE5B68100D2DBAF /* AssetCoreDataManager.swift */; };
+		C64BBDC12BE5B70300D2DBAF /* APIAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC02BE5B70300D2DBAF /* APIAsset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +97,8 @@
 		299D947C2A21538500C50149 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
 		29BAC4E62A228B36004369F1 /* usersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usersTableViewCell.swift; sourceTree = "<group>"; };
 		29BAC4E72A228B36004369F1 /* usersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = usersTableViewCell.xib; sourceTree = "<group>"; };
+		C64BBDBE2BE5B68100D2DBAF /* AssetCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCoreDataManager.swift; sourceTree = "<group>"; };
+		C64BBDC02BE5B70300D2DBAF /* APIAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAsset.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,7 @@
 			children = (
 				2966172F2A17E37D0042D2F9 /* DataModel.xcdatamodeld */,
 				2911E0CC2B2ECEF10033CC2E /* APIDevice.swift */,
+				C64BBDC02BE5B70300D2DBAF /* APIAsset.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 			children = (
 				2911E0CE2B2ECFD70033CC2E /* DeviceManagerAPI.swift */,
 				2911E0D62B3271B40033CC2E /* CoreDataManager.swift */,
+				C64BBDBE2BE5B68100D2DBAF /* AssetCoreDataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -307,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				299D947A2A21527700C50149 /* HomeMenuVC.swift in Sources */,
+				C64BBDC12BE5B70300D2DBAF /* APIAsset.swift in Sources */,
 				290972C228BBC73F0004B925 /* ViewController.swift in Sources */,
 				299D94772A1D38C300C50149 /* DeviceDetailsVC.swift in Sources */,
 				290972BE28BBC73F0004B925 /* AppDelegate.swift in Sources */,
@@ -316,6 +323,7 @@
 				2305663F2983B5500065403D /* Validation.swift in Sources */,
 				23AA085A28C5298200B1BD99 /* HomeVC.swift in Sources */,
 				29BAC4E82A228B36004369F1 /* usersTableViewCell.swift in Sources */,
+				C64BBDBF2BE5B68100D2DBAF /* AssetCoreDataManager.swift in Sources */,
 				2911E0CD2B2ECEF10033CC2E /* APIDevice.swift in Sources */,
 				295142262A21B2F5008DC91D /* AddNewAssetVC.swift in Sources */,
 				296867DE28BD6FDD00ECA8FB /* HelpWebVC.swift in Sources */,
