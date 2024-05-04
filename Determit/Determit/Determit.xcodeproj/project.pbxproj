@@ -49,6 +49,7 @@
 		299D947E2A21538500C50149 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299D947C2A21538500C50149 /* MenuCollectionViewCell.xib */; };
 		29BAC4E82A228B36004369F1 /* usersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BAC4E62A228B36004369F1 /* usersTableViewCell.swift */; };
 		29BAC4E92A228B36004369F1 /* usersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29BAC4E72A228B36004369F1 /* usersTableViewCell.xib */; };
+		52F40D4E2BE61C95002FA5AD /* AssetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F40D4D2BE61C94002FA5AD /* AssetViewModel.swift */; };
 		C64BBDBF2BE5B68100D2DBAF /* AssetCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDBE2BE5B68100D2DBAF /* AssetCoreDataManager.swift */; };
 		C64BBDC12BE5B70300D2DBAF /* APIAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC02BE5B70300D2DBAF /* APIAsset.swift */; };
 		C64BBDC32BE5FD3A00D2DBAF /* MyEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC22BE5FD3900D2DBAF /* MyEnums.swift */; };
@@ -99,6 +100,7 @@
 		299D947C2A21538500C50149 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
 		29BAC4E62A228B36004369F1 /* usersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usersTableViewCell.swift; sourceTree = "<group>"; };
 		29BAC4E72A228B36004369F1 /* usersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = usersTableViewCell.xib; sourceTree = "<group>"; };
+		52F40D4D2BE61C94002FA5AD /* AssetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetViewModel.swift; sourceTree = "<group>"; };
 		C64BBDBE2BE5B68100D2DBAF /* AssetCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCoreDataManager.swift; sourceTree = "<group>"; };
 		C64BBDC02BE5B70300D2DBAF /* APIAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAsset.swift; sourceTree = "<group>"; };
 		C64BBDC22BE5FD3900D2DBAF /* MyEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEnums.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				2911E0D42B2EF9CD0033CC2E /* InventoryViewModel.swift */,
+				52F40D4D2BE61C94002FA5AD /* AssetViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 			files = (
 				299D947A2A21527700C50149 /* HomeMenuVC.swift in Sources */,
 				C64BBDC12BE5B70300D2DBAF /* APIAsset.swift in Sources */,
+				52F40D4E2BE61C95002FA5AD /* AssetViewModel.swift in Sources */,
 				290972C228BBC73F0004B925 /* ViewController.swift in Sources */,
 				299D94772A1D38C300C50149 /* DeviceDetailsVC.swift in Sources */,
 				290972BE28BBC73F0004B925 /* AppDelegate.swift in Sources */,
