@@ -51,6 +51,8 @@
 		29BAC4E92A228B36004369F1 /* usersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29BAC4E72A228B36004369F1 /* usersTableViewCell.xib */; };
 		C64BBDBF2BE5B68100D2DBAF /* AssetCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDBE2BE5B68100D2DBAF /* AssetCoreDataManager.swift */; };
 		C64BBDC12BE5B70300D2DBAF /* APIAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC02BE5B70300D2DBAF /* APIAsset.swift */; };
+		C64BBDC32BE5FD3A00D2DBAF /* MyEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC22BE5FD3900D2DBAF /* MyEnums.swift */; };
+		C64BBDC52BE5FD8000D2DBAF /* AssetManagerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC42BE5FD8000D2DBAF /* AssetManagerAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +101,8 @@
 		29BAC4E72A228B36004369F1 /* usersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = usersTableViewCell.xib; sourceTree = "<group>"; };
 		C64BBDBE2BE5B68100D2DBAF /* AssetCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCoreDataManager.swift; sourceTree = "<group>"; };
 		C64BBDC02BE5B70300D2DBAF /* APIAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAsset.swift; sourceTree = "<group>"; };
+		C64BBDC22BE5FD3900D2DBAF /* MyEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEnums.swift; sourceTree = "<group>"; };
+		C64BBDC42BE5FD8000D2DBAF /* AssetManagerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetManagerAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +217,7 @@
 				2911E0CE2B2ECFD70033CC2E /* DeviceManagerAPI.swift */,
 				2911E0D62B3271B40033CC2E /* CoreDataManager.swift */,
 				C64BBDBE2BE5B68100D2DBAF /* AssetCoreDataManager.swift */,
+				C64BBDC42BE5FD8000D2DBAF /* AssetManagerAPI.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 				23E0F5022975A45B008E2CA2 /* LoadingView.swift */,
 				23E0F5042975A4DF008E2CA2 /* Constants.swift */,
 				23AA085D28C529CB00B1BD99 /* Alert.swift */,
+				C64BBDC22BE5FD3900D2DBAF /* MyEnums.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -334,8 +340,10 @@
 				296617312A17E37D0042D2F9 /* DataModel.xcdatamodeld in Sources */,
 				298F6EC62A217DD3006965C4 /* inHouseInventoryTableViewCell.swift in Sources */,
 				23E0F5052975A4DF008E2CA2 /* Constants.swift in Sources */,
+				C64BBDC32BE5FD3A00D2DBAF /* MyEnums.swift in Sources */,
 				295142292A21B3F4008DC91D /* deviceTableViewCell.swift in Sources */,
 				23AA085828C5297200B1BD99 /* AccountVC.swift in Sources */,
+				C64BBDC52BE5FD8000D2DBAF /* AssetManagerAPI.swift in Sources */,
 				290972C028BBC73F0004B925 /* SceneDelegate.swift in Sources */,
 				23AA085E28C529CB00B1BD99 /* Alert.swift in Sources */,
 				2951422C2A21C822008DC91D /* reviewAssetDataVC.swift in Sources */,

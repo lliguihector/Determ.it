@@ -8,9 +8,7 @@
 import Foundation
 
 struct APIAsset: Codable{
-    
-    
-    
+
     let assetTag: String
     let devicdeID: String
     let serialNumber: String
