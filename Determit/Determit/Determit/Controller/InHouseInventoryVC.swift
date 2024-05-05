@@ -15,12 +15,9 @@ import UIKit
 class InHouseInventoryVC: UITableViewController {
  
 
+
     
-   
-    
-    
-    
-    var testing = ["iPad Pro","MacBook Air","Mac Book Pro"]
+    var testing = ["ABC-001","ABC-002","XYZ-003","ABC-0011","ABC-0012"]
     
     
     override func viewDidLoad() {
@@ -41,7 +38,7 @@ class InHouseInventoryVC: UITableViewController {
     //MARK: - Helper Methods
     
     
-  
+
     
     // MARK: - Table view data source
 

@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct APIAsset: Codable{
+struct APIAsset: Hashable, Codable{
 
     let assetTag: String
-    let devicdeID: String
+    let deviceID: String
     let serialNumber: String
     
 }

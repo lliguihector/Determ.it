@@ -39,7 +39,7 @@ class AssetCoreDataManager {
         let newAsset = Asset(context: self.viewContext)
         
         newAsset.assetTag = asset.assetTag
-        newAsset.deviceID = asset.devicdeID
+        newAsset.deviceID = asset.deviceID
         newAsset.serialNumber = asset.serialNumber
        
         

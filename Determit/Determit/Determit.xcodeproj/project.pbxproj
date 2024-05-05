@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2305663F2983B5500065403D /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2305663E2983B5500065403D /* Validation.swift */; };
-		2398E4292A05FD89001DBAD7 /* InventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2398E4282A05FD89001DBAD7 /* InventoryVC.swift */; };
+		2398E4292A05FD89001DBAD7 /* InventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2398E4282A05FD89001DBAD7 /* InventoryView.swift */; };
 		23A8DF3728C6934F00F59941 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A8DF3628C6934F00F59941 /* Launch Screen.storyboard */; };
 		23AA085228C5293200B1BD99 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA085128C5293100B1BD99 /* LogInVC.swift */; };
 		23AA085428C5294600B1BD99 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA085328C5294600B1BD99 /* LocationVC.swift */; };
@@ -53,11 +53,14 @@
 		C64BBDC12BE5B70300D2DBAF /* APIAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC02BE5B70300D2DBAF /* APIAsset.swift */; };
 		C64BBDC32BE5FD3A00D2DBAF /* MyEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC22BE5FD3900D2DBAF /* MyEnums.swift */; };
 		C64BBDC52BE5FD8000D2DBAF /* AssetManagerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC42BE5FD8000D2DBAF /* AssetManagerAPI.swift */; };
+		C64BBDC72BE68AE100D2DBAF /* AssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC62BE68AE100D2DBAF /* AssetView.swift */; };
+		C64BBDC92BE6F4AD00D2DBAF /* AssetData.json in Resources */ = {isa = PBXBuildFile; fileRef = C64BBDC82BE6F4AD00D2DBAF /* AssetData.json */; };
+		C64BBDCC2BE6F55200D2DBAF /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDCB2BE6F55200D2DBAF /* ModelData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2305663E2983B5500065403D /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
-		2398E4282A05FD89001DBAD7 /* InventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryVC.swift; sourceTree = "<group>"; };
+		2398E4282A05FD89001DBAD7 /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryView.swift; sourceTree = "<group>"; };
 		23A8DF3628C6934F00F59941 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		23AA085128C5293100B1BD99 /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		23AA085328C5294600B1BD99 /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
@@ -103,6 +106,9 @@
 		C64BBDC02BE5B70300D2DBAF /* APIAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAsset.swift; sourceTree = "<group>"; };
 		C64BBDC22BE5FD3900D2DBAF /* MyEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEnums.swift; sourceTree = "<group>"; };
 		C64BBDC42BE5FD8000D2DBAF /* AssetManagerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetManagerAPI.swift; sourceTree = "<group>"; };
+		C64BBDC62BE68AE100D2DBAF /* AssetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetView.swift; sourceTree = "<group>"; };
+		C64BBDC82BE6F4AD00D2DBAF /* AssetData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssetData.json; sourceTree = "<group>"; };
+		C64BBDCB2BE6F55200D2DBAF /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,17 +161,8 @@
 		290972D128BBC7470004B925 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				23AA085B28C529A300B1BD99 /* Main.storyboard */,
-				296617282A17B1FD0042D2F9 /* InventoryTableViewCell.swift */,
-				296617292A17B1FD0042D2F9 /* InventoryTableViewCell.xib */,
-				299D947B2A21538500C50149 /* MenuCollectionViewCell.swift */,
-				299D947C2A21538500C50149 /* MenuCollectionViewCell.xib */,
-				298F6EC42A217DD3006965C4 /* inHouseInventoryTableViewCell.swift */,
-				298F6EC52A217DD3006965C4 /* inHouseInventoryTableViewCell.xib */,
-				295142272A21B3F4008DC91D /* deviceTableViewCell.swift */,
-				295142282A21B3F4008DC91D /* deviceTableViewCell.xib */,
-				29BAC4E62A228B36004369F1 /* usersTableViewCell.swift */,
-				29BAC4E72A228B36004369F1 /* usersTableViewCell.xib */,
+				C64BBDCE2BE75A1000D2DBAF /* SwiftUI */,
+				C64BBDCD2BE7592E00D2DBAF /* UIKIt */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -174,8 +171,10 @@
 			isa = PBXGroup;
 			children = (
 				2966172F2A17E37D0042D2F9 /* DataModel.xcdatamodeld */,
+				C64BBDC82BE6F4AD00D2DBAF /* AssetData.json */,
 				2911E0CC2B2ECEF10033CC2E /* APIDevice.swift */,
 				C64BBDC02BE5B70300D2DBAF /* APIAsset.swift */,
+				C64BBDCB2BE6F55200D2DBAF /* ModelData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,16 +183,10 @@
 			isa = PBXGroup;
 			children = (
 				290972C128BBC73F0004B925 /* ViewController.swift */,
-				23AA085128C5293100B1BD99 /* LogInVC.swift */,
-				23AA085328C5294600B1BD99 /* LocationVC.swift */,
-				23AA085528C5295900B1BD99 /* RegisterVC.swift */,
 				23AA085728C5297200B1BD99 /* AccountVC.swift */,
 				296867DD28BD6FDD00ECA8FB /* HelpWebVC.swift */,
 				23AA085928C5298200B1BD99 /* HomeVC.swift */,
-				2398E4282A05FD89001DBAD7 /* InventoryVC.swift */,
-				296617322A17FECF0042D2F9 /* AddNewDeviceVC.swift */,
 				295142252A21B2F5008DC91D /* AddNewAssetVC.swift */,
-				299D94762A1D38C300C50149 /* DeviceDetailsVC.swift */,
 				299D94792A21527700C50149 /* HomeMenuVC.swift */,
 				298F6EC22A217DA0006965C4 /* InHouseInventoryVC.swift */,
 				2951422B2A21C822008DC91D /* reviewAssetDataVC.swift */,
@@ -232,6 +225,78 @@
 				C64BBDC22BE5FD3900D2DBAF /* MyEnums.swift */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C64BBDCA2BE6F4F500D2DBAF /* AssetView */ = {
+			isa = PBXGroup;
+			children = (
+				C64BBDC62BE68AE100D2DBAF /* AssetView.swift */,
+			);
+			path = AssetView;
+			sourceTree = "<group>";
+		};
+		C64BBDCD2BE7592E00D2DBAF /* UIKIt */ = {
+			isa = PBXGroup;
+			children = (
+				23AA085B28C529A300B1BD99 /* Main.storyboard */,
+				C64BBDD02BE75D8F00D2DBAF /* Login */,
+				C64BBDD12BE75DA400D2DBAF /* Register */,
+				C64BBDD22BE75DE200D2DBAF /* Map */,
+				C64BBDCF2BE75D6900D2DBAF /* Devices */,
+				299D947B2A21538500C50149 /* MenuCollectionViewCell.swift */,
+				299D947C2A21538500C50149 /* MenuCollectionViewCell.xib */,
+				298F6EC42A217DD3006965C4 /* inHouseInventoryTableViewCell.swift */,
+				298F6EC52A217DD3006965C4 /* inHouseInventoryTableViewCell.xib */,
+				295142272A21B3F4008DC91D /* deviceTableViewCell.swift */,
+				295142282A21B3F4008DC91D /* deviceTableViewCell.xib */,
+				29BAC4E72A228B36004369F1 /* usersTableViewCell.xib */,
+				29BAC4E62A228B36004369F1 /* usersTableViewCell.swift */,
+			);
+			path = UIKIt;
+			sourceTree = "<group>";
+		};
+		C64BBDCE2BE75A1000D2DBAF /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				C64BBDCA2BE6F4F500D2DBAF /* AssetView */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		C64BBDCF2BE75D6900D2DBAF /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				2398E4282A05FD89001DBAD7 /* InventoryView.swift */,
+				299D94762A1D38C300C50149 /* DeviceDetailsVC.swift */,
+				296617322A17FECF0042D2F9 /* AddNewDeviceVC.swift */,
+				296617282A17B1FD0042D2F9 /* InventoryTableViewCell.swift */,
+				296617292A17B1FD0042D2F9 /* InventoryTableViewCell.xib */,
+			);
+			path = Devices;
+			sourceTree = "<group>";
+		};
+		C64BBDD02BE75D8F00D2DBAF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				23AA085128C5293100B1BD99 /* LogInVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C64BBDD12BE75DA400D2DBAF /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				23AA085528C5295900B1BD99 /* RegisterVC.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		C64BBDD22BE75DE200D2DBAF /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				23AA085328C5294600B1BD99 /* LocationVC.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C64BBDC92BE6F4AD00D2DBAF /* AssetData.json in Resources */,
 				2966172B2A17B1FD0042D2F9 /* InventoryTableViewCell.xib in Resources */,
 				299D947E2A21538500C50149 /* MenuCollectionViewCell.xib in Resources */,
 				2982BB5B28BBE5C0003CF948 /* GoogleService-Info.plist in Resources */,
@@ -339,18 +405,20 @@
 				23AA085228C5293200B1BD99 /* LogInVC.swift in Sources */,
 				296617312A17E37D0042D2F9 /* DataModel.xcdatamodeld in Sources */,
 				298F6EC62A217DD3006965C4 /* inHouseInventoryTableViewCell.swift in Sources */,
+				C64BBDCC2BE6F55200D2DBAF /* ModelData.swift in Sources */,
 				23E0F5052975A4DF008E2CA2 /* Constants.swift in Sources */,
 				C64BBDC32BE5FD3A00D2DBAF /* MyEnums.swift in Sources */,
 				295142292A21B3F4008DC91D /* deviceTableViewCell.swift in Sources */,
 				23AA085828C5297200B1BD99 /* AccountVC.swift in Sources */,
 				C64BBDC52BE5FD8000D2DBAF /* AssetManagerAPI.swift in Sources */,
+				C64BBDC72BE68AE100D2DBAF /* AssetView.swift in Sources */,
 				290972C028BBC73F0004B925 /* SceneDelegate.swift in Sources */,
 				23AA085E28C529CB00B1BD99 /* Alert.swift in Sources */,
 				2951422C2A21C822008DC91D /* reviewAssetDataVC.swift in Sources */,
 				298F6EC32A217DA0006965C4 /* InHouseInventoryVC.swift in Sources */,
 				2911E0D52B2EF9CD0033CC2E /* InventoryViewModel.swift in Sources */,
 				296617332A17FECF0042D2F9 /* AddNewDeviceVC.swift in Sources */,
-				2398E4292A05FD89001DBAD7 /* InventoryVC.swift in Sources */,
+				2398E4292A05FD89001DBAD7 /* InventoryView.swift in Sources */,
 				23AA085628C5295900B1BD99 /* RegisterVC.swift in Sources */,
 				299D947D2A21538500C50149 /* MenuCollectionViewCell.swift in Sources */,
 				2913356E2A228F2800A1646A /* UsersVC.swift in Sources */,

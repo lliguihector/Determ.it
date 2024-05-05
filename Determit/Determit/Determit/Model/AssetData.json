@@ -1,0 +1,17 @@
+[
+    {
+        "assetTag": "XYZ-1234",
+        "deviceID": "658ceb6e1b9ff8efa7a1410f",
+        "serialNumber": "ABCD-33",
+    },
+    {
+        "assetTag": "ABC-1234",
+        "deviceID": "6616c7a525d384a3a1f053ec",
+        "serialNumber": "ABCD-123",
+    },
+    {
+        "assetTag": "ABC-1094",
+        "deviceID": "662fc2f35751d2181d09109b",
+        "serialNumber": "ABUY-123",
+    }
+]
