@@ -6,32 +6,37 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct AssetView: View {
-    
-    var asset: APIAsset
-    
+
+    let keyword: String
+    let symbol: String
     
     var body: some View {
-//        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-//        Text("Apple")
-        
-        HStack{
-            Text(asset.assetTag)
-            Text(asset.serialNumber)
-            Spacer()
-        }
-        
-        
+     
+        Label(keyword, systemImage: symbol)
+            .font(.title)
+            .foregroundColor(.white)
+            .padding()
+            .background(.purple.opacity(0.75), in: Capsule())
     }
 }
 
 
 struct AssetView_Previews: PreviewProvider {
+    static let keywords = ["chives", "fern-leaf lavender"]
+    
     static var previews: some View {
-        
-        
-        AssetView(asset: assets[2])
+
+    VStack{
+            ForEach(keywords, id:\.self){ word in
+                        AssetView(keyword: word, symbol: "leaf")
+                
+            }
+        }
+     
+
         
         
     }

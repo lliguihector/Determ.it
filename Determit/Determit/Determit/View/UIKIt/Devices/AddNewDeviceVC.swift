@@ -35,8 +35,6 @@ class AddNewDeviceVC: UIViewController,Loadable {
     
     var ViewModel = InventoryViewModel()
     
-    
-    
     weak var delegate: addNewDeviceVCDelegate?
     
     
@@ -125,10 +123,6 @@ class AddNewDeviceVC: UIViewController,Loadable {
             
             let newDevice = APIDevice(_id: "", brand: brandTextField.text!, deviceName: deviceNameTextField.text!, model: modelTextField.text!, serialNumber: serialNumberTextField.text!, storage: storageCapacityTextFiled.text!, memory: memoryCpacityTextField.text!, processor: processorDescriptionTextField.text!, imageURL: imageURLTextField.text!, category: categoryTextField.text!, operatingSystem: osTextField.text!)
             
-            
-    
-            
-            
             //Call the API
             ViewModel.createData(newDevice)
             
@@ -137,15 +131,7 @@ class AddNewDeviceVC: UIViewController,Loadable {
        
             self.delegate!.reloadData() //Call the delegate method here
             }
-            
-         
-            
-            
-                
-    
-            
-            
-            
+ 
         }
     }
     

@@ -270,11 +270,37 @@
                         <outlet property="collectionView" destination="6e2-ZF-rja" id="CSF-2l-RKH"/>
                         <segue destination="PdP-hg-aAm" kind="show" identifier="menuToinHouseInventory" id="uby-Ln-1Qg"/>
                         <segue destination="WT2-HC-rkB" kind="show" identifier="toUsers" id="MUx-yI-lqH"/>
+                        <segue destination="bk2-AS-dld" kind="show" identifier="menuToAssetView" id="sef-wo-YfE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JEq-uV-TNu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3732" y="135"/>
+        </scene>
+        <!--Asset View-->
+        <scene sceneID="0yW-4g-RUR">
+            <objects>
+                <viewController id="bk2-AS-dld" customClass="AssetView" customModule="Determit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cy4-0n-6vi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Done" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4d-m6-xSd">
+                                <rect key="frame" x="186" y="392" width="41" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4dB-YO-PaL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Q8n-lj-OqP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EIn-FR-VNA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5499" y="-56"/>
         </scene>
         <!--Users-->
         <scene sceneID="px2-vb-c59">
@@ -312,7 +338,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k6O-rV-jHO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4032" y="-787"/>
+            <point key="canvasLocation" x="4596" y="-769"/>
         </scene>
         <!--Device DetailsVC-->
         <scene sceneID="pfW-fu-zhC">
@@ -525,7 +551,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6d-Kr-yhb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8114" y="-891"/>
+            <point key="canvasLocation" x="7123" y="-912"/>
         </scene>
         <!--Add New Device-->
         <scene sceneID="AcO-9z-LN4">
@@ -1261,7 +1287,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5i-Go-ygu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4686.9565217391309" y="-507.58928571428567"/>
+            <point key="canvasLocation" x="5813" y="-194"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="BYX-LX-pw1">
@@ -1444,7 +1470,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jMI-w4-Tho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2712" y="163"/>
+            <point key="canvasLocation" x="2777" y="621"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
