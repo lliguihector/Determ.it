@@ -49,11 +49,12 @@
 		299D947E2A21538500C50149 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299D947C2A21538500C50149 /* MenuCollectionViewCell.xib */; };
 		29BAC4E82A228B36004369F1 /* usersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BAC4E62A228B36004369F1 /* usersTableViewCell.swift */; };
 		29BAC4E92A228B36004369F1 /* usersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29BAC4E72A228B36004369F1 /* usersTableViewCell.xib */; };
+		29F8FA682BEA756D00E15D12 /* AssetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8FA672BEA756D00E15D12 /* AssetList.swift */; };
 		C64BBDBF2BE5B68100D2DBAF /* AssetCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDBE2BE5B68100D2DBAF /* AssetCoreDataManager.swift */; };
 		C64BBDC12BE5B70300D2DBAF /* APIAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC02BE5B70300D2DBAF /* APIAsset.swift */; };
 		C64BBDC32BE5FD3A00D2DBAF /* MyEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC22BE5FD3900D2DBAF /* MyEnums.swift */; };
 		C64BBDC52BE5FD8000D2DBAF /* AssetManagerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC42BE5FD8000D2DBAF /* AssetManagerAPI.swift */; };
-		C64BBDC72BE68AE100D2DBAF /* AssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC62BE68AE100D2DBAF /* AssetView.swift */; };
+		C64BBDC72BE68AE100D2DBAF /* AssetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC62BE68AE100D2DBAF /* AssetRow.swift */; };
 		C64BBDC92BE6F4AD00D2DBAF /* AssetData.json in Resources */ = {isa = PBXBuildFile; fileRef = C64BBDC82BE6F4AD00D2DBAF /* AssetData.json */; };
 		C64BBDCC2BE6F55200D2DBAF /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDCB2BE6F55200D2DBAF /* ModelData.swift */; };
 		C64BBDD42BE7669B00D2DBAF /* AssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDD32BE7669B00D2DBAF /* AssetViewController.swift */; };
@@ -103,11 +104,12 @@
 		299D947C2A21538500C50149 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
 		29BAC4E62A228B36004369F1 /* usersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usersTableViewCell.swift; sourceTree = "<group>"; };
 		29BAC4E72A228B36004369F1 /* usersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = usersTableViewCell.xib; sourceTree = "<group>"; };
+		29F8FA672BEA756D00E15D12 /* AssetList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetList.swift; sourceTree = "<group>"; };
 		C64BBDBE2BE5B68100D2DBAF /* AssetCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCoreDataManager.swift; sourceTree = "<group>"; };
 		C64BBDC02BE5B70300D2DBAF /* APIAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAsset.swift; sourceTree = "<group>"; };
 		C64BBDC22BE5FD3900D2DBAF /* MyEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEnums.swift; sourceTree = "<group>"; };
 		C64BBDC42BE5FD8000D2DBAF /* AssetManagerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetManagerAPI.swift; sourceTree = "<group>"; };
-		C64BBDC62BE68AE100D2DBAF /* AssetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetView.swift; sourceTree = "<group>"; };
+		C64BBDC62BE68AE100D2DBAF /* AssetRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetRow.swift; sourceTree = "<group>"; };
 		C64BBDC82BE6F4AD00D2DBAF /* AssetData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssetData.json; sourceTree = "<group>"; };
 		C64BBDCB2BE6F55200D2DBAF /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		C64BBDD32BE7669B00D2DBAF /* AssetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetViewController.swift; sourceTree = "<group>"; };
@@ -233,7 +235,8 @@
 		C64BBDCA2BE6F4F500D2DBAF /* AssetView */ = {
 			isa = PBXGroup;
 			children = (
-				C64BBDC62BE68AE100D2DBAF /* AssetView.swift */,
+				C64BBDC62BE68AE100D2DBAF /* AssetRow.swift */,
+				29F8FA672BEA756D00E15D12 /* AssetList.swift */,
 			);
 			path = AssetView;
 			sourceTree = "<group>";
@@ -409,13 +412,14 @@
 				296617312A17E37D0042D2F9 /* DataModel.xcdatamodeld in Sources */,
 				298F6EC62A217DD3006965C4 /* inHouseInventoryTableViewCell.swift in Sources */,
 				C64BBDCC2BE6F55200D2DBAF /* ModelData.swift in Sources */,
+				29F8FA682BEA756D00E15D12 /* AssetList.swift in Sources */,
 				23E0F5052975A4DF008E2CA2 /* Constants.swift in Sources */,
 				C64BBDD42BE7669B00D2DBAF /* AssetViewController.swift in Sources */,
 				C64BBDC32BE5FD3A00D2DBAF /* MyEnums.swift in Sources */,
 				295142292A21B3F4008DC91D /* deviceTableViewCell.swift in Sources */,
 				23AA085828C5297200B1BD99 /* AccountVC.swift in Sources */,
 				C64BBDC52BE5FD8000D2DBAF /* AssetManagerAPI.swift in Sources */,
-				C64BBDC72BE68AE100D2DBAF /* AssetView.swift in Sources */,
+				C64BBDC72BE68AE100D2DBAF /* AssetRow.swift in Sources */,
 				290972C028BBC73F0004B925 /* SceneDelegate.swift in Sources */,
 				23AA085E28C529CB00B1BD99 /* Alert.swift in Sources */,
 				2951422C2A21C822008DC91D /* reviewAssetDataVC.swift in Sources */,
