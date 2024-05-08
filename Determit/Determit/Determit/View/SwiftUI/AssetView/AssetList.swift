@@ -9,7 +9,10 @@ import SwiftUI
 
 struct AssetList: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(assets) { asset in
+            AssetRow(asset: asset)
+            
+        }
     }
 }
 

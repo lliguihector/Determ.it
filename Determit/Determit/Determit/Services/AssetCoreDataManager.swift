@@ -17,18 +17,9 @@ class AssetCoreDataManager {
     
     
     private init() {}
-    
-    //Properties
-//    var viewContext: NSManagedObjectContext{
-//
-//        return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-//    }
-   
+
     var viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-
-    
-
     
 //MARK: - ASSET METHODS
     
@@ -37,7 +28,6 @@ class AssetCoreDataManager {
     func CreateAsset( _ asset: APIAsset){
         
         let newAsset = Asset(context: self.viewContext)
-        
         newAsset.assetTag = asset.assetTag
         newAsset.deviceID = asset.deviceID
         newAsset.serialNumber = asset.serialNumber
@@ -80,13 +70,6 @@ class AssetCoreDataManager {
         
     }
     
-    
-
-    
-    
-    
-
-
     //Save to CoreData
     func saveContext(){
         
@@ -101,25 +84,23 @@ class AssetCoreDataManager {
     }
     
     
-    
-    
-    
+
     
     //MARK: - ASSET QUERY
     
     
-    //Search by m
+    //Search by AssetTag Number
    
     func customeSearch(_ searchBarString: String) -> [Asset] {
 
    
            let request : NSFetchRequest<Asset> = Asset.fetchRequest()
    
-           let predicate = NSPredicate(format: "modelName CONTAINS[cd] %@", searchBarString)
+           let predicate = NSPredicate(format: "assetTag CONTAINS[cd] %@", searchBarString)
    
            request.predicate = predicate
    
-           let sortDescriptor = NSSortDescriptor(key: "modelName", ascending: true)
+           let sortDescriptor = NSSortDescriptor(key: "assetTag", ascending: true)
    
    
            request.sortDescriptors = [sortDescriptor]

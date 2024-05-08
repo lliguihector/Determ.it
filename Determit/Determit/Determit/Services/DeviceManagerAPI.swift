@@ -161,7 +161,7 @@ func getDevices<T:Codable>(url: URL?, expecting: T.Type, completion:
                 let decodedData = try decoder.decode(expecting, from: safeData)
                 completion(.success(decodedData))
             }catch{
-                print("From: Device Manaher Error: jsonDecodingFailed \(error)")
+                print("From: Device Manager Error: jsonDecodingFailed \(error)")
                 completion(.failure(.jsonDecodingFailed))
                 return
             }

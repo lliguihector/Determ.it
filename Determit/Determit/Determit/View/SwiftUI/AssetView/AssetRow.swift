@@ -16,11 +16,21 @@ struct AssetRow: View {
     
     var body: some View {
      
-        HStack{
-            Text(asset.assetTag)
-            Text(asset.serialNumber)
-        }
+//        HStack{
+//            Text("AssetTag:").font(.title).fontWeight(.light)
+//            Text(asset.assetTag).font(.title).bold()
+//        }
       
+        VStack{
+            Text("Asset Tag: \(asset.assetTag)")
+            Text("Device ID: \(asset.deviceID)")
+            Text("Serial Number: \(asset.serialNumber)")
+        }
+        .padding()
+        .background(Color.gray.opacity(0.1))
+        .cornerRadius(10)
+        .padding(.horizontal)
+        
     }
 }
 

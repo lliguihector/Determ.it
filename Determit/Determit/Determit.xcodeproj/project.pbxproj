@@ -50,14 +50,16 @@
 		29BAC4E82A228B36004369F1 /* usersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BAC4E62A228B36004369F1 /* usersTableViewCell.swift */; };
 		29BAC4E92A228B36004369F1 /* usersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29BAC4E72A228B36004369F1 /* usersTableViewCell.xib */; };
 		29F8FA682BEA756D00E15D12 /* AssetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8FA672BEA756D00E15D12 /* AssetList.swift */; };
+		29F8FA6A2BEA7A7A00E15D12 /* AssetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8FA692BEA7A7A00E15D12 /* AssetVC.swift */; };
+		29F8FA6C2BEB5EAA00E15D12 /* TicketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8FA6B2BEB5EAA00E15D12 /* TicketViewModel.swift */; };
+		29F8FA6E2BEB653100E15D12 /* AssetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8FA6D2BEB653100E15D12 /* AssetViewModel.swift */; };
 		C64BBDBF2BE5B68100D2DBAF /* AssetCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDBE2BE5B68100D2DBAF /* AssetCoreDataManager.swift */; };
 		C64BBDC12BE5B70300D2DBAF /* APIAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC02BE5B70300D2DBAF /* APIAsset.swift */; };
 		C64BBDC32BE5FD3A00D2DBAF /* MyEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC22BE5FD3900D2DBAF /* MyEnums.swift */; };
 		C64BBDC52BE5FD8000D2DBAF /* AssetManagerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC42BE5FD8000D2DBAF /* AssetManagerAPI.swift */; };
 		C64BBDC72BE68AE100D2DBAF /* AssetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC62BE68AE100D2DBAF /* AssetRow.swift */; };
 		C64BBDC92BE6F4AD00D2DBAF /* AssetData.json in Resources */ = {isa = PBXBuildFile; fileRef = C64BBDC82BE6F4AD00D2DBAF /* AssetData.json */; };
-		C64BBDCC2BE6F55200D2DBAF /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDCB2BE6F55200D2DBAF /* ModelData.swift */; };
-		C64BBDD42BE7669B00D2DBAF /* AssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDD32BE7669B00D2DBAF /* AssetViewController.swift */; };
+		C64BBDCC2BE6F55200D2DBAF /* ReadFromFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDCB2BE6F55200D2DBAF /* ReadFromFileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,14 +107,16 @@
 		29BAC4E62A228B36004369F1 /* usersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usersTableViewCell.swift; sourceTree = "<group>"; };
 		29BAC4E72A228B36004369F1 /* usersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = usersTableViewCell.xib; sourceTree = "<group>"; };
 		29F8FA672BEA756D00E15D12 /* AssetList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetList.swift; sourceTree = "<group>"; };
+		29F8FA692BEA7A7A00E15D12 /* AssetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetVC.swift; sourceTree = "<group>"; };
+		29F8FA6B2BEB5EAA00E15D12 /* TicketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewModel.swift; sourceTree = "<group>"; };
+		29F8FA6D2BEB653100E15D12 /* AssetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetViewModel.swift; sourceTree = "<group>"; };
 		C64BBDBE2BE5B68100D2DBAF /* AssetCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCoreDataManager.swift; sourceTree = "<group>"; };
 		C64BBDC02BE5B70300D2DBAF /* APIAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAsset.swift; sourceTree = "<group>"; };
 		C64BBDC22BE5FD3900D2DBAF /* MyEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEnums.swift; sourceTree = "<group>"; };
 		C64BBDC42BE5FD8000D2DBAF /* AssetManagerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetManagerAPI.swift; sourceTree = "<group>"; };
 		C64BBDC62BE68AE100D2DBAF /* AssetRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetRow.swift; sourceTree = "<group>"; };
 		C64BBDC82BE6F4AD00D2DBAF /* AssetData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssetData.json; sourceTree = "<group>"; };
-		C64BBDCB2BE6F55200D2DBAF /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
-		C64BBDD32BE7669B00D2DBAF /* AssetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetViewController.swift; sourceTree = "<group>"; };
+		C64BBDCB2BE6F55200D2DBAF /* ReadFromFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadFromFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,7 +182,7 @@
 				C64BBDC82BE6F4AD00D2DBAF /* AssetData.json */,
 				2911E0CC2B2ECEF10033CC2E /* APIDevice.swift */,
 				C64BBDC02BE5B70300D2DBAF /* APIAsset.swift */,
-				C64BBDCB2BE6F55200D2DBAF /* ModelData.swift */,
+				C64BBDCB2BE6F55200D2DBAF /* ReadFromFileManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,11 +196,9 @@
 				23AA085928C5298200B1BD99 /* HomeVC.swift */,
 				295142252A21B2F5008DC91D /* AddNewAssetVC.swift */,
 				299D94792A21527700C50149 /* HomeMenuVC.swift */,
-				298F6EC22A217DA0006965C4 /* InHouseInventoryVC.swift */,
 				2951422B2A21C822008DC91D /* reviewAssetDataVC.swift */,
 				2913356D2A228F2800A1646A /* UsersVC.swift */,
 				2911E0CA2B2ACDE80033CC2E /* scannerVC.swift */,
-				C64BBDD32BE7669B00D2DBAF /* AssetViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -205,6 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				2911E0D42B2EF9CD0033CC2E /* InventoryViewModel.swift */,
+				29F8FA6B2BEB5EAA00E15D12 /* TicketViewModel.swift */,
+				29F8FA6D2BEB653100E15D12 /* AssetViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -232,6 +236,16 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		29F8FA6F2BEB66FB00E15D12 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				298F6EC42A217DD3006965C4 /* inHouseInventoryTableViewCell.swift */,
+				298F6EC52A217DD3006965C4 /* inHouseInventoryTableViewCell.xib */,
+				298F6EC22A217DA0006965C4 /* InHouseInventoryVC.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		C64BBDCA2BE6F4F500D2DBAF /* AssetView */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,14 +263,14 @@
 				C64BBDD12BE75DA400D2DBAF /* Register */,
 				C64BBDD22BE75DE200D2DBAF /* Map */,
 				C64BBDCF2BE75D6900D2DBAF /* Devices */,
+				29F8FA6F2BEB66FB00E15D12 /* Assets */,
 				299D947B2A21538500C50149 /* MenuCollectionViewCell.swift */,
 				299D947C2A21538500C50149 /* MenuCollectionViewCell.xib */,
-				298F6EC42A217DD3006965C4 /* inHouseInventoryTableViewCell.swift */,
-				298F6EC52A217DD3006965C4 /* inHouseInventoryTableViewCell.xib */,
 				295142272A21B3F4008DC91D /* deviceTableViewCell.swift */,
 				295142282A21B3F4008DC91D /* deviceTableViewCell.xib */,
 				29BAC4E72A228B36004369F1 /* usersTableViewCell.xib */,
 				29BAC4E62A228B36004369F1 /* usersTableViewCell.swift */,
+				29F8FA692BEA7A7A00E15D12 /* AssetVC.swift */,
 			);
 			path = UIKIt;
 			sourceTree = "<group>";
@@ -405,16 +419,18 @@
 				2911E0CD2B2ECEF10033CC2E /* APIDevice.swift in Sources */,
 				295142262A21B2F5008DC91D /* AddNewAssetVC.swift in Sources */,
 				296867DE28BD6FDD00ECA8FB /* HelpWebVC.swift in Sources */,
+				29F8FA6A2BEA7A7A00E15D12 /* AssetVC.swift in Sources */,
+				29F8FA6C2BEB5EAA00E15D12 /* TicketViewModel.swift in Sources */,
 				2911E0CF2B2ECFD70033CC2E /* DeviceManagerAPI.swift in Sources */,
 				2911E0D72B3271B40033CC2E /* CoreDataManager.swift in Sources */,
 				2966172A2A17B1FD0042D2F9 /* InventoryTableViewCell.swift in Sources */,
 				23AA085228C5293200B1BD99 /* LogInVC.swift in Sources */,
 				296617312A17E37D0042D2F9 /* DataModel.xcdatamodeld in Sources */,
 				298F6EC62A217DD3006965C4 /* inHouseInventoryTableViewCell.swift in Sources */,
-				C64BBDCC2BE6F55200D2DBAF /* ModelData.swift in Sources */,
+				C64BBDCC2BE6F55200D2DBAF /* ReadFromFileManager.swift in Sources */,
 				29F8FA682BEA756D00E15D12 /* AssetList.swift in Sources */,
 				23E0F5052975A4DF008E2CA2 /* Constants.swift in Sources */,
-				C64BBDD42BE7669B00D2DBAF /* AssetViewController.swift in Sources */,
+				29F8FA6E2BEB653100E15D12 /* AssetViewModel.swift in Sources */,
 				C64BBDC32BE5FD3A00D2DBAF /* MyEnums.swift in Sources */,
 				295142292A21B3F4008DC91D /* deviceTableViewCell.swift in Sources */,
 				23AA085828C5297200B1BD99 /* AccountVC.swift in Sources */,
