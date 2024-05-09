@@ -239,11 +239,32 @@
 		29F8FA6F2BEB66FB00E15D12 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				29F8FA692BEA7A7A00E15D12 /* AssetVC.swift */,
 				298F6EC42A217DD3006965C4 /* inHouseInventoryTableViewCell.swift */,
 				298F6EC52A217DD3006965C4 /* inHouseInventoryTableViewCell.xib */,
 				298F6EC22A217DA0006965C4 /* InHouseInventoryVC.swift */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		29F8FA702BEB687A00E15D12 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		29F8FA712BEB68BA00E15D12 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				299D947B2A21538500C50149 /* MenuCollectionViewCell.swift */,
+				299D947C2A21538500C50149 /* MenuCollectionViewCell.xib */,
+				295142272A21B3F4008DC91D /* deviceTableViewCell.swift */,
+				295142282A21B3F4008DC91D /* deviceTableViewCell.xib */,
+				29BAC4E72A228B36004369F1 /* usersTableViewCell.xib */,
+				29BAC4E62A228B36004369F1 /* usersTableViewCell.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		C64BBDCA2BE6F4F500D2DBAF /* AssetView */ = {
@@ -258,19 +279,14 @@
 		C64BBDCD2BE7592E00D2DBAF /* UIKIt */ = {
 			isa = PBXGroup;
 			children = (
+				29F8FA712BEB68BA00E15D12 /* Other */,
 				23AA085B28C529A300B1BD99 /* Main.storyboard */,
+				29F8FA702BEB687A00E15D12 /* Users */,
 				C64BBDD02BE75D8F00D2DBAF /* Login */,
 				C64BBDD12BE75DA400D2DBAF /* Register */,
 				C64BBDD22BE75DE200D2DBAF /* Map */,
 				C64BBDCF2BE75D6900D2DBAF /* Devices */,
 				29F8FA6F2BEB66FB00E15D12 /* Assets */,
-				299D947B2A21538500C50149 /* MenuCollectionViewCell.swift */,
-				299D947C2A21538500C50149 /* MenuCollectionViewCell.xib */,
-				295142272A21B3F4008DC91D /* deviceTableViewCell.swift */,
-				295142282A21B3F4008DC91D /* deviceTableViewCell.xib */,
-				29BAC4E72A228B36004369F1 /* usersTableViewCell.xib */,
-				29BAC4E62A228B36004369F1 /* usersTableViewCell.swift */,
-				29F8FA692BEA7A7A00E15D12 /* AssetVC.swift */,
 			);
 			path = UIKIt;
 			sourceTree = "<group>";

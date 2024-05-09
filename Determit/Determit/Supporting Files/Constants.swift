@@ -21,9 +21,9 @@ struct constant{
     static let  GET_All_dEVICES = URL(string: "http://localhost:3000/devices")
     static let  POST_Device = URL(string: "http://localhost:3000/devices")
     
-    //Assets    
-    static let GET_ALL_ASSETS = URL(string: "http://localhost:300/assets")
-    static let POST_ASSET = URL(string: "http://localhost:300/assets")
+    //Assets
+    static let GET_ALL_ASSETS = URL(string: "http://localhost:3000/assets")
+    static let POST_ASSET = URL(string: "http://localhost:3000/assets")
     
     
     
