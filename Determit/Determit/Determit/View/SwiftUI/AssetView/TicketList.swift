@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct AssetList: View {
+struct TicketList: View {
     var body: some View {
-        List(assets) { asset in
-            AssetRow(asset: asset)
+        List(tickets) { ticket in
+            TicketRow(ticket: ticket)
             
         }
     }
@@ -18,6 +18,6 @@ struct AssetList: View {
 
 struct AssetList_Previews: PreviewProvider {
     static var previews: some View {
-        AssetList()
+        TicketList()
     }
 }

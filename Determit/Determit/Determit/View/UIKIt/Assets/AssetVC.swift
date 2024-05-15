@@ -8,11 +8,21 @@
 import UIKit
 import SwiftUI
 
+
+
+
+
 class AssetVC: UIViewController {
 
-    
     //Properties
-    var assetTag = "Apple "
+let SampleDate = Date()
+    // Computed property to format createdAt into preferred format
+    var formattedCreatedAt: Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss" // Your preferred date format
+        let dateString = dateFormatter.string(from: SampleDate)
+        return dateFormatter.date(from: dateString) ?? SampleDate
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,16 +33,22 @@ class AssetVC: UIViewController {
     
 
     //MARK: -- Integrate Swift UI To UIKIt Method
-   
+    func sampleData(){
+        
+        
+        
+        
+        
+    }
     
     private func configureSwiftUI(){
         
         
         // Create a SwiftUI view and wrap it in a UIHostingController
-        let assetRow = AssetRow(asset: APIAsset(_id: "001", assetTag: assetTag,deviceID: "77",serialNumber: "0")) // Provide appropriate asset tag
+        let ticketRow = TicketRow(ticket: APITicket(_id: "60a42b2fda8bc6477ff55123", organizationId: "60a42b2fda8bc6477ff55000", assetId: "60a42b2fda8bc6477ff55abc", title: "Clean installation of macOS Monterey", description: "Running slow, backup data, and clean install macOS.", priority: "Medium", status: "Open", category: "Software", assignedTo: "Hector Lliguichuzhca", createdBy: "Mrs. Figueroa", createdAt: formattedCreatedAt, updatedAt: SampleDate, dueDate: formattedCreatedAt )) // Provide appropriate asset tag
         
         
-               let hostingController = UIHostingController(rootView: assetRow)
+               let hostingController = UIHostingController(rootView: ticketRow)
                
                // Set up constraints if needed Constaraints
                hostingController.view.translatesAutoresizingMaskIntoConstraints = false

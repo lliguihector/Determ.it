@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct APIAsset: Hashable, Codable, Identifiable {
+struct APIAsset: Codable{
   
     
     var id: String { _id} //Using the '_id' as the identifier

@@ -8,7 +8,9 @@
 import Foundation
 
 
-var assets: [APIAsset] = load("AssetData.json")
+
+
+var tickets: [APITicket] = load("TicketData.json")
 
 
 func load<T: Decodable>(_ filename: String) -> T {
