@@ -16,15 +16,26 @@ struct AssetRow: View {
     
     var body: some View {
      
-//        HStack{
-//            Text("AssetTag:").font(.title).fontWeight(.light)
-//            Text(asset.assetTag).font(.title).bold()
-//        }
-      
-        VStack{
-            Text("Asset Tag: \(asset.assetTag)")
-            Text("Device ID: \(asset.deviceID)")
-            Text("Serial Number: \(asset.serialNumber)")
+        HStack(){
+            
+            VStack(){
+                
+                Text("Status").font(.subheadline)
+                Image(systemName: "person")
+                    .foregroundColor(.red)
+                
+            }
+            .padding()
+            .font(.none)
+            
+            VStack(){
+                Text("Asset Tag:\(asset.assetTag)")
+                Text("Device ID: \(asset.assetTag)")
+                Text("Serial Number: \(asset.serialNumber)")
+                
+            }
+Spacer()
+            
         }
         .padding()
         .background(Color.gray.opacity(0.1))
