@@ -89,6 +89,6 @@ struct TicketRow_Previews: PreviewProvider {
     static var previews: some View {
         
         
-        TicketRow(ticket: tickets[0])
+        TicketRow(ticket: tickets[2])
     }
 }

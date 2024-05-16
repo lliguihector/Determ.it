@@ -11,7 +11,6 @@ struct TicketList: View {
     var body: some View {
         
         
-        
         List(tickets){ ticket in
             TicketRow(ticket: ticket)
             
