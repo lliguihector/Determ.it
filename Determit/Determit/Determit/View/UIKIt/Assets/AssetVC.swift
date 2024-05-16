@@ -45,7 +45,7 @@ let SampleDate = Date()
         
         
         // Create a SwiftUI view and wrap it in a UIHostingController
-        let ticketRow = TicketRow(ticket: APITicket(_id: "60a42b2fda8bc6477ff55123", organizationId: "60a42b2fda8bc6477ff55000", assetId: "60a42b2fda8bc6477ff55abc", title: "Clean installation of macOS Monterey", description: "Running slow, backup data, and clean install macOS.", priority: "Medium", status: "Open", category: "Software", assignedTo: "Hector Lliguichuzhca", createdBy: "Mrs. Figueroa", createdAt: formattedCreatedAt, updatedAt: SampleDate, dueDate: formattedCreatedAt )) // Provide appropriate asset tag
+        let ticketRow = TicketRow(ticket: APITicket(_id: "60a42b2fda8bc6477ff55123", organizationId: "60a42b2fda8bc6477ff55000", assetId: "60a42b2fda8bc6477ff55abc", title: "Clean installation of macOS Monterey", description: "Running slow, backup data, and clean install macOS.", priority: "High", status: "Open", category: "Software", assignedTo: "Hector Lliguichuzhca", createdBy: "Mrs. Figueroa", dueDate: "May 15 2024", createdAt:"May 15 2024", updatedAt: "May 15 2024" )) // Provide appropriate asset tag
         
         
                let hostingController = UIHostingController(rootView: ticketRow)

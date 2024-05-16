@@ -11,9 +11,6 @@ import SwiftUI
 struct APIAsset: Codable{
   
     
-    var id: String { _id} //Using the '_id' as the identifier
-    
-    
     let _id: String //use '_id' as the identifier for Swift UI List
     let assetTag: String
     let deviceID: String

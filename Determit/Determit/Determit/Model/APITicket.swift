@@ -14,19 +14,19 @@ struct APITicket: Hashable, Codable, Identifiable {
      var id: String { _id} //Using the '_id' as the identifier
     
     
-      let _id: String //use '_id' as the identifier for Swift UI List
-      let organizationId: String
-      let assetId: String
-      let title: String
-      let description: String
-      let priority: String
-      let status: String
-      let category: String
-      let assignedTo: String
-      let createdBy: String
-      let createdAt: Date
-      let updatedAt: Date
-      let dueDate: Date
+    let _id: String //use '_id' as the identifier for Swift UI List
+    let organizationId: String
+    let assetId: String
+    let title: String
+    let description: String
+    let priority: String
+    let status: String
+    let category: String
+    let assignedTo: String
+    let createdBy: String
+    let dueDate: String
+    let createdAt: String
+    let updatedAt: String
    
 
   }
