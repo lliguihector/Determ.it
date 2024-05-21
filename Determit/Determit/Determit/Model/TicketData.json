@@ -12,7 +12,8 @@
         "createdBy": "Mrs. Figueroa",
         "dueDate": "2024-05-10T00:00:00.000Z",
         "createdAt": "2024-05-15T23:43:13.593Z",
-        "updatedAt": "2024-05-15T23:43:13.593Z"
+        "updatedAt": "2024-05-15T23:43:13.593Z",
+        "approved": true
     },
     {
         "_id": "6645489132993a1dd21b65fg",
@@ -27,7 +28,8 @@
         "createdBy": "Mrs. Figueroa",
         "dueDate": "2024-05-10T00:00:00.000Z",
         "createdAt": "2024-05-15T23:43:13.593Z",
-        "updatedAt": "2024-05-15T23:43:13.593Z"
+        "updatedAt": "2024-05-15T23:43:13.593Z",
+        "approved": true,
     },
     {
         "_id": "6645489132993a1dd21b65fj",
@@ -42,6 +44,7 @@
         "createdBy": "Mrs. Figueroa",
         "dueDate": "2024-05-10T00:00:00.000Z",
         "createdAt": "2024-05-15T23:43:13.593Z",
-        "updatedAt": "2024-05-15T23:43:13.593Z"
+        "updatedAt": "2024-05-15T23:43:13.593Z",
+        "approved": true,
     }
 ]

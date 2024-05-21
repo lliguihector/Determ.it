@@ -27,6 +27,7 @@ struct APITicket: Hashable, Codable, Identifiable {
     let dueDate: String
     let createdAt: String
     let updatedAt: String
+    let approved: Bool
    
 
   }

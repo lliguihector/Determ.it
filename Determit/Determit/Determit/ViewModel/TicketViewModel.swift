@@ -10,14 +10,18 @@ import Foundation
 
 class TicketViewModel: ObservableObject{
     //ObservableObject allows objects to announce changes to their data/ will automaticaly update the ui when these properties changes
-    @Published var data: [APIAsset] = [] //API Data
+    @Published var data: [APITicket] = [] //API Data
     
     
+    var apiManager = ManagerAPI()
     
-    init(){
+    
+    func Create(_ newData: APITicket){
+        
         
         
     }
+    
 
     
     

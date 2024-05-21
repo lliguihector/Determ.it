@@ -61,6 +61,7 @@
 		C64BBDC52BE5FD8000D2DBAF /* AssetManagerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC42BE5FD8000D2DBAF /* AssetManagerAPI.swift */; };
 		C64BBDC92BE6F4AD00D2DBAF /* TicketData.json in Resources */ = {isa = PBXBuildFile; fileRef = C64BBDC82BE6F4AD00D2DBAF /* TicketData.json */; };
 		C64BBDCC2BE6F55200D2DBAF /* ReadFromFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDCB2BE6F55200D2DBAF /* ReadFromFileManager.swift */; };
+		C67CF32E2BFB0AF500DD07FF /* ManagerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CF32D2BFB0AF500DD07FF /* ManagerAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +120,7 @@
 		C64BBDC42BE5FD8000D2DBAF /* AssetManagerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetManagerAPI.swift; sourceTree = "<group>"; };
 		C64BBDC82BE6F4AD00D2DBAF /* TicketData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TicketData.json; sourceTree = "<group>"; };
 		C64BBDCB2BE6F55200D2DBAF /* ReadFromFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadFromFileManager.swift; sourceTree = "<group>"; };
+		C67CF32D2BFB0AF500DD07FF /* ManagerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 				2911E0D62B3271B40033CC2E /* CoreDataManager.swift */,
 				C64BBDBE2BE5B68100D2DBAF /* AssetCoreDataManager.swift */,
 				C64BBDC42BE5FD8000D2DBAF /* AssetManagerAPI.swift */,
+				C67CF32D2BFB0AF500DD07FF /* ManagerAPI.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 			files = (
 				299D947A2A21527700C50149 /* HomeMenuVC.swift in Sources */,
 				C64BBDC12BE5B70300D2DBAF /* APIAsset.swift in Sources */,
+				C67CF32E2BFB0AF500DD07FF /* ManagerAPI.swift in Sources */,
 				290972C228BBC73F0004B925 /* ViewController.swift in Sources */,
 				299D94772A1D38C300C50149 /* DeviceDetailsVC.swift in Sources */,
 				290972BE28BBC73F0004B925 /* AppDelegate.swift in Sources */,
