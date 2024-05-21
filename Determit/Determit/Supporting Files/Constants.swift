@@ -25,6 +25,13 @@ struct constant{
     static let GET_ALL_ASSETS = URL(string: "http://localhost:3000/assets")
     static let POST_ASSET = URL(string: "http://localhost:3000/assets")
     
+    //Tickets
+    static let GET_ALL_TICKETS =  URL(string: "http://localhost:3000/ticket/tickets")
+    
+    static let CREATE_TICKET =  URL(string: "http://localhost:3000/ticket/ticket")
+    
+    
+    
     
     
 }
