@@ -21,6 +21,7 @@
 		23E0F5052975A4DF008E2CA2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E0F5042975A4DF008E2CA2 /* Constants.swift */; };
 		290837B42BF59FF20041B3B5 /* TicketRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290837B32BF59FF20041B3B5 /* TicketRow.swift */; };
 		290837B62BF5A1380041B3B5 /* TicketList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290837B52BF5A1370041B3B5 /* TicketList.swift */; };
+		290837BE2BFE5C960041B3B5 /* DetermitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290837BD2BFE5C960041B3B5 /* DetermitTests.swift */; };
 		290972BE28BBC73F0004B925 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290972BD28BBC73F0004B925 /* AppDelegate.swift */; };
 		290972C028BBC73F0004B925 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290972BF28BBC73F0004B925 /* SceneDelegate.swift */; };
 		290972C228BBC73F0004B925 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290972C128BBC73F0004B925 /* ViewController.swift */; };
@@ -64,6 +65,16 @@
 		C67CF32E2BFB0AF500DD07FF /* ManagerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CF32D2BFB0AF500DD07FF /* ManagerAPI.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		290837BF2BFE5C960041B3B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 290972B228BBC73F0004B925 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 290972B928BBC73F0004B925;
+			remoteInfo = Determit;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		2305663E2983B5500065403D /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		2398E4282A05FD89001DBAD7 /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryView.swift; sourceTree = "<group>"; };
@@ -79,6 +90,8 @@
 		23E0F5042975A4DF008E2CA2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		290837B32BF59FF20041B3B5 /* TicketRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketRow.swift; sourceTree = "<group>"; };
 		290837B52BF5A1370041B3B5 /* TicketList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketList.swift; sourceTree = "<group>"; };
+		290837BB2BFE5C960041B3B5 /* DetermitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DetermitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		290837BD2BFE5C960041B3B5 /* DetermitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetermitTests.swift; sourceTree = "<group>"; };
 		290972BA28BBC73F0004B925 /* Determit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Determit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		290972BD28BBC73F0004B925 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		290972BF28BBC73F0004B925 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +137,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		290837B82BFE5C960041B3B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		290972B728BBC73F0004B925 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -135,11 +155,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		290837BC2BFE5C960041B3B5 /* DetermitTests */ = {
+			isa = PBXGroup;
+			children = (
+				290837BD2BFE5C960041B3B5 /* DetermitTests.swift */,
+			);
+			path = DetermitTests;
+			sourceTree = "<group>";
+		};
 		290972B128BBC73F0004B925 = {
 			isa = PBXGroup;
 			children = (
 				299D94782A1D3A4D00C50149 /* Supporting Files */,
 				290972BC28BBC73F0004B925 /* Determit */,
+				290837BC2BFE5C960041B3B5 /* DetermitTests */,
 				290972BB28BBC73F0004B925 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -148,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				290972BA28BBC73F0004B925 /* Determit.app */,
+				290837BB2BFE5C960041B3B5 /* DetermitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -344,6 +374,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		290837BA2BFE5C960041B3B5 /* DetermitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 290837C32BFE5C960041B3B5 /* Build configuration list for PBXNativeTarget "DetermitTests" */;
+			buildPhases = (
+				290837B72BFE5C960041B3B5 /* Sources */,
+				290837B82BFE5C960041B3B5 /* Frameworks */,
+				290837B92BFE5C960041B3B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				290837C02BFE5C960041B3B5 /* PBXTargetDependency */,
+			);
+			name = DetermitTests;
+			productName = DetermitTests;
+			productReference = 290837BB2BFE5C960041B3B5 /* DetermitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		290972B928BBC73F0004B925 /* Determit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 290972CE28BBC7400004B925 /* Build configuration list for PBXNativeTarget "Determit" */;
@@ -370,9 +418,13 @@
 		290972B228BBC73F0004B925 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					290837BA2BFE5C960041B3B5 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 290972B928BBC73F0004B925;
+					};
 					290972B928BBC73F0004B925 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -397,11 +449,19 @@
 			projectRoot = "";
 			targets = (
 				290972B928BBC73F0004B925 /* Determit */,
+				290837BA2BFE5C960041B3B5 /* DetermitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		290837B92BFE5C960041B3B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		290972B828BBC73F0004B925 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -422,6 +482,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		290837B72BFE5C960041B3B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				290837BE2BFE5C960041B3B5 /* DetermitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		290972B628BBC73F0004B925 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -475,7 +543,55 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		290837C02BFE5C960041B3B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 290972B928BBC73F0004B925 /* Determit */;
+			targetProxy = 290837BF2BFE5C960041B3B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		290837C12BFE5C960041B3B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FLMQ8FUJ4T;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = determit.com.DetermitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Determit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Determit";
+			};
+			name = Debug;
+		};
+		290837C22BFE5C960041B3B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FLMQ8FUJ4T;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = determit.com.DetermitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Determit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Determit";
+			};
+			name = Release;
+		};
 		290972CC28BBC7400004B925 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -635,6 +751,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		290837C32BFE5C960041B3B5 /* Build configuration list for PBXNativeTarget "DetermitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				290837C12BFE5C960041B3B5 /* Debug */,
+				290837C22BFE5C960041B3B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		290972B528BBC73F0004B925 /* Build configuration list for PBXProject "Determit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
