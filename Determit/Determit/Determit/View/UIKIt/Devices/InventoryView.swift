@@ -10,7 +10,7 @@ import CoreData
 import AVFoundation
 import UIKit
 
-class InventoryVC: UITableViewController,Loadable, UISearchBarDelegate{
+class InventoryView: UITableViewController,Loadable, UISearchBarDelegate{
 
     //MARK: - Properties
     let searchController = UISearchController(searchResultsController: nil)
@@ -204,7 +204,7 @@ func refreshControlSetUp(){
 }
 
 //MARK: - UISearchResultUpdating
-extension InventoryVC: UISearchResultsUpdating{
+extension InventoryView: UISearchResultsUpdating{
     
     func updateSearchResults(for searchController: UISearchController) {
         
@@ -245,7 +245,7 @@ extension InventoryVC: UISearchResultsUpdating{
 
 
 //MARK: - AddNewDeviceVCDelegate
-extension InventoryVC: addNewDeviceVCDelegate {
+extension InventoryView: addNewDeviceVCDelegate {
     
     func reloadData() {
         

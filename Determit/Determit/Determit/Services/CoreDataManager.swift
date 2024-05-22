@@ -86,14 +86,6 @@ class CoreDataManager {
         
         
     }
-    
-    
-
-    
-    
-    
-
-
     //Save to CoreData
     func saveContext(){
         
@@ -115,7 +107,7 @@ class CoreDataManager {
     //MARK: - DEVICE QUERY
     
     
-    //Search by m
+    //Search by modelName
    
     func customeSearch(_ searchBarString: String) -> [Device] {
 

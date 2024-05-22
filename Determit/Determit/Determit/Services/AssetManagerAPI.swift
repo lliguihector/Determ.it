@@ -1,16 +1,16 @@
 //
-//  DeviceManager.swift
+//  AssetManagerAPI.swift
 //  Determit
 //
-//  Created by Hector Lliguichuzca on 12/17/23.
+//  Created by Blanca Tixi on 5/4/24.
 //
 
 import Foundation
 
+import Foundation
 
 
-
-struct DeviceManagerAPI{
+struct AssetManagerAPI{
     
 //CREATE
 //    func createUser(_ newUserToSave: APIDevice, completion: @escaping(Result<APIErrors>)-> Void){
@@ -60,7 +60,7 @@ struct DeviceManagerAPI{
 
     
     // CREATE
-        func createDevice<T: Codable>(url: URL?, deviceData: T, completion: @escaping (Result<String, APIErrors>) -> Void) {
+        func createAsset<T: Codable>(url: URL?, assetData: T, completion: @escaping (Result<String, APIErrors>) -> Void) {
             
             // URL STRING ERROR!
             guard let url = url else {
@@ -74,10 +74,10 @@ struct DeviceManagerAPI{
             
             do {
                 let encoder = JSONEncoder()
-                let jsonData = try encoder.encode(deviceData)
+                let jsonData = try encoder.encode(assetData)
                 request.httpBody = jsonData
             } catch {
-                print("Error encoding device data: \(error)")
+                print("Error encoding asset data: \(error)")
                 completion(.failure(.jsonDecodingFailed))
                 return
             }
@@ -106,11 +106,7 @@ struct DeviceManagerAPI{
                     
                     completion(.failure(.jsonDecodingFailed))
                 }
-                
-                
-                
-                
-                
+        
                 
             }
             dataTask.resume()
@@ -123,7 +119,7 @@ struct DeviceManagerAPI{
     
     
 //READ_ALL
-func getDevices<T:Codable>(url: URL?, expecting: T.Type, completion:
+func getAssets<T:Codable>(url: URL?, expecting: T.Type, completion:
                                     @escaping(Result<T,APIErrors>) -> Void){
         
         //URL STRING ERROR!
@@ -161,7 +157,7 @@ func getDevices<T:Codable>(url: URL?, expecting: T.Type, completion:
                 let decodedData = try decoder.decode(expecting, from: safeData)
                 completion(.success(decodedData))
             }catch{
-                print("From: Device Manager Error: jsonDecodingFailed \(error)")
+                print("From: Asset Manager Error: jsonDecodingFailed \(error)")
                 completion(.failure(.jsonDecodingFailed))
                 return
             }
@@ -182,4 +178,3 @@ func getDevices<T:Codable>(url: URL?, expecting: T.Type, completion:
     
     
     //DELETE
-
