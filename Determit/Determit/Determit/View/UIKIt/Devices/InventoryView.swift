@@ -14,7 +14,9 @@ class InventoryView: UITableViewController,Loadable, UISearchBarDelegate{
 
     //MARK: - Properties
     let searchController = UISearchController(searchResultsController: nil)
-
+    var emptyStateView = EmptyStateView()
+  
+    
     
     //Instantiate ViewModelS
     var ViewModel = InventoryViewModel()
@@ -38,7 +40,23 @@ class InventoryView: UITableViewController,Loadable, UISearchBarDelegate{
         
         
         
+        
+        
+        
+        
         //        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        
+        
+        
+        
+        // Instantiate the EmptyStateView
+               emptyStateView = EmptyStateView(frame: view.bounds)
+               emptyStateView.image = UIImage(systemName: "magnifyingglass")
+               emptyStateView.caption = "Check the spelling or try new search."
+               
+               
+               
+        
     }
     
     
@@ -101,6 +119,9 @@ class InventoryView: UITableViewController,Loadable, UISearchBarDelegate{
         registerNib()
         refreshControlSetUp()
         configureSearchCotroller()
+        
+        
+      
     }
 
     
@@ -213,32 +234,35 @@ extension InventoryView: UISearchResultsUpdating{
             return
         }
         
-        //If the searchText is empty
+        
+        
+        
         if searchText.isEmpty{
-            //Load Items from Core data If the Text In the search Bar is empty
-            print("Empty Search Field Reloading Data...")
             
             ViewModel.readAllDevicesFromCoreData()
-              tableView.reloadData()
+            tableView.reloadData()
+            
         }else{
-            
-           // reload table view data with queried search Text
-            print("Searching for: \(searchText)")
-            
-            
             
             
             ViewModel.queryDeviceData(searchText)
-
+            if ViewModel.devicesCoreData.count == 0{
+                
+               emptyStateView.updateTitle("No Results for \(searchText)")
+               view.addSubview(emptyStateView)
+            }else{
+                
+                emptyStateView.removeFromSuperview()
+            }
             
+            print(ViewModel.devicesCoreData.count)
             tableView.reloadData()
             
-            
-  
         }
-       
+        
+        
+        
     }
-
 }
 
 

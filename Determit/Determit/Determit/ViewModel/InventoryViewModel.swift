@@ -107,12 +107,12 @@ class InventoryViewModel{
     public func queryDeviceData(_ searcBarString: String){
         
         
+    
         
-      devicesCoreData = coreDataManager.customeSearch(searcBarString)
+        devicesCoreData = coreDataManager.customeSearch(searcBarString)
         
         
-        
-        
+   
     }
     
     
