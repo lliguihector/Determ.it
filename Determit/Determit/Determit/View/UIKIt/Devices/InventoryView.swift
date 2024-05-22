@@ -234,7 +234,8 @@ extension InventoryView: UISearchResultsUpdating{
             return
         }
         
-        
+        // Clear out any existing subviews
+                view.subviews.forEach { $0.removeFromSuperview() }
         
         
         if searchText.isEmpty{
@@ -245,8 +246,15 @@ extension InventoryView: UISearchResultsUpdating{
         }else{
             
             
+            
+            
+            
+            
             ViewModel.queryDeviceData(searchText)
-            if ViewModel.devicesCoreData.count == 0{
+            
+            
+            
+            if ViewModel.devicesCoreData.isEmpty{
                 
                emptyStateView.updateTitle("No Results for \(searchText)")
                view.addSubview(emptyStateView)
