@@ -140,14 +140,11 @@ private func handleError(_ error: APIErrors){
     
     }
     
+    
     private func apiStringResponse(_ apiStringResponse: String){
         
         
         let apiMessage = apiStringResponse
-        
-     
-        
-        
         
         //Update the UI on Main thread
                DispatchQueue.main.async {

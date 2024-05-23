@@ -50,7 +50,8 @@ class InventoryView: UITableViewController,Loadable, UISearchBarDelegate{
         
         
         // Instantiate the EmptyStateView
-               emptyStateView = EmptyStateView(frame: view.bounds)
+        // Create an instance of EmptyStateView
+               emptyStateView = EmptyStateView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
                emptyStateView.image = UIImage(systemName: "magnifyingglass")
                emptyStateView.caption = "Check the spelling or try new search."
                
@@ -233,22 +234,14 @@ extension InventoryView: UISearchResultsUpdating{
         guard let searchText = searchController.searchBar.text else{
             return
         }
-        
         // Clear out any existing subviews
                 view.subviews.forEach { $0.removeFromSuperview() }
-        
-        
         if searchText.isEmpty{
             
             ViewModel.readAllDevicesFromCoreData()
             tableView.reloadData()
             
         }else{
-            
-            
-            
-            
-            
             
             ViewModel.queryDeviceData(searchText)
             

@@ -23,7 +23,7 @@ let searchController = UISearchController(searchResultsController: nil)
     
     //Instantiate ViewModel
     var ViewModel = AssetViewModel()
-    
+    var emptyStateView = EmptyStateView()
     
     
     
@@ -53,6 +53,14 @@ let searchController = UISearchController(searchResultsController: nil)
         registerNib()
         refreshControlSetUp()
         configureSearchCotroller()
+        
+        
+        // Instantiate the EmptyStateView
+               emptyStateView = EmptyStateView(frame: view.bounds)
+               emptyStateView.image = UIImage(systemName: "magnifyingglass")
+               emptyStateView.caption = "Check the spelling or try new search."
+        
+        
     }
     
     //Registers the custome nib files
@@ -194,24 +202,30 @@ extension InHouseInventoryVC: UISearchResultsUpdating{
             return
         }
         
-        //If the searchText is empty
+
+        
+        
+        view.subviews.forEach { $0.removeFromSuperview() }
+        
+        
         if searchText.isEmpty{
-            //Load Items from Core data If the Text In the search Bar is empty
             print("Empty Search Field Reloading Data...")
             
             ViewModel.readAllAssetsFromCoreData()
             tableView.reloadData()
         }else{
             
-            // reload table view data with queried search Text
-            print("Searching for: \(searchText)")
-            
-            
-            
-            
             ViewModel.queryAssetData(searchText)
+     
             
-            
+            if ViewModel.assetsCoreData.isEmpty{
+                
+                emptyStateView.updateTitle("No Results for \(searchText)")
+                view.addSubview(emptyStateView)
+            }else{
+                
+                emptyStateView.removeFromSuperview()
+            }
             tableView.reloadData()
             
         }
