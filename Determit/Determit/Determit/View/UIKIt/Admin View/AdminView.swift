@@ -7,13 +7,14 @@
 
 import UIKit
 
-class HomeMenuVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
+class AdminView: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
     
 
     let menuItems = ["Accets","IT Requests","Technicians","Clients"]
     let sfSymbolTitle = ["laptopcomputer.and.iphone","ticket","person.text.rectangle","person.3.sequence"]
     
-  
+    //Company Logo Outlit
+    @IBOutlet weak var companyLogo: UIImageView!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -29,7 +30,28 @@ class HomeMenuVC: UIViewController, UICollectionViewDataSource, UICollectionView
         
         
         collectionView.register(UINib(nibName: "MenuCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MenuCell")
+        
+        
+        setUpCompanyImageUI()
+        
             
+    }
+    
+    
+    
+    
+    
+    
+    func setUpCompanyImageUI(){
+        
+       
+        // Apply rounded corners
+        companyLogo.layer.cornerRadius = companyLogo.frame.size.width / 2
+              
+              // Apply border
+        companyLogo.layer.borderWidth = 0.5
+        companyLogo.layer.borderColor = UIColor.lightGray.cgColor
+        
     }
     
     
