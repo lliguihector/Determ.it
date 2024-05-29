@@ -10,8 +10,8 @@ import UIKit
 class AdminView: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
     
 
-    let menuItems = ["Accets","IT Requests","Technicians","Clients"]
-    let sfSymbolTitle = ["laptopcomputer.and.iphone","ticket","person.text.rectangle","person.3.sequence"]
+    let menuItems = ["Devices","Assets","Service Requests","Technicians","Clients"]
+    let sfSymbolTitle = ["laptopcomputer.and.iphone","qrcode.viewfinder","wrench.and.screwdriver.fill","person.fill","person.3.fill"]
     
     //Company Logo Outlit
     @IBOutlet weak var companyLogo: UIImageView!
@@ -28,13 +28,8 @@ class AdminView: UIViewController, UICollectionViewDataSource, UICollectionViewD
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        
-        collectionView.register(UINib(nibName: "MenuCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MenuCell")
-        
-        
-        setUpCompanyImageUI()
-        
-            
+        setupUI()
+
     }
     
     
@@ -42,15 +37,34 @@ class AdminView: UIViewController, UICollectionViewDataSource, UICollectionViewD
     
     
     
-    func setUpCompanyImageUI(){
+    func setupUI(){
         
-       
-        // Apply rounded corners
+        // Register Menu Cell Nib File
+        collectionView.register(UINib(nibName: "MenuCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MenuCell")
+        
+        // Set Up company Profile Image View
         companyLogo.layer.cornerRadius = companyLogo.frame.size.width / 2
-              
-              // Apply border
         companyLogo.layer.borderWidth = 0.5
         companyLogo.layer.borderColor = UIColor.lightGray.cgColor
+        
+        // Initialize the custom view
+             let adminMenuContainerView = AdminMenuContainerView()
+             adminMenuContainerView.translatesAutoresizingMaskIntoConstraints = false
+             
+             // Add the custom view to the view controller's view hierarchy
+             view.addSubview(adminMenuContainerView)
+             
+             // Set up Auto Layout constraints for the custom view
+             NSLayoutConstraint.activate([
+//                 adminMenuContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+//                 adminMenuContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+//                 adminMenuContainerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+//                 adminMenuContainerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+                 adminMenuContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                 adminMenuContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                 adminMenuContainerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+                 adminMenuContainerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5) // Bottom half of the screen
+             ])
         
     }
     
@@ -80,13 +94,20 @@ class AdminView: UIViewController, UICollectionViewDataSource, UICollectionViewD
         
         if indexPath.row == 0 {
             print("Device")
-            self.performSegue(withIdentifier: "menuToinHouseInventory", sender: self)
+            self.performSegue(withIdentifier: "adminToDevices", sender: self)
             
         }else if indexPath.row == 1{
-            self.performSegue(withIdentifier: "menuToAssetView", sender: self)
+            print("Assets")
+            self.performSegue(withIdentifier: "menuToinHouseInventory", sender: self)
+            print("Tickets")
+        }else if indexPath.row == 2{
+            self.performSegue(withIdentifier: "menuToTicketView", sender: self)
             
-            print("Ticket")
         }else if indexPath.row == 3 {
+            
+          
+            print("Technicians")
+        }else if indexPath.row == 4 {
             
             self.performSegue(withIdentifier: "toUsers", sender: self)
             print("Users")

@@ -125,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="944.79999999999995" y="83.497536945812811"/>
+            <point key="canvasLocation" x="693" y="71"/>
         </scene>
         <!--Admin View-->
         <scene sceneID="GZX-z0-n7T">
@@ -140,23 +140,20 @@
                                 <color key="backgroundColor" red="0.2008791566" green="0.44737952949999998" blue="0.88632291559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="ticket" catalog="system" title="Create IT ticket"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add Employee"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SxH-Dv-10A">
                                 <rect key="frame" x="10" y="696" width="394" height="31"/>
                                 <color key="backgroundColor" red="0.2008791566" green="0.44737952949999998" blue="0.88632291559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="laptopcomputer" catalog="system" title="View Device Inventory"/>
-                                <connections>
-                                    <segue destination="4GT-Vt-xaV" kind="show" id="mEe-Zu-pf4"/>
-                                </connections>
+                                <buttonConfiguration key="configuration" style="plain" title="Service Request"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WfJ-IE-EVV" userLabel="cardView">
                                 <rect key="frame" x="1" y="40" width="412" height="80"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Qra-S4-W46">
-                                        <rect key="frame" x="5" y="10" width="60" height="60"/>
+                                        <rect key="frame" x="10" y="10" width="60" height="60"/>
                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="b1Y-gi-sGi"/>
@@ -164,7 +161,7 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CeL-uL-ucK" userLabel="UserInfo">
-                                        <rect key="frame" x="75" y="19.999999999999996" width="327" height="43.666666666666657"/>
+                                        <rect key="frame" x="82" y="19.999999999999996" width="320" height="43.666666666666657"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Determit.inc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAg-cB-E7A">
                                                 <rect key="frame" x="0.0" y="0.0" width="82.333333333333329" height="18.666666666666668"/>
@@ -184,8 +181,8 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="CeL-uL-ucK" firstAttribute="leading" secondItem="Qra-S4-W46" secondAttribute="trailing" constant="10" id="ExY-3h-3Mv"/>
-                                    <constraint firstItem="Qra-S4-W46" firstAttribute="leading" secondItem="WfJ-IE-EVV" secondAttribute="leading" constant="5" id="KkN-Tp-QSl"/>
+                                    <constraint firstItem="CeL-uL-ucK" firstAttribute="leading" secondItem="Qra-S4-W46" secondAttribute="trailing" constant="12" id="ExY-3h-3Mv"/>
+                                    <constraint firstItem="Qra-S4-W46" firstAttribute="leading" secondItem="WfJ-IE-EVV" secondAttribute="leading" constant="10" id="KkN-Tp-QSl"/>
                                     <constraint firstItem="CeL-uL-ucK" firstAttribute="top" secondItem="WfJ-IE-EVV" secondAttribute="top" constant="20" id="PYr-pV-h8B"/>
                                     <constraint firstAttribute="trailing" secondItem="CeL-uL-ucK" secondAttribute="trailing" constant="10" id="Zip-vP-O6u"/>
                                     <constraint firstAttribute="height" constant="80" id="o04-eU-nKn"/>
@@ -197,7 +194,7 @@
                                 <color key="backgroundColor" red="0.2008791566" green="0.44737952949999998" blue="0.88632291559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="location.circle" catalog="system" title="Client Locations"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reset Password"/>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6e2-ZF-rja">
                                 <rect key="frame" x="0.0" y="121" width="414" height="100"/>
@@ -222,7 +219,7 @@
                                 <color key="backgroundColor" red="0.2008791566" green="0.44737952949999998" blue="0.88632291559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="plus.app" catalog="system" title="Add Client to database"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Post News "/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="snT-xh-CIA"/>
@@ -255,7 +252,8 @@
                         <outlet property="companyLogo" destination="Qra-S4-W46" id="6py-WB-slk"/>
                         <segue destination="PdP-hg-aAm" kind="show" identifier="menuToinHouseInventory" id="uby-Ln-1Qg"/>
                         <segue destination="WT2-HC-rkB" kind="show" identifier="toUsers" id="MUx-yI-lqH"/>
-                        <segue destination="bk2-AS-dld" kind="show" identifier="menuToAssetView" id="sef-wo-YfE"/>
+                        <segue destination="bk2-AS-dld" kind="show" identifier="menuToTicketView" id="sef-wo-YfE"/>
+                        <segue destination="4GT-Vt-xaV" kind="show" identifier="adminToDevices" id="dcQ-rQ-GLf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JEq-uV-TNu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -285,7 +283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EIn-FR-VNA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5274" y="-67"/>
+            <point key="canvasLocation" x="5700" y="-52"/>
         </scene>
         <!--Users-->
         <scene sceneID="px2-vb-c59">
@@ -536,7 +534,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6d-Kr-yhb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7123" y="-912"/>
+            <point key="canvasLocation" x="3896" y="-788"/>
         </scene>
         <!--Add New Device-->
         <scene sceneID="AcO-9z-LN4">
@@ -893,7 +891,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JPW-mO-iUm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7552" y="-3"/>
+            <point key="canvasLocation" x="8628" y="208"/>
         </scene>
         <!--ScannerVC-->
         <scene sceneID="Gfq-Wf-jHK">
@@ -1272,7 +1270,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5i-Go-ygu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5813" y="-194"/>
+            <point key="canvasLocation" x="6414" y="-176"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="BYX-LX-pw1">
@@ -1460,7 +1458,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="EZ4-Qb-M5D"/>
-        <segue reference="mEe-Zu-pf4"/>
+        <segue reference="dcQ-rQ-GLf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="DetermitLogoSVG" width="1366" height="768"/>
@@ -1469,10 +1467,8 @@
         <image name="faceid" catalog="system" width="128" height="115"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
-        <image name="laptopcomputer" catalog="system" width="128" height="73"/>
         <image name="lifepreserver" catalog="system" width="128" height="121"/>
         <image name="line.3.horizontal.decrease.circle" catalog="system" width="128" height="121"/>
-        <image name="location.circle" catalog="system" width="128" height="121"/>
         <image name="location.square" catalog="system" width="128" height="114"/>
         <image name="location.square.fill" catalog="system" width="128" height="114"/>
         <image name="lock" catalog="system" width="128" height="128"/>
@@ -1483,9 +1479,7 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="photo.artframe" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="plus.app" catalog="system" width="128" height="114"/>
         <image name="scroll" catalog="system" width="128" height="116"/>
-        <image name="ticket" catalog="system" width="128" height="84"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

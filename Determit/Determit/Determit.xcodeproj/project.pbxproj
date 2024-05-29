@@ -64,6 +64,9 @@
 		C64BBDC92BE6F4AD00D2DBAF /* TicketData.json in Resources */ = {isa = PBXBuildFile; fileRef = C64BBDC82BE6F4AD00D2DBAF /* TicketData.json */; };
 		C64BBDCC2BE6F55200D2DBAF /* ReadFromFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDCB2BE6F55200D2DBAF /* ReadFromFileManager.swift */; };
 		C67CF32E2BFB0AF500DD07FF /* ManagerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CF32D2BFB0AF500DD07FF /* ManagerAPI.swift */; };
+		C67CF3342C02224700DD07FF /* AdminMenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CF3332C02224600DD07FF /* AdminMenuList.swift */; };
+		C67CF3362C02229900DD07FF /* AdminMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CF3352C02229900DD07FF /* AdminMenuRow.swift */; };
+		C67CF3392C077ED400DD07FF /* AdminMenuContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CF3382C077ED300DD07FF /* AdminMenuContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +139,9 @@
 		C64BBDC82BE6F4AD00D2DBAF /* TicketData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TicketData.json; sourceTree = "<group>"; };
 		C64BBDCB2BE6F55200D2DBAF /* ReadFromFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadFromFileManager.swift; sourceTree = "<group>"; };
 		C67CF32D2BFB0AF500DD07FF /* ManagerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerAPI.swift; sourceTree = "<group>"; };
+		C67CF3332C02224600DD07FF /* AdminMenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMenuList.swift; sourceTree = "<group>"; };
+		C67CF3352C02229900DD07FF /* AdminMenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMenuRow.swift; sourceTree = "<group>"; };
+		C67CF3382C077ED300DD07FF /* AdminMenuContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMenuContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,9 +238,7 @@
 				23AA085728C5297200B1BD99 /* AccountVC.swift */,
 				296867DD28BD6FDD00ECA8FB /* HelpWebVC.swift */,
 				23AA085928C5298200B1BD99 /* HomeVC.swift */,
-				295142252A21B2F5008DC91D /* AddNewAssetVC.swift */,
 				2951422B2A21C822008DC91D /* reviewAssetDataVC.swift */,
-				2913356D2A228F2800A1646A /* UsersVC.swift */,
 				2911E0CA2B2ACDE80033CC2E /* scannerVC.swift */,
 			);
 			path = Controller;
@@ -277,6 +281,7 @@
 		29F8FA6F2BEB66FB00E15D12 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				295142252A21B2F5008DC91D /* AddNewAssetVC.swift */,
 				298F6EC42A217DD3006965C4 /* inHouseInventoryTableViewCell.swift */,
 				298F6EC52A217DD3006965C4 /* inHouseInventoryTableViewCell.xib */,
 				298F6EC22A217DA0006965C4 /* InHouseInventoryVC.swift */,
@@ -287,6 +292,7 @@
 		29F8FA702BEB687A00E15D12 /* Users */ = {
 			isa = PBXGroup;
 			children = (
+				2913356D2A228F2800A1646A /* UsersVC.swift */,
 				29BAC4E72A228B36004369F1 /* usersTableViewCell.xib */,
 				29BAC4E62A228B36004369F1 /* usersTableViewCell.swift */,
 			);
@@ -333,6 +339,7 @@
 		C64BBDCE2BE75A1000D2DBAF /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				C67CF3372C077A2200DD07FF /* Admin UI Components */,
 				C64BBDCA2BE6F4F500D2DBAF /* Ticket */,
 			);
 			path = SwiftUI;
@@ -380,6 +387,7 @@
 				299D94792A21527700C50149 /* AdminView.swift */,
 				299D947B2A21538500C50149 /* MenuCollectionViewCell.swift */,
 				299D947C2A21538500C50149 /* MenuCollectionViewCell.xib */,
+				C67CF3382C077ED300DD07FF /* AdminMenuContainerView.swift */,
 			);
 			path = "Admin View";
 			sourceTree = "<group>";
@@ -404,6 +412,15 @@
 				29F8FA692BEA7A7A00E15D12 /* AssetVC.swift */,
 			);
 			path = Ticket;
+			sourceTree = "<group>";
+		};
+		C67CF3372C077A2200DD07FF /* Admin UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				C67CF3332C02224600DD07FF /* AdminMenuList.swift */,
+				C67CF3352C02229900DD07FF /* AdminMenuRow.swift */,
+			);
+			path = "Admin UI Components";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -532,6 +549,7 @@
 				299D947A2A21527700C50149 /* AdminView.swift in Sources */,
 				C64BBDC12BE5B70300D2DBAF /* APIAsset.swift in Sources */,
 				C67CF32E2BFB0AF500DD07FF /* ManagerAPI.swift in Sources */,
+				C67CF3392C077ED400DD07FF /* AdminMenuContainerView.swift in Sources */,
 				290972C228BBC73F0004B925 /* ViewController.swift in Sources */,
 				299D94772A1D38C300C50149 /* DeviceDetailsVC.swift in Sources */,
 				290972BE28BBC73F0004B925 /* AppDelegate.swift in Sources */,
@@ -540,6 +558,7 @@
 				2911E0CB2B2ACDE80033CC2E /* scannerVC.swift in Sources */,
 				2305663F2983B5500065403D /* Validation.swift in Sources */,
 				23AA085A28C5298200B1BD99 /* HomeVC.swift in Sources */,
+				C67CF3342C02224700DD07FF /* AdminMenuList.swift in Sources */,
 				29BAC4E82A228B36004369F1 /* usersTableViewCell.swift in Sources */,
 				C64BBDBF2BE5B68100D2DBAF /* AssetCoreDataManager.swift in Sources */,
 				2911E0CD2B2ECEF10033CC2E /* APIDevice.swift in Sources */,
@@ -559,6 +578,7 @@
 				290837C52BFE7C400041B3B5 /* EmptyStateView.swift in Sources */,
 				C64BBDC32BE5FD3A00D2DBAF /* MyEnums.swift in Sources */,
 				295142292A21B3F4008DC91D /* deviceTableViewCell.swift in Sources */,
+				C67CF3362C02229900DD07FF /* AdminMenuRow.swift in Sources */,
 				23AA085828C5297200B1BD99 /* AccountVC.swift in Sources */,
 				290837B42BF59FF20041B3B5 /* TicketRow.swift in Sources */,
 				C64BBDC52BE5FD8000D2DBAF /* AssetManagerAPI.swift in Sources */,
