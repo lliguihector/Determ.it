@@ -122,7 +122,7 @@ private func handleError(_ error: APIErrors){
     let errorMessage: String
            switch error {
            case .requestFailed:
-               errorMessage = "Unable to establish a network connection with the server. Please check your internet connection and try again later."
+               errorMessage = " Unable to connect to the server."
            case .responseFailed:
                errorMessage = "Response Failed"
            case .jsonDecodingFailed:

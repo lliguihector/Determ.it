@@ -62,8 +62,12 @@ class AdminView: UIViewController, UICollectionViewDataSource, UICollectionViewD
 //                 adminMenuContainerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
                  adminMenuContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
                  adminMenuContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-                 adminMenuContainerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-                 adminMenuContainerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5) // Bottom half of the screen
+//                 adminMenuContainerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+                 adminMenuContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 242),
+//                 adminMenuContainerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5) // Bottom half of the screen
+                 
+                 
+                 adminMenuContainerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
              ])
         
     }

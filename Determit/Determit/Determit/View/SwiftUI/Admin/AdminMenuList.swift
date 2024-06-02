@@ -13,11 +13,11 @@ struct AdminMenuList: View {
     
     
     let customRows = [
-            ("Post News", "Subtitle for Post News", "person"),
-            ("Service Request", "Subtitle for Service Request", "person"),
-            ("Add Employee", "Subtitle for Add Employee", "person"),
-            ("Reset Password", "Subtitle for Reset Password", "person"),
-            ("Other", "Subtitle for Other", "person"),
+            ("Post News", "MAY 4 2024", "newspaper.circle"),
+            ("Service Request", "Pending Approval 4", "hammer.circle"),
+            ("Add Employee", "Employees: 100", "person.2.circle"),
+            ("Reset Password", "", "lock.circle"),
+            ("No unread Messages", "", "envelope.circle"),
         ]
     
     var body: some View {
@@ -29,18 +29,19 @@ struct AdminMenuList: View {
                     
                     Section{
                         AdminMenuRow(buttonTitle: row.0, buttonSubtitle: row.1, buttonImage: row.2)
-                                            .padding(10)
+                                            .padding()
+                        
                                     }
                     
                 }
-               
                 
             }
 //            .listStyle(PlainListStyle())
-         
+            .shadow(color: .gray, radius: 2, x: 0, y: 2)
         
+    
        
-    }
+    }   
 }
 
 struct Admin_Menu_Previews: PreviewProvider {

@@ -28,15 +28,24 @@ struct AdminMenuRow: View {
                                 .frame(width: 40, height: 40)
                                 .aspectRatio(contentMode: .fit)
                                 .padding(.trailing, 10)
+                                .foregroundColor(Color.black)
+                                
+//                                .scaleEffect(x: 0.5, y: 0.5) //
+                                
                             
                             
                             VStack(alignment: .leading) {
-                                          Text(buttonTitle)
+                                
+                                Text(buttonTitle)
+                                    .font(.subheadline)
+                                    .foregroundColor(.gray)
+                                
+                                
+                                Text(buttonSubtitle)
                                               .font(.headline)
+                                              .foregroundColor(Color.black)
                                           
-                                          Text(buttonSubtitle)
-                                              .font(.subheadline)
-                                              .foregroundColor(.gray)
+                                       
                                       }
                                       
                                       Spacer()
@@ -44,10 +53,10 @@ struct AdminMenuRow: View {
                                       Image(systemName: "chevron.right")
                                           .foregroundColor(.gray)
                         }
-                        .padding()
+//                        .padding()
                                .background(Color.white)
 //                               .cornerRadius(8)
-//                               .shadow(color: .gray, radius: 2, x: 0, y: 2)
+
     }
 }
 

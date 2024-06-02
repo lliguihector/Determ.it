@@ -339,7 +339,7 @@
 		C64BBDCE2BE75A1000D2DBAF /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				C67CF3372C077A2200DD07FF /* Admin UI Components */,
+				C67CF3372C077A2200DD07FF /* Admin */,
 				C64BBDCA2BE6F4F500D2DBAF /* Ticket */,
 			);
 			path = SwiftUI;
@@ -414,13 +414,13 @@
 			path = Ticket;
 			sourceTree = "<group>";
 		};
-		C67CF3372C077A2200DD07FF /* Admin UI Components */ = {
+		C67CF3372C077A2200DD07FF /* Admin */ = {
 			isa = PBXGroup;
 			children = (
 				C67CF3332C02224600DD07FF /* AdminMenuList.swift */,
 				C67CF3352C02229900DD07FF /* AdminMenuRow.swift */,
 			);
-			path = "Admin UI Components";
+			path = Admin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
