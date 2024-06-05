@@ -8,12 +8,46 @@
 import Foundation
 
 
-struct ManagerAPI{
+struct APIManager{
   
+    static let shared = APIManager()
     
-    //need to test this on users, crate a user, delete a user, update a user
+    private init() {}
     
-//MARK: -- CREATE / POST
+
+    
+    //MARK: -- authenticate Fiere Base token with back end server
+    
+    
+    func authenticateWithBackEnd(idToken: String, completion:  @escaping (Result<[String: Any], Error>) -> Void) {
+        guard let url = URL(string: "http://your-backend-url/authenticate") else { return }
+              
+              var request = URLRequest(url: url)
+              request.httpMethod = "POST"
+              request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+              request.addValue("Bearer \(idToken)", forHTTPHeaderField: "Authorization")
+              
+              let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                  if let error = error {
+                      completion(.failure(error))
+                      return
+                  }
+                  
+                  guard let data = data else { return }
+                  do {
+                      if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                          completion(.success(json))
+                      }
+                  } catch let error {
+                      completion(.failure(error))
+                  }
+              }
+              task.resume()
+    }
+    
+    
+    
+//MARK: -- CREATE
     public func Create<T: Codable>(url: URL?, data: T, completion: @escaping (Result<String, APIErrors>) -> Void){
         
         //URL String Error!
@@ -66,7 +100,7 @@ struct ManagerAPI{
         }
     
     
-    //MARK: -- READ ALL / GET
+    //MARK: -- READ ALL
     public func Read_All<T:Codable>(url: URL?, expecting: T.Type, completion: @escaping(Result<T,APIErrors>) -> Void){
         
         //URL Sting Error
@@ -123,12 +157,12 @@ struct ManagerAPI{
 
     
     
-    //MARK: -- READ BY ID / GET
+    //MARK: -- READ BY ID
     
     
     
     
-    //MARK: -- UPDATE BY ID / POST
+    //MARK: -- UPDATE BY ID 
     
     
     

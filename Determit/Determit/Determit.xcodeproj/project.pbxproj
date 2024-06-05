@@ -57,13 +57,15 @@
 		29F8FA6C2BEB5EAA00E15D12 /* TicketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8FA6B2BEB5EAA00E15D12 /* TicketViewModel.swift */; };
 		29F8FA6E2BEB653100E15D12 /* AssetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8FA6D2BEB653100E15D12 /* AssetViewModel.swift */; };
 		29F8FA732BF53B5200E15D12 /* APITicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8FA722BF53B5200E15D12 /* APITicket.swift */; };
+		C62DEFAA2C10B416003D120C /* apiManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62DEFA92C10B415003D120C /* apiManagerTest.swift */; };
+		C62DEFAC2C10C682003D120C /* loginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62DEFAB2C10C682003D120C /* loginViewModel.swift */; };
 		C64BBDBF2BE5B68100D2DBAF /* AssetCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDBE2BE5B68100D2DBAF /* AssetCoreDataManager.swift */; };
 		C64BBDC12BE5B70300D2DBAF /* APIAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC02BE5B70300D2DBAF /* APIAsset.swift */; };
 		C64BBDC32BE5FD3A00D2DBAF /* MyEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC22BE5FD3900D2DBAF /* MyEnums.swift */; };
 		C64BBDC52BE5FD8000D2DBAF /* AssetManagerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC42BE5FD8000D2DBAF /* AssetManagerAPI.swift */; };
 		C64BBDC92BE6F4AD00D2DBAF /* TicketData.json in Resources */ = {isa = PBXBuildFile; fileRef = C64BBDC82BE6F4AD00D2DBAF /* TicketData.json */; };
 		C64BBDCC2BE6F55200D2DBAF /* ReadFromFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDCB2BE6F55200D2DBAF /* ReadFromFileManager.swift */; };
-		C67CF32E2BFB0AF500DD07FF /* ManagerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CF32D2BFB0AF500DD07FF /* ManagerAPI.swift */; };
+		C67CF32E2BFB0AF500DD07FF /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CF32D2BFB0AF500DD07FF /* APIManager.swift */; };
 		C67CF3342C02224700DD07FF /* AdminMenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CF3332C02224600DD07FF /* AdminMenuList.swift */; };
 		C67CF3362C02229900DD07FF /* AdminMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CF3352C02229900DD07FF /* AdminMenuRow.swift */; };
 		C67CF3392C077ED400DD07FF /* AdminMenuContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CF3382C077ED300DD07FF /* AdminMenuContainerView.swift */; };
@@ -132,13 +134,15 @@
 		29F8FA6B2BEB5EAA00E15D12 /* TicketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewModel.swift; sourceTree = "<group>"; };
 		29F8FA6D2BEB653100E15D12 /* AssetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetViewModel.swift; sourceTree = "<group>"; };
 		29F8FA722BF53B5200E15D12 /* APITicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITicket.swift; sourceTree = "<group>"; };
+		C62DEFA92C10B415003D120C /* apiManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiManagerTest.swift; sourceTree = "<group>"; };
+		C62DEFAB2C10C682003D120C /* loginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewModel.swift; sourceTree = "<group>"; };
 		C64BBDBE2BE5B68100D2DBAF /* AssetCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCoreDataManager.swift; sourceTree = "<group>"; };
 		C64BBDC02BE5B70300D2DBAF /* APIAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAsset.swift; sourceTree = "<group>"; };
 		C64BBDC22BE5FD3900D2DBAF /* MyEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEnums.swift; sourceTree = "<group>"; };
 		C64BBDC42BE5FD8000D2DBAF /* AssetManagerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetManagerAPI.swift; sourceTree = "<group>"; };
 		C64BBDC82BE6F4AD00D2DBAF /* TicketData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TicketData.json; sourceTree = "<group>"; };
 		C64BBDCB2BE6F55200D2DBAF /* ReadFromFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadFromFileManager.swift; sourceTree = "<group>"; };
-		C67CF32D2BFB0AF500DD07FF /* ManagerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerAPI.swift; sourceTree = "<group>"; };
+		C67CF32D2BFB0AF500DD07FF /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		C67CF3332C02224600DD07FF /* AdminMenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMenuList.swift; sourceTree = "<group>"; };
 		C67CF3352C02229900DD07FF /* AdminMenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMenuRow.swift; sourceTree = "<group>"; };
 		C67CF3382C077ED300DD07FF /* AdminMenuContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMenuContainerView.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				290837BD2BFE5C960041B3B5 /* DetermitTests.swift */,
+				C62DEFA92C10B415003D120C /* apiManagerTest.swift */,
 			);
 			path = DetermitTests;
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 				2911E0D42B2EF9CD0033CC2E /* InventoryViewModel.swift */,
 				29F8FA6B2BEB5EAA00E15D12 /* TicketViewModel.swift */,
 				29F8FA6D2BEB653100E15D12 /* AssetViewModel.swift */,
+				C62DEFAB2C10C682003D120C /* loginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -261,7 +267,7 @@
 				2911E0D62B3271B40033CC2E /* CoreDataManager.swift */,
 				C64BBDBE2BE5B68100D2DBAF /* AssetCoreDataManager.swift */,
 				C64BBDC42BE5FD8000D2DBAF /* AssetManagerAPI.swift */,
-				C67CF32D2BFB0AF500DD07FF /* ManagerAPI.swift */,
+				C67CF32D2BFB0AF500DD07FF /* APIManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -539,6 +545,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				290837BE2BFE5C960041B3B5 /* DetermitTests.swift in Sources */,
+				C62DEFAA2C10B416003D120C /* apiManagerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,7 +555,7 @@
 			files = (
 				299D947A2A21527700C50149 /* AdminView.swift in Sources */,
 				C64BBDC12BE5B70300D2DBAF /* APIAsset.swift in Sources */,
-				C67CF32E2BFB0AF500DD07FF /* ManagerAPI.swift in Sources */,
+				C67CF32E2BFB0AF500DD07FF /* APIManager.swift in Sources */,
 				C67CF3392C077ED400DD07FF /* AdminMenuContainerView.swift in Sources */,
 				290972C228BBC73F0004B925 /* ViewController.swift in Sources */,
 				299D94772A1D38C300C50149 /* DeviceDetailsVC.swift in Sources */,
@@ -580,6 +587,7 @@
 				295142292A21B3F4008DC91D /* deviceTableViewCell.swift in Sources */,
 				C67CF3362C02229900DD07FF /* AdminMenuRow.swift in Sources */,
 				23AA085828C5297200B1BD99 /* AccountVC.swift in Sources */,
+				C62DEFAC2C10C682003D120C /* loginViewModel.swift in Sources */,
 				290837B42BF59FF20041B3B5 /* TicketRow.swift in Sources */,
 				C64BBDC52BE5FD8000D2DBAF /* AssetManagerAPI.swift in Sources */,
 				290972C028BBC73F0004B925 /* SceneDelegate.swift in Sources */,
