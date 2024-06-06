@@ -120,12 +120,39 @@
                         <outlet property="loginBtn" destination="KnD-yy-JBb" id="iAm-uT-vu4"/>
                         <outlet property="passwordTextField" destination="duk-Ar-50x" id="vJN-TO-ZJ5"/>
                         <outlet property="registerBtn" destination="hLe-tq-bNf" id="6Xj-e1-d4O"/>
-                        <segue destination="rYi-YC-w0u" kind="show" identifier="loginToHome" id="EZ4-Qb-M5D"/>
+                        <segue destination="rYi-YC-w0u" kind="show" identifier="loginToAdmin" id="EZ4-Qb-M5D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="693" y="71"/>
+            <point key="canvasLocation" x="304" y="-52"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0bV-du-idq">
+            <objects>
+                <viewController id="A9p-GZ-QCa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p5n-D3-XAu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employee View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAm-Ph-YAW">
+                                <rect key="frame" x="122" y="433.66666666666669" width="170" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gte-ya-weA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TAm-Ph-YAW" firstAttribute="centerX" secondItem="p5n-D3-XAu" secondAttribute="centerX" id="5uu-Sb-e0y"/>
+                            <constraint firstItem="TAm-Ph-YAW" firstAttribute="centerY" secondItem="p5n-D3-XAu" secondAttribute="centerY" id="UZL-Bb-dWP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RCa-Vo-kZu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2734.7826086956525" y="423.88392857142856"/>
         </scene>
         <!--Admin View-->
         <scene sceneID="GZX-z0-n7T">
@@ -221,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JEq-uV-TNu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3731.884057971015" y="134.59821428571428"/>
+            <point key="canvasLocation" x="3546" y="608"/>
         </scene>
         <!--AssetVC-->
         <scene sceneID="0yW-4g-RUR">
@@ -931,7 +958,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W4Z-Wa-QPl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2520" y="-600"/>
+            <point key="canvasLocation" x="3171" y="-734"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="2Jo-SQ-b1a">
@@ -950,7 +977,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Rj-bf-wcZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="83.705357142857139"/>
+            <point key="canvasLocation" x="-471" y="42"/>
         </scene>
         <!--Account-->
         <scene sceneID="OUc-Iy-Exi">
@@ -975,13 +1002,13 @@
                                                 <constraint firstAttribute="width" constant="60" id="m2m-Ph-FPj"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hector Lliguichuzhca" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnU-Bx-CYk">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Hector Lliguichuzhca" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnU-Bx-CYk">
                                             <rect key="frame" x="0.0" y="63.999999999999993" width="157.66666666666666" height="19.333333333333336"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyw-b2-Xn4">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Email " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyw-b2-Xn4">
                                             <rect key="frame" x="62.333333333333314" y="87.333333333333343" width="33" height="14.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -1375,7 +1402,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7VP-g7-d1m" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="904" y="858"/>
+            <point key="canvasLocation" x="303" y="717"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="j88-Rh-26O">
@@ -1396,12 +1423,12 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="022-nr-EJ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1642" y="-194"/>
+            <point key="canvasLocation" x="1749" y="-275"/>
         </scene>
         <!--Home-->
         <scene sceneID="fD1-JR-aBg">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xNa-Fh-y7p" customClass="HomeVC" customModule="Determit" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xNa-Fh-y7p" customClass="NavigationController" customModule="Determit" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house.fill" id="jhi-PI-cbS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="kwo-27-OhM">
@@ -1416,12 +1443,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jMI-w4-Tho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2597" y="517"/>
+            <point key="canvasLocation" x="1748" y="424"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="EZ4-Qb-M5D"/>
-        <segue reference="SVN-SX-AJ9"/>
+        <segue reference="dcQ-rQ-GLf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="DetermitLogoSVG" width="1366" height="768"/>
@@ -1441,7 +1468,7 @@
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="photo.artframe" catalog="system" width="128" height="93"/>
-        <image name="plus" catalog="system" width="32" height="32"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="scroll" catalog="system" width="128" height="116"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

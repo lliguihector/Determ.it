@@ -21,16 +21,23 @@ class LogInVC: UIViewController,Loadable {
 //User Defaults
     let defaults = UserDefaults.standard
     
-    private let viewModel: loginViewModel
+    
+
+// self.defaults.set(self.emailTextField.text, forKey: "UserEmail")
+
+
+
+      
+    private let viewModel: LoginViewModel
     
     // Dependency Injection via initializer
-       init(viewModel: loginViewModel = loginViewModel()) {
+       init(viewModel: LoginViewModel = LoginViewModel()) {
            self.viewModel = viewModel
            super.init(nibName: nil, bundle: nil)
        }
        
        required init?(coder: NSCoder) {
-           self.viewModel = loginViewModel()
+           self.viewModel = LoginViewModel()
            super.init(coder: coder)
        }
        
@@ -38,87 +45,97 @@ class LogInVC: UIViewController,Loadable {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Bimd ViewModel callbacks
-        viewModel.onError = {[weak self] errorMessage in
-            DispatchQueue.main.async {
-                          self?.showErrorAlert(message: errorMessage)
-                      }
-        }
-        
-        viewModel.onloginSuceess = {[weak self] json in
-            DispatchQueue.main.async {
-                           self?.handleLoginSuccess(response: json)
-                       }
-        }
-        
-        
-        
-        viewModel.onSuccessMock = { [weak self] idToken in
+        setupBinding()
 
-            DispatchQueue.main.async {
-                self?.handleSuccessMock(idToken: idToken)
-                       }
-
-
-        }
 
         setUpMyUI()
 
     }
     
+    func setupBinding(){
+        viewModel.authState = {[weak self] state in
+            
+            switch state{
+            case .authenticated(let role):
+                self?.navigateBasedOnRole(role: role)
+            case .unauthenticated(let error):
+                self?.showErrorAlert(error: error)
+            case .loading:
+                
+                self!.showLoadingView()
+                
+                
+                
+                break
+            }
+   
+        }
+        
+    }
+    
+    
+    
+    
     
     
     //MARK: -- Binding Methods
-    private func showErrorAlert(message: String){
+    private func showErrorAlert(error: Error){
+        
+        let errorMessage = error.localizedDescription
+        DispatchQueue.main.async {
         //Show Alert
-        Alert.showBasicAlert(on: self, with: "", message: "\(message)")
-        hideLoadingView()
-    }
-
-    
-    
-    private func handleLoginSuccess(response: [String: Any]){
-        
-        // Handle login success (e.g., navigate to another screen)
-             print("Login successful: \(response)")
-        
-        
-    //If statement where depending on roles will Login in user to there custome screen
-        
-                            //save the user name to user defaults
-                            self.defaults.set(self.emailTextField.text, forKey: "UserEmail")
-                            //Perform a segue based on rolles Admin, technician, client
-                            self.performSegue(withIdentifier: "loginToHome", sender: self)
-        
-        
-                            self.hideLoadingView()
-    }
-    
-    
-    private func handleSuccessMock(idToken: String){
-        
-        
-        print("ID Token: \(idToken)")
-        
-        //save the user name to user defaults
-        self.defaults.set(self.emailTextField.text, forKey: "UserEmail")
-        //Perform a segue based on rolles Admin, technician, client
-        self.performSegue(withIdentifier: "loginToHome", sender: self)
-        
-        
-        
-        
-        hideLoadingView()
+        Alert.showBasicAlert(on: self, with: "", message: "\(errorMessage)")
+            self.hideLoadingView()
+        }
         
         
     }
 
+    
+    
+private func navigateBasedOnRole(role: String){
+    
+    switch role {
+        
+    case "admin":
+        
+        DispatchQueue.main.async {
+        self.performSegue(withIdentifier: "loginToAdmin", sender: self)
+            self.hideLoadingView()
+        }
+        print("Admin View")
+    case "user":
+        DispatchQueue.main.async {
+//        self.performSegue(withIdentifier: "loginToAdmin", sender: self)
+            self.hideLoadingView()
+        }
+
+        print("User View")
+
+    case "tech":
+        
+        DispatchQueue.main.async {
+//        self.performSegue(withIdentifier: "loginToAdmin", sender: self)
+            self.hideLoadingView()
+        }
+        print("Technician View")
+
+    default:
+        
+        //Handle other roles or show an error
+        print("Unknown role: \(role)")
+    }
+                          
+    }
+    
+    
+ 
     
     
     //MARK: - ACTIONS
     @IBAction func LoginPressed(_ sender: Any) {
         
-       showLoadingView()
+
 
         
         guard let email = emailTextField.text,

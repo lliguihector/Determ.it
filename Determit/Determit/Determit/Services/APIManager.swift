@@ -19,8 +19,8 @@ struct APIManager{
     //MARK: -- authenticate Fiere Base token with back end server
     
     
-    func authenticateWithBackEnd(idToken: String, completion:  @escaping (Result<[String: Any], Error>) -> Void) {
-        guard let url = URL(string: "http://your-backend-url/authenticate") else { return }
+    func authenticateWithBackEnd(idToken: String, completion:  @escaping (Result<String, Error>) -> Void) {
+        guard let url = URL(string: "http://localhost:3000/api/users/authenticate") else { return }
               
               var request = URLRequest(url: url)
               request.httpMethod = "POST"
@@ -34,10 +34,16 @@ struct APIManager{
                   }
                   
                   guard let data = data else { return }
+                  
                   do {
-                      if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                          completion(.success(json))
-                      }
+                      if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+                          
+                          let role = json["role"] as? String{
+                          completion(.success(role))
+                      }else{
+                          
+                    //Handle the error
+                          }
                   } catch let error {
                       completion(.failure(error))
                   }

@@ -14,7 +14,7 @@
 		23AA085428C5294600B1BD99 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA085328C5294600B1BD99 /* LocationVC.swift */; };
 		23AA085628C5295900B1BD99 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA085528C5295900B1BD99 /* RegisterVC.swift */; };
 		23AA085828C5297200B1BD99 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA085728C5297200B1BD99 /* AccountVC.swift */; };
-		23AA085A28C5298200B1BD99 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA085928C5298200B1BD99 /* HomeVC.swift */; };
+		23AA085A28C5298200B1BD99 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA085928C5298200B1BD99 /* NavigationController.swift */; };
 		23AA085C28C529A300B1BD99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23AA085B28C529A300B1BD99 /* Main.storyboard */; };
 		23AA085E28C529CB00B1BD99 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA085D28C529CB00B1BD99 /* Alert.swift */; };
 		23E0F5032975A45B008E2CA2 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E0F5022975A45B008E2CA2 /* LoadingView.swift */; };
@@ -58,7 +58,7 @@
 		29F8FA6E2BEB653100E15D12 /* AssetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8FA6D2BEB653100E15D12 /* AssetViewModel.swift */; };
 		29F8FA732BF53B5200E15D12 /* APITicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8FA722BF53B5200E15D12 /* APITicket.swift */; };
 		C62DEFAA2C10B416003D120C /* apiManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62DEFA92C10B415003D120C /* apiManagerTest.swift */; };
-		C62DEFAC2C10C682003D120C /* loginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62DEFAB2C10C682003D120C /* loginViewModel.swift */; };
+		C62DEFAC2C10C682003D120C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62DEFAB2C10C682003D120C /* LoginViewModel.swift */; };
 		C64BBDBF2BE5B68100D2DBAF /* AssetCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDBE2BE5B68100D2DBAF /* AssetCoreDataManager.swift */; };
 		C64BBDC12BE5B70300D2DBAF /* APIAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC02BE5B70300D2DBAF /* APIAsset.swift */; };
 		C64BBDC32BE5FD3A00D2DBAF /* MyEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC22BE5FD3900D2DBAF /* MyEnums.swift */; };
@@ -89,7 +89,7 @@
 		23AA085328C5294600B1BD99 /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		23AA085528C5295900B1BD99 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		23AA085728C5297200B1BD99 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
-		23AA085928C5298200B1BD99 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		23AA085928C5298200B1BD99 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		23AA085B28C529A300B1BD99 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		23AA085D28C529CB00B1BD99 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		23E0F5022975A45B008E2CA2 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 		29F8FA6D2BEB653100E15D12 /* AssetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetViewModel.swift; sourceTree = "<group>"; };
 		29F8FA722BF53B5200E15D12 /* APITicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITicket.swift; sourceTree = "<group>"; };
 		C62DEFA92C10B415003D120C /* apiManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiManagerTest.swift; sourceTree = "<group>"; };
-		C62DEFAB2C10C682003D120C /* loginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewModel.swift; sourceTree = "<group>"; };
+		C62DEFAB2C10C682003D120C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C64BBDBE2BE5B68100D2DBAF /* AssetCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCoreDataManager.swift; sourceTree = "<group>"; };
 		C64BBDC02BE5B70300D2DBAF /* APIAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAsset.swift; sourceTree = "<group>"; };
 		C64BBDC22BE5FD3900D2DBAF /* MyEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEnums.swift; sourceTree = "<group>"; };
@@ -242,7 +242,7 @@
 				290972C128BBC73F0004B925 /* ViewController.swift */,
 				23AA085728C5297200B1BD99 /* AccountVC.swift */,
 				296867DD28BD6FDD00ECA8FB /* HelpWebVC.swift */,
-				23AA085928C5298200B1BD99 /* HomeVC.swift */,
+				23AA085928C5298200B1BD99 /* NavigationController.swift */,
 				2951422B2A21C822008DC91D /* reviewAssetDataVC.swift */,
 				2911E0CA2B2ACDE80033CC2E /* scannerVC.swift */,
 			);
@@ -255,7 +255,7 @@
 				2911E0D42B2EF9CD0033CC2E /* InventoryViewModel.swift */,
 				29F8FA6B2BEB5EAA00E15D12 /* TicketViewModel.swift */,
 				29F8FA6D2BEB653100E15D12 /* AssetViewModel.swift */,
-				C62DEFAB2C10C682003D120C /* loginViewModel.swift */,
+				C62DEFAB2C10C682003D120C /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -564,7 +564,7 @@
 				23E0F5032975A45B008E2CA2 /* LoadingView.swift in Sources */,
 				2911E0CB2B2ACDE80033CC2E /* scannerVC.swift in Sources */,
 				2305663F2983B5500065403D /* Validation.swift in Sources */,
-				23AA085A28C5298200B1BD99 /* HomeVC.swift in Sources */,
+				23AA085A28C5298200B1BD99 /* NavigationController.swift in Sources */,
 				C67CF3342C02224700DD07FF /* AdminMenuList.swift in Sources */,
 				29BAC4E82A228B36004369F1 /* usersTableViewCell.swift in Sources */,
 				C64BBDBF2BE5B68100D2DBAF /* AssetCoreDataManager.swift in Sources */,
@@ -587,7 +587,7 @@
 				295142292A21B3F4008DC91D /* deviceTableViewCell.swift in Sources */,
 				C67CF3362C02229900DD07FF /* AdminMenuRow.swift in Sources */,
 				23AA085828C5297200B1BD99 /* AccountVC.swift in Sources */,
-				C62DEFAC2C10C682003D120C /* loginViewModel.swift in Sources */,
+				C62DEFAC2C10C682003D120C /* LoginViewModel.swift in Sources */,
 				290837B42BF59FF20041B3B5 /* TicketRow.swift in Sources */,
 				C64BBDC52BE5FD8000D2DBAF /* AssetManagerAPI.swift in Sources */,
 				290972C028BBC73F0004B925 /* SceneDelegate.swift in Sources */,
