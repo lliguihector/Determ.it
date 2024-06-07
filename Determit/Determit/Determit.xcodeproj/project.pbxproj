@@ -25,7 +25,7 @@
 		290837C52BFE7C400041B3B5 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290837C42BFE7C400041B3B5 /* EmptyStateView.swift */; };
 		290972BE28BBC73F0004B925 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290972BD28BBC73F0004B925 /* AppDelegate.swift */; };
 		290972C028BBC73F0004B925 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290972BF28BBC73F0004B925 /* SceneDelegate.swift */; };
-		290972C228BBC73F0004B925 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290972C128BBC73F0004B925 /* ViewController.swift */; };
+		290972C228BBC73F0004B925 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290972C128BBC73F0004B925 /* TabBarController.swift */; };
 		290972C728BBC7400004B925 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 290972C628BBC7400004B925 /* Assets.xcassets */; };
 		2911E0CB2B2ACDE80033CC2E /* scannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911E0CA2B2ACDE80033CC2E /* scannerVC.swift */; };
 		2911E0CD2B2ECEF10033CC2E /* APIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911E0CC2B2ECEF10033CC2E /* APIDevice.swift */; };
@@ -65,6 +65,7 @@
 		C64BBDC52BE5FD8000D2DBAF /* AssetManagerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDC42BE5FD8000D2DBAF /* AssetManagerAPI.swift */; };
 		C64BBDC92BE6F4AD00D2DBAF /* TicketData.json in Resources */ = {isa = PBXBuildFile; fileRef = C64BBDC82BE6F4AD00D2DBAF /* TicketData.json */; };
 		C64BBDCC2BE6F55200D2DBAF /* ReadFromFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BBDCB2BE6F55200D2DBAF /* ReadFromFileManager.swift */; };
+		C66537632C11931E00F50F11 /* EmployeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66537622C11931E00F50F11 /* EmployeeView.swift */; };
 		C67CF32E2BFB0AF500DD07FF /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CF32D2BFB0AF500DD07FF /* APIManager.swift */; };
 		C67CF3342C02224700DD07FF /* AdminMenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CF3332C02224600DD07FF /* AdminMenuList.swift */; };
 		C67CF3362C02229900DD07FF /* AdminMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CF3352C02229900DD07FF /* AdminMenuRow.swift */; };
@@ -102,7 +103,7 @@
 		290972BA28BBC73F0004B925 /* Determit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Determit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		290972BD28BBC73F0004B925 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		290972BF28BBC73F0004B925 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		290972C128BBC73F0004B925 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		290972C128BBC73F0004B925 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		290972C628BBC7400004B925 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		290972CB28BBC7400004B925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2911E0CA2B2ACDE80033CC2E /* scannerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scannerVC.swift; sourceTree = "<group>"; };
@@ -142,6 +143,7 @@
 		C64BBDC42BE5FD8000D2DBAF /* AssetManagerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetManagerAPI.swift; sourceTree = "<group>"; };
 		C64BBDC82BE6F4AD00D2DBAF /* TicketData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TicketData.json; sourceTree = "<group>"; };
 		C64BBDCB2BE6F55200D2DBAF /* ReadFromFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadFromFileManager.swift; sourceTree = "<group>"; };
+		C66537622C11931E00F50F11 /* EmployeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeView.swift; sourceTree = "<group>"; };
 		C67CF32D2BFB0AF500DD07FF /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		C67CF3332C02224600DD07FF /* AdminMenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMenuList.swift; sourceTree = "<group>"; };
 		C67CF3352C02229900DD07FF /* AdminMenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMenuRow.swift; sourceTree = "<group>"; };
@@ -239,7 +241,7 @@
 		290972D328BBC7640004B925 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				290972C128BBC73F0004B925 /* ViewController.swift */,
+				290972C128BBC73F0004B925 /* TabBarController.swift */,
 				23AA085728C5297200B1BD99 /* AccountVC.swift */,
 				296867DD28BD6FDD00ECA8FB /* HelpWebVC.swift */,
 				23AA085928C5298200B1BD99 /* NavigationController.swift */,
@@ -330,8 +332,8 @@
 				29F8FA712BEB68BA00E15D12 /* UI Components */,
 				C64BBDD12BE75DA400D2DBAF /* Register */,
 				C64BBDD02BE75D8F00D2DBAF /* Login */,
+				C66537612C1192E900F50F11 /* Employee View */,
 				C67CF32F2C00BA0000DD07FF /* Admin View */,
-				C67CF3302C00EA3300DD07FF /* Employees View */,
 				C67CF3312C00EA7B00DD07FF /* Technicians View */,
 				C64BBDD22BE75DE200D2DBAF /* Map */,
 				C64BBDCF2BE75D6900D2DBAF /* Devices */,
@@ -387,6 +389,14 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
+		C66537612C1192E900F50F11 /* Employee View */ = {
+			isa = PBXGroup;
+			children = (
+				C66537622C11931E00F50F11 /* EmployeeView.swift */,
+			);
+			path = "Employee View";
+			sourceTree = "<group>";
+		};
 		C67CF32F2C00BA0000DD07FF /* Admin View */ = {
 			isa = PBXGroup;
 			children = (
@@ -396,13 +406,6 @@
 				C67CF3382C077ED300DD07FF /* AdminMenuContainerView.swift */,
 			);
 			path = "Admin View";
-			sourceTree = "<group>";
-		};
-		C67CF3302C00EA3300DD07FF /* Employees View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Employees View";
 			sourceTree = "<group>";
 		};
 		C67CF3312C00EA7B00DD07FF /* Technicians View */ = {
@@ -557,7 +560,7 @@
 				C64BBDC12BE5B70300D2DBAF /* APIAsset.swift in Sources */,
 				C67CF32E2BFB0AF500DD07FF /* APIManager.swift in Sources */,
 				C67CF3392C077ED400DD07FF /* AdminMenuContainerView.swift in Sources */,
-				290972C228BBC73F0004B925 /* ViewController.swift in Sources */,
+				290972C228BBC73F0004B925 /* TabBarController.swift in Sources */,
 				299D94772A1D38C300C50149 /* DeviceDetailsVC.swift in Sources */,
 				290972BE28BBC73F0004B925 /* AppDelegate.swift in Sources */,
 				23AA085428C5294600B1BD99 /* LocationVC.swift in Sources */,
@@ -573,6 +576,7 @@
 				296867DE28BD6FDD00ECA8FB /* HelpWebVC.swift in Sources */,
 				29F8FA6A2BEA7A7A00E15D12 /* AssetVC.swift in Sources */,
 				29F8FA6C2BEB5EAA00E15D12 /* TicketViewModel.swift in Sources */,
+				C66537632C11931E00F50F11 /* EmployeeView.swift in Sources */,
 				2911E0CF2B2ECFD70033CC2E /* DeviceManagerAPI.swift in Sources */,
 				2911E0D72B3271B40033CC2E /* CoreDataManager.swift in Sources */,
 				2966172A2A17B1FD0042D2F9 /* InventoryTableViewCell.swift in Sources */,
