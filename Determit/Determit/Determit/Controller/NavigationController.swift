@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class HomeVC:  UINavigationController{
+class NavigationController:  UINavigationController{
     
     
     override func viewDidLoad() {

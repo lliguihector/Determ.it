@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" reuseIdentifier="MenuCell" id="gTV-IL-0wX" customClass="MenuCollectionViewCell" customModule="Determit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.artframe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hGG-x1-dfJ">
+                        <rect key="frame" x="20" y="21" width="60" height="57.5"/>
+                        <color key="backgroundColor" red="0.13463810966552175" green="0.31425285424002153" blue="0.65012705694768846" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="41m-CU-i5Z"/>
+                            <constraint firstAttribute="width" secondItem="hGG-x1-dfJ" secondAttribute="height" multiplier="1:1" id="LeG-dU-25f"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PSs-Z3-dNa">
+                        <rect key="frame" x="21.5" y="76" width="57" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="PSs-Z3-dNa" secondAttribute="height" multiplier="57:14" id="5uR-K4-uvf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" red="0.13405397529999999" green="0.31482568379999998" blue="0.65101617570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="tintColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="PSs-Z3-dNa" secondAttribute="bottom" constant="10" id="AvG-01-Npw"/>
+                <constraint firstItem="hGG-x1-dfJ" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="ZCi-dL-Bpr"/>
+                <constraint firstItem="PSs-Z3-dNa" firstAttribute="centerX" secondItem="hGG-x1-dfJ" secondAttribute="centerX" id="gHC-3G-4dc"/>
+                <constraint firstItem="hGG-x1-dfJ" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="pHa-Nf-D7D"/>
+            </constraints>
+            <size key="customSize" width="347" height="323"/>
+            <connections>
+                <outlet property="menuImage" destination="hGG-x1-dfJ" id="q6a-mF-Fql"/>
+                <outlet property="menuTitle" destination="PSs-Z3-dNa" id="49N-rc-A2L"/>
+            </connections>
+            <point key="canvasLocation" x="224.63768115942031" y="35.491071428571423"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="photo.artframe" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

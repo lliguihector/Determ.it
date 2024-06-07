@@ -11,7 +11,22 @@ import Foundation
 class TicketViewModel: ObservableObject{
     
     
-    var apiManager = ManagerAPI()
+    private let apiManager: APIManager
+    
+    var onError: ((String) -> Void)?
+       var onLoginSuccess: (([String: Any]) -> Void)?
+       
+       init(apiManager: APIManager = APIManager.shared) {
+           self.apiManager = apiManager
+       }
+       
+    
+    
+    
+    
+    
+//    
+//    var apiManager = APIManager()
     
     //ObservableObject allows objects to announce changes to their data/ will automaticaly update the ui when these properties changes
     @Published var tickets: [APITicket] = [] //API Data
