@@ -159,7 +159,7 @@
         <!--Devices-->
         <scene sceneID="8r4-PQ-d4j">
             <objects>
-                <viewController id="cjY-Et-X5z" sceneMemberID="viewController">
+                <viewController id="cjY-Et-X5z" customClass="EmployeeView" customModule="Determit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rta-tL-kh8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1010,10 +1010,10 @@
             </objects>
             <point key="canvasLocation" x="397" y="-1571"/>
         </scene>
-        <!--HomeVC-->
+        <!--Navigation Controller-->
         <scene sceneID="2Jo-SQ-b1a">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fiT-FE-XRx" customClass="HomeVC" customModule="Determit" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fiT-FE-XRx" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Rff-a9-b8D">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -1027,7 +1027,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Rj-bf-wcZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4786" y="-283"/>
+            <point key="canvasLocation" x="-5084" y="-291"/>
         </scene>
         <!--Account-->
         <scene sceneID="OUc-Iy-Exi">
