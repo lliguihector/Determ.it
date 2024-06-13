@@ -14,16 +14,65 @@ protocol addNewDeviceVCDelegate: AnyObject{
     func reloadData()
 }
 
-
-
-
-class AddNewDeviceVC: UIViewController,Loadable {
+class AddNewDeviceVC: UIViewController,Loadable, UITextFieldDelegate,CustomTextFieldDelegate, ValidationDelegate, CategorySelectionDelegate{
+    
+    
+    
+    func didSelectCategory(_ category: String, _ sfImage: String) {
+        categorySelectedLabel.text = category
+        categoryIcon.image = UIImage(systemName: sfImage)
+    }
+    
+    
+    
+    
+ 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if let categorySelectionView = segue.destination as? CategorySelectionView {
+                categorySelectionView.delegate = self
+            }
+        }
+    
+    
+    
+    func validationDidFinish(isValid: Bool, errorMessage: String?) {
+        print("Bolean: \(isValid) + Error Message: \(errorMessage ?? "ok")")
+    }
+  
+    
+    
+    
+    
+    
+    
+    
+    func textFieldDidEndEditing(_ textField: CustomTextField, isValid: Bool, errorMessage: String?) {
+                 if isValid {
+                     textField.clearErrorState()
+                     textField.showCheckmark()
+                     updateErrorLabel(for: textField, with: nil)
+                 } else {
+                     textField.showErrorState(message: errorMessage ?? "Invalid input")
+                     updateErrorLabel(for: textField, with: errorMessage)
+                 }
+    }
+    
+    
+    
+    var ValidationBool = true
+    
+    
+    @IBOutlet weak var testLabel: UILabel!
+    
+    
     
     //OUTLITS
     @IBOutlet weak var brandTextField: UITextField!
+    
     @IBOutlet weak var deviceNameTextField: UITextField!
     @IBOutlet weak var modelTextField: UITextField!
-    @IBOutlet weak var serialNumberTextField: UITextField!
+    @IBOutlet weak var serialNumberTextField: CustomTextField!
     @IBOutlet weak var storageCapacityTextFiled: UITextField!
     @IBOutlet weak var memoryCpacityTextField: UITextField!
     @IBOutlet weak var processorDescriptionTextField: UITextField!
@@ -33,7 +82,18 @@ class AddNewDeviceVC: UIViewController,Loadable {
     
     @IBOutlet weak var modelNameTextField: UITextField!
     
-    var ViewModel = InventoryViewModel()
+    
+    
+    //Category
+    
+    
+    @IBOutlet weak var categoryIcon: UIImageView!
+    @IBOutlet weak var categorySelectedLabel: UILabel!
+    
+    
+    
+    
+    private let viewModel = InventoryViewModel()
     
     weak var delegate: addNewDeviceVCDelegate?
     
@@ -44,13 +104,40 @@ class AddNewDeviceVC: UIViewController,Loadable {
         bindViewModel()
         
         
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         tapGesture.cancelsTouchesInView = false
         view.addGestureRecognizer(tapGesture)
         
+        viewModel.delegate = self
+        
+//        serialNumberTextField.customDelegate = self
+        
+        setupUi()
+        
     }
     
     
+
+     private func updateErrorLabel(for textField: CustomTextField, with message: String?) {
+         switch textField {
+         case brandTextField:
+             testLabel.text = message
+         case modelTextField:
+             testLabel.text = message
+         // Add cases for other text fields...
+         default:
+             break
+         }
+     }
+    
+    
+    func setupUi(){
+        
+   
+        
+        
+    }
     
     
     @objc func handleTap() {
@@ -58,9 +145,9 @@ class AddNewDeviceVC: UIViewController,Loadable {
     }
     //
     //Built in Method
-    //    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    //        self.view.endEditing(true)
-    //    }
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
     
     
     
@@ -68,13 +155,13 @@ class AddNewDeviceVC: UIViewController,Loadable {
     
     func bindViewModel(){
         
-        ViewModel.onError = { [weak self] errorMessage in
+        viewModel.onError = { [weak self] errorMessage in
             
             Alert.showBasicAlert(on: self!, with: "Error", message: errorMessage)
             
         }
         
-        ViewModel.onSuccess = { [weak self] apiMessage in
+        viewModel.onSuccess = { [weak self] apiMessage in
             //THIRD
             
             DispatchQueue.main.async {
@@ -82,19 +169,35 @@ class AddNewDeviceVC: UIViewController,Loadable {
                 Alert.showBasicAlert(on: self!, with: "Success", message: apiMessage)
                 
             }
-                
-                
       
         }
+        // Observe ViewModel properties for updates
+//               ViewModel.updateValidationStatus = { [weak self] isValid in
+//                   self?.updateValidationStatus(isValid: isValid)
+//               }
+//
+//               ViewModel.updateErrorMessage = { [weak self] errorMessage in
+//                   self?.updateErrorMessage(errorMessage: errorMessage)
+//               }
+
+        
     }
     
     
+//    func updateValidationStatus(isValid: Bool) {
+//
+//
+//        self.ValidationBool = isValid
+//        }
+//
+//        func updateErrorMessage(errorMessage: String?) {
+//
+//        }
+
+
+    
     
     @IBAction func addNewPressed(_ sender: Any) {
-        
-        
-        
-        
         
         let isEmpty =
         brandTextField.text?.isEmpty ?? true ||
@@ -124,7 +227,7 @@ class AddNewDeviceVC: UIViewController,Loadable {
             let newDevice = APIDevice(_id: "", brand: brandTextField.text!, deviceName: deviceNameTextField.text!, model: modelTextField.text!, serialNumber: serialNumberTextField.text!, storage: storageCapacityTextFiled.text!, memory: memoryCpacityTextField.text!, processor: processorDescriptionTextField.text!, imageURL: imageURLTextField.text!, category: categoryTextField.text!, operatingSystem: osTextField.text!)
             
             //Call the API
-            ViewModel.createData(newDevice)
+            viewModel.createData(newDevice)
             
             
             self.navigationController!.popViewController(animated: true)
@@ -133,11 +236,28 @@ class AddNewDeviceVC: UIViewController,Loadable {
             }
  
         }
-    }
     
     
+ 
     
     
 
     
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//
+//
+//
+//        viewModel.validate(input: serialNumberTextField.text, for: .email)
+//
+//
+//
+//
+//
+//
+//
+//    }
+    
+    
+
+}
     

@@ -10,6 +10,9 @@ import CoreData
 import UIKit
 
 
+protocol ValidationDelegate: AnyObject {
+    func validationDidFinish(isValid: Bool, errorMessage: String?)
+}
 
 class InventoryViewModel{
     
@@ -29,6 +32,16 @@ class InventoryViewModel{
     //Create an empty array to hold Core Data Device entety
     var devicesCoreData: [Device] = []
     let coreDataManager = CoreDataManager.shared
+    
+    
+    weak var delegate: ValidationDelegate?
+    var validationType: ValidationType = .email
+
+    //Form Validation
+    private let validation = Validation()
+    
+    var updateValidationStatus: ((Bool) -> Void)?
+    var updateErrorMessage: ((String?) -> Void)?
 
     //MARK: - API METHODS
     //CREATE
@@ -157,7 +170,65 @@ private func handleError(_ error: APIErrors){
                    
                }
     }
+    
+    
+    
+    //MARK: -- Form validation
+    
+    
+    var isValid: Bool = false{
+        didSet{
+            updateValidationStatus?(isValid)
+        }
+    }
+    
+    var errorMessage: String? {
+         didSet {
+             updateErrorMessage?(errorMessage)
+         }
+     }
+    
+    
+   
 
+    func validate(input: String?, for type: ValidationType){
+        
+        
+            guard let input = input, !input.isEmpty else {
+              isValid = false
+                errorMessage = "Input cannot be empty"
+                delegate?.validationDidFinish(isValid: false,errorMessage: "Input cannot beempty")
+                return
+            }
+        
+        let isValid: Bool
+        let errorMessage: String?
+        
+        switch type {
+                case .email:
+            
+            
+                    isValid =  validation.validateEmail(email: input)
+            
+                    errorMessage = isValid ? nil : "Invalid email format"
+            
+                  
+                case .password:
+                   
+            isValid = validation.validatePassword(password: input)
+            errorMessage = isValid ? nil : "Password must be at least 6 characters long, with at least one letter and one number"
+            
+            // Add more cases for other validation types if needed
+        }
+        
+        delegate?.validationDidFinish(isValid: isValid, errorMessage: errorMessage)
+
+    }
+
+    
+    
+    
+    
     
 }
         

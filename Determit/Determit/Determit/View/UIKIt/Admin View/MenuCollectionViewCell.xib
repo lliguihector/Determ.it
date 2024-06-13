@@ -51,7 +51,7 @@
                 <outlet property="menuImage" destination="hGG-x1-dfJ" id="q6a-mF-Fql"/>
                 <outlet property="menuTitle" destination="PSs-Z3-dNa" id="49N-rc-A2L"/>
             </connections>
-            <point key="canvasLocation" x="224.63768115942031" y="35.491071428571423"/>
+            <point key="canvasLocation" x="224.63768115942031" y="34.821428571428569"/>
         </collectionViewCell>
     </objects>
     <resources>

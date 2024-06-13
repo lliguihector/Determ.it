@@ -15,3 +15,11 @@ enum APIErrors: Error{
     case invalidImageURL
     
 }
+
+enum ValidationType {
+    case email
+    case password
+//    case username
+//    case phoneNumber
+    // Add more validation types as needed
+}
