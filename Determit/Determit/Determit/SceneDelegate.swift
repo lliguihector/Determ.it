@@ -10,14 +10,42 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    // Define this property to switch between real and mock API managers
+       let useMockAPIManager = true
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        
+        
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+
+        
+        // Initialize the window
+              window = UIWindow(windowScene:  windowScene )
+              
+        
+        
+        //Choose the APIManager based on the flag
+        let apiManager: APIManagerProtocol = useMockAPIManager ? MockAPIManager() : APIManager.shared
+        
+        let loginViewModel = LoginViewModel(apiManager: apiManager)
+        
+        // Initialize the LoginViewController with the view model
+               let storyboard = UIStoryboard(name: "Main", bundle: nil)
+               if let navigationController = storyboard.instantiateInitialViewController() as? UINavigationController,
+                  let loginViewController = navigationController.topViewController as? LogInVC {
+                   loginViewController.viewModel = loginViewModel
+                   window?.rootViewController = navigationController
+               }
+        
+        window?.makeKeyAndVisible()
+        
     }
+    
+    
+    
+    
+    
+    
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

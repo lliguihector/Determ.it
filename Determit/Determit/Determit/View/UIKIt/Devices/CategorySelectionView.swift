@@ -30,15 +30,15 @@ class CategorySelectionView: UIViewController, UICollectionViewDataSource,UIColl
     ("Mouse","computermouse"),
     ("Keyboard","keyboard"),
     ("Printer","printer"),
-    ("Gaming Console","gamecontroller.fill"),
+    ("Gaming Console","gamecontroller"),
     ("Fax Machine","faxmachine"),
     ("Display","display"),
-    ("tv","tv"),
+    ("Television","tv"),
     ("Server","xserve"),
     ("Server Rack","server.rack"),
-    ("smartphone","iphone"),
-    ("smart watch","applewatch"),
-    ("headphones","headphones")
+    ("Smartphone","iphone"),
+    ("Smart watch","applewatch"),
+    ("Headphones","headphones")
     ]
     
     

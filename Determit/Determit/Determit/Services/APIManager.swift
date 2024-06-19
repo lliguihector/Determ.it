@@ -8,10 +8,14 @@
 import Foundation
 
 
-struct APIManager{
+
+//Protocal
+
+
+struct APIManager: APIManagerProtocol{
   
     static let shared = APIManager()
-    
+
     private init() {}
     
 

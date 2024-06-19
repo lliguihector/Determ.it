@@ -19,8 +19,9 @@ class AddNewDeviceVC: UIViewController,Loadable, UITextFieldDelegate,CustomTextF
     
     
     func didSelectCategory(_ category: String, _ sfImage: String) {
-        categorySelectedLabel.text = category
-        categoryIcon.image = UIImage(systemName: sfImage)
+        
+        setCategoryToButton(sfImage,category)
+        
     }
     
     
@@ -84,13 +85,8 @@ class AddNewDeviceVC: UIViewController,Loadable, UITextFieldDelegate,CustomTextF
     
     
     
-    //Category
-    
-    
-    @IBOutlet weak var categoryIcon: UIImageView!
-    @IBOutlet weak var categorySelectedLabel: UILabel!
-    
-    
+    //Category Button
+    @IBOutlet weak var selectCategoryBtn: UIButton!
     
     
     private let viewModel = InventoryViewModel()
@@ -111,9 +107,11 @@ class AddNewDeviceVC: UIViewController,Loadable, UITextFieldDelegate,CustomTextF
         
         viewModel.delegate = self
         
-//        serialNumberTextField.customDelegate = self
         
         setupUi()
+        
+        
+        
         
     }
     
@@ -134,10 +132,42 @@ class AddNewDeviceVC: UIViewController,Loadable, UITextFieldDelegate,CustomTextF
     
     func setupUi(){
         
-   
         
+        //Select Category Button
+        selectCategoryBtn.layer.borderWidth = 1.0
+        selectCategoryBtn.layer.cornerRadius = 4
+        selectCategoryBtn.layer.borderColor = UIColor.systemMint.cgColor
+   
+        setCategoryToButton("arrow.forward.circle","Select Category")
+
+    }
+    
+    
+    func setCategoryToButton(_ sfIcon: String, _ title:  String){
+        
+        // Create a UIButtonConfiguration
+          var config = UIButton.Configuration.plain()
+          
+          // Set the title and image
+          config.title = title
+          config.image = UIImage(systemName: sfIcon)
+          
+          // Adjust the placement of the image and title
+        config.imagePlacement = .trailing // This places the image to the left of the title
+          config.imagePadding = 8.0 // Spacing between image and title
+        config.baseForegroundColor = .systemTeal // Set the color of the image and title
+          
+          // Apply the configuration to the button
+          selectCategoryBtn.configuration = config
+        selectCategoryBtn.contentHorizontalAlignment = .center// Align content to the left
+          
+          // Debug: Print the current configuration
+          print("Button title: \(String(describing: selectCategoryBtn.configuration?.title))")
+          print("Button image: \(String(describing: selectCategoryBtn.configuration?.image))")
         
     }
+    
+    
     
     
     @objc func handleTap() {

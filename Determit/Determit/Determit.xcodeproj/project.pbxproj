@@ -75,6 +75,9 @@
 		C67CF3342C02224700DD07FF /* AdminMenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CF3332C02224600DD07FF /* AdminMenuList.swift */; };
 		C67CF3362C02229900DD07FF /* AdminMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CF3352C02229900DD07FF /* AdminMenuRow.swift */; };
 		C67CF3392C077ED400DD07FF /* AdminMenuContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CF3382C077ED300DD07FF /* AdminMenuContainerView.swift */; };
+		C6E88F882C22A3CD000A34D9 /* MockAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E88F872C22A3CD000A34D9 /* MockAPIManager.swift */; };
+		C6E88F8A2C22A9BC000A34D9 /* APIManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E88F892C22A9BC000A34D9 /* APIManagerProtocol.swift */; };
+		C6E88F8D2C22BD4A000A34D9 /* JWTDecode in Frameworks */ = {isa = PBXBuildFile; productRef = C6E88F8C2C22BD4A000A34D9 /* JWTDecode */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +161,8 @@
 		C67CF3332C02224600DD07FF /* AdminMenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMenuList.swift; sourceTree = "<group>"; };
 		C67CF3352C02229900DD07FF /* AdminMenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMenuRow.swift; sourceTree = "<group>"; };
 		C67CF3382C077ED300DD07FF /* AdminMenuContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMenuContainerView.swift; sourceTree = "<group>"; };
+		C6E88F872C22A3CD000A34D9 /* MockAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIManager.swift; sourceTree = "<group>"; };
+		C6E88F892C22A9BC000A34D9 /* APIManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6E88F8D2C22BD4A000A34D9 /* JWTDecode in Frameworks */,
 				296867E128EE970100ECA8FB /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +287,8 @@
 				C64BBDBE2BE5B68100D2DBAF /* AssetCoreDataManager.swift */,
 				C64BBDC42BE5FD8000D2DBAF /* AssetManagerAPI.swift */,
 				C67CF32D2BFB0AF500DD07FF /* APIManager.swift */,
+				C6E88F872C22A3CD000A34D9 /* MockAPIManager.swift */,
+				C6E88F892C22A9BC000A34D9 /* APIManagerProtocol.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -483,6 +491,7 @@
 			name = Determit;
 			packageProductDependencies = (
 				296867E028EE970100ECA8FB /* FirebaseAuth */,
+				C6E88F8C2C22BD4A000A34D9 /* JWTDecode */,
 			);
 			productName = Determit;
 			productReference = 290972BA28BBC73F0004B925 /* Determit.app */;
@@ -519,6 +528,7 @@
 				29396D7B28BBE21C00BC79C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				23A8DF3328C692C700F59941 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				296867DF28EE970100ECA8FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				C6E88F8B2C22BD49000A34D9 /* XCRemoteSwiftPackageReference "JWTDecode" */,
 			);
 			productRefGroup = 290972BB28BBC73F0004B925 /* Products */;
 			projectDirPath = "";
@@ -585,6 +595,7 @@
 				23E0F5032975A45B008E2CA2 /* LoadingView.swift in Sources */,
 				2911E0CB2B2ACDE80033CC2E /* scannerVC.swift in Sources */,
 				2305663F2983B5500065403D /* Validation.swift in Sources */,
+				C6E88F882C22A3CD000A34D9 /* MockAPIManager.swift in Sources */,
 				23AA085A28C5298200B1BD99 /* NavigationController.swift in Sources */,
 				C64330052C1A4A1D00AFD233 /* categoryCell.swift in Sources */,
 				C67CF3342C02224700DD07FF /* AdminMenuList.swift in Sources */,
@@ -605,6 +616,7 @@
 				298F6EC62A217DD3006965C4 /* inHouseInventoryTableViewCell.swift in Sources */,
 				C64BBDCC2BE6F55200D2DBAF /* ReadFromFileManager.swift in Sources */,
 				23E0F5052975A4DF008E2CA2 /* Constants.swift in Sources */,
+				C6E88F8A2C22A9BC000A34D9 /* APIManagerProtocol.swift in Sources */,
 				29F8FA6E2BEB653100E15D12 /* AssetViewModel.swift in Sources */,
 				290837C52BFE7C400041B3B5 /* EmptyStateView.swift in Sources */,
 				C64BBDC32BE5FD3A00D2DBAF /* MyEnums.swift in Sources */,
@@ -893,6 +905,14 @@
 				kind = branch;
 			};
 		};
+		C6E88F8B2C22BD49000A34D9 /* XCRemoteSwiftPackageReference "JWTDecode" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/JWTDecode.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -900,6 +920,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 23A8DF3328C692C700F59941 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		C6E88F8C2C22BD4A000A34D9 /* JWTDecode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6E88F8B2C22BD49000A34D9 /* XCRemoteSwiftPackageReference "JWTDecode" */;
+			productName = JWTDecode;
 		};
 /* End XCSwiftPackageProductDependency section */
 

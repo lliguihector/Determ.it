@@ -16,6 +16,8 @@ protocol CustomTextFieldDelegate: AnyObject {
 class CustomTextField: UITextField {
 
     private let checkmarkImageView = UIImageView(image: UIImage(systemName: "checkmark.circle.fill"))
+    
+    private let exclamationmarkImageView = UIImageView(image: UIImage(systemName: "exclamationmark.circle.fill"))
 
     var validationType: ValidationType = .email {
         didSet { viewModel.validationType = validationType }
@@ -28,13 +30,13 @@ class CustomTextField: UITextField {
         didSet { updateAppearance() }
     }
 
-    @IBInspectable var cornerRadius: CGFloat = 0.0 {
+    @IBInspectable var cornerRadius: CGFloat = 2 {
         didSet {
             setupView()
         }
     }
 
-    @IBInspectable var borderColor: UIColor = UIColor.white {
+    @IBInspectable var borderColor: UIColor = UIColor.black {
         didSet {
             setupView()
         }
@@ -53,6 +55,7 @@ class CustomTextField: UITextField {
         setupView()
         delegate = self
         setupCheckmarkImageView()
+        setupExclamationmarkImageView()
         viewModel.delegate = self
     }
 
@@ -61,6 +64,7 @@ class CustomTextField: UITextField {
         setupView()
         delegate = self
         setupCheckmarkImageView()
+        setupExclamationmarkImageView()
         viewModel.delegate = self
     }
 
@@ -72,7 +76,7 @@ class CustomTextField: UITextField {
     }
 
     private func setupCheckmarkImageView() {
-        checkmarkImageView.tintColor = .green
+        checkmarkImageView.tintColor = .systemGreen
         checkmarkImageView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(checkmarkImageView)
         NSLayoutConstraint.activate([
@@ -83,6 +87,23 @@ class CustomTextField: UITextField {
         ])
         checkmarkImageView.isHidden = true
     }
+    
+    
+    private func setupExclamationmarkImageView() {
+        exclamationmarkImageView.tintColor = .systemRed
+        exclamationmarkImageView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(exclamationmarkImageView)
+        NSLayoutConstraint.activate([
+            exclamationmarkImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
+            exclamationmarkImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            exclamationmarkImageView.widthAnchor.constraint(equalToConstant: 20),
+            exclamationmarkImageView.heightAnchor.constraint(equalToConstant: 20)
+        ])
+        exclamationmarkImageView.isHidden = true
+    }
+    
+    
+    
 
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.insetBy(dx: padding, dy: padding)
@@ -97,20 +118,22 @@ class CustomTextField: UITextField {
     }
 
     func showErrorState(message: String) {
-        self.layer.borderColor = UIColor.red.cgColor
+        self.layer.borderColor = UIColor.systemRed.cgColor
 //        self.backgroundColor = UIColor.red.withAlphaComponent(0.1)
         checkmarkImageView.isHidden = true
+        exclamationmarkImageView.isHidden = false
         print("Error:", message)
     }
 
     func clearErrorState() {
         self.layer.borderColor = borderColor.cgColor
-//        self.backgroundColor = UIColor.white
+        exclamationmarkImageView.isHidden = true
+
     }
 
     func showCheckmark() {
         checkmarkImageView.isHidden = false
-        self.layer.borderColor = UIColor.green.cgColor
+        self.layer.borderColor = UIColor.systemGreen.cgColor
     }
 
     private func updateAppearance() {

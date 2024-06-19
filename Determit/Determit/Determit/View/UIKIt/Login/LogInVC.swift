@@ -27,21 +27,33 @@ class LogInVC: UIViewController,Loadable {
 
 
 
-      
-    private let viewModel: LoginViewModel
+    // Replace the let with var to allow setting from SceneDelegate
+      var viewModel: LoginViewModel!
+
+    
+    
+    
     
     // Dependency Injection via initializer
-       init(viewModel: LoginViewModel = LoginViewModel()) {
+       init(viewModel: LoginViewModel) {
            self.viewModel = viewModel
            super.init(nibName: nil, bundle: nil)
        }
+    
+    
        
        required init?(coder: NSCoder) {
-           self.viewModel = LoginViewModel()
+           self.viewModel = LoginViewModel(apiManager: APIManager.shared)
            super.init(coder: coder)
        }
-       
     
+    
+    
+    
+    
+       
+   
+    //MARK: -- VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,6 +65,8 @@ class LogInVC: UIViewController,Loadable {
     }
     
     func setupBinding(){
+        
+        
         viewModel.authState = {[weak self] state in
             
             switch state{
@@ -142,6 +156,9 @@ private func navigateBasedOnRole(role: String){
               let password = passwordTextField.text else {
               return
         }
+        
+        
+        //Sign in the user to fire base and st
         
         viewModel.signInUserToFireBase(email: email, password: password)
         

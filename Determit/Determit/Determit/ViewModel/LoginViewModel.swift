@@ -12,7 +12,6 @@ import Firebase
 
 class LoginViewModel{
     
-    
     //Define an enum for the authentication state
     enum AuthState{
         case authenticated(role: String)
@@ -20,27 +19,28 @@ class LoginViewModel{
         case loading
     }
     
-    //Create a property to handle the authentication state
-    var authState: ((AuthState) -> Void)?
+    
+    //Dependency Injection allows to inject RealAPIManager or MockAPIManager
+    
+    private let apiManager: APIManagerProtocol
     
     
-    private let apiManager: APIManager
-    
-  
-    var onError: ((String)->Void)?
-//    var onloginSuceess: ((String)->Void)?
-    
-   
-    
-    
-    init(apiManager: APIManager = APIManager.shared){
+    init(apiManager: APIManagerProtocol = APIManager.shared){
         self.apiManager = apiManager
     }
     
     
     
     
+    //Create a property to handle the authentication state
+    var authState: ((AuthState) -> Void)?
+    var onError: ((String)->Void)?
+//    var onloginSuceess: ((String)->Void)?
     
+   
+    //MARK: -- Dummy Sign In
+    
+
     
     //MARK: -- Firebase
     func signInUserToFireBase(email: String, password: String){

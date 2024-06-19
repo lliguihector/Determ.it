@@ -54,7 +54,7 @@ class categoryCell: UICollectionViewCell {
     
     
     func updateLabelColor(isSelected: Bool) {
-        categoryTitle.textColor = isSelected ? .black: .systemGray
+        categoryTitle.textColor = isSelected ? .black: .darkGray
 
      }
     

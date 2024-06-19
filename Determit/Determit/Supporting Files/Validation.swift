@@ -30,12 +30,13 @@ class Validation{
      return isvalidatePass
     }
     
+
+    
+    
+    
     //Trim any empty Spaces
     public func trimWhiteSpaces(str: String) -> String{
-        
         let trimmedStr = str.trimmingCharacters(in: .whitespacesAndNewlines)
-    
-        
         return trimmedStr
         
     }
