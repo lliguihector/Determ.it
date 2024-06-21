@@ -197,9 +197,10 @@ private func handleError(_ error: APIErrors){
             guard let input = input, !input.isEmpty else {
               isValid = false
                 errorMessage = "Input cannot be empty"
-                delegate?.validationDidFinish(isValid: false,errorMessage: "Input cannot beempty")
+                delegate?.validationDidFinish(isValid: false,errorMessage: "Input cannot be empty")
                 return
             }
+        
         
         let isValid: Bool
         let errorMessage: String?

@@ -14,11 +14,9 @@ protocol CategorySelectionDelegate: AnyObject{
 }
 
 class CategorySelectionView: UIViewController, UICollectionViewDataSource,UICollectionViewDelegate{
+    
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    
-    
-    
+  
     weak var delegate: CategorySelectionDelegate?
     
     var selectedIndexPath: IndexPath?
@@ -46,59 +44,42 @@ class CategorySelectionView: UIViewController, UICollectionViewDataSource,UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         collectionView.delegate = self
         collectionView.dataSource = self
         
         
-        //Register Cell file
-        collectionView.register(UINib(nibName: "categoryCell", bundle: nil), forCellWithReuseIdentifier: "categoryCell")
-        
+        setupUpUserInterface()
 
-        
-        
     }
     
     
     
 
-    func setupui(){
-        
-        
-        
+    public func setupUpUserInterface(){
+        //Register Cell file
+        collectionView.register(UINib(nibName: "categoryCell", bundle: nil), forCellWithReuseIdentifier: "categoryCell")
+
     }
     
     //MARK: -- Collection View Code
-    
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        
         categoryButtonData.count
-    }
+        }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath) as! categoryCell
         
         let menuItem = categoryButtonData[indexPath.row]
-        
     
         cell.categoryImage.image = UIImage(systemName: menuItem.1)
         cell.categoryTitle.text = menuItem.0
-        
-        
-        
-        
-    
-        
+ 
         return cell
     }
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        
-        
+
         // Update the previously selected cell
                 if let previousIndexPath = selectedIndexPath {
                     if let previousCell = collectionView.cellForItem(at: previousIndexPath) as? categoryCell {
@@ -114,10 +95,6 @@ class CategorySelectionView: UIViewController, UICollectionViewDataSource,UIColl
                     currentCell.updateImageBorder(isSelected: true)
                 }
                 
-        
-        
-        
-        
     }
     
     

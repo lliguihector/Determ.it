@@ -15,7 +15,7 @@ let _id: String
 let brand: String
 let deviceName: String
 let model: String
-let serialNumber: String
+let serialNumber: String //NEED tO MOVE TO ASSETS
 let storage: String
 let memory: String
 let processor: String

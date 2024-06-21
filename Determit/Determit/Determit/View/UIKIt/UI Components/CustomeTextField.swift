@@ -9,8 +9,13 @@ import Foundation
 import UIKit
 
 protocol CustomTextFieldDelegate: AnyObject {
-    func textFieldDidEndEditing(_ textField: CustomTextField, isValid: Bool, errorMessage: String?)
+//    func textFieldDidEndEditing(_ textField: CustomTextField, isValid: Bool, errorMessage: String?)
+    
+    
+    func updateMyLabel(_ errorMessage: String)
 }
+    
+    
 
 @IBDesignable
 class CustomTextField: UITextField {
@@ -117,12 +122,10 @@ class CustomTextField: UITextField {
         return bounds.insetBy(dx: padding, dy: padding)
     }
 
-    func showErrorState(message: String) {
+    func showErrorState() {
         self.layer.borderColor = UIColor.systemRed.cgColor
-//        self.backgroundColor = UIColor.red.withAlphaComponent(0.1)
         checkmarkImageView.isHidden = true
         exclamationmarkImageView.isHidden = false
-        print("Error:", message)
     }
 
     func clearErrorState() {
@@ -141,20 +144,45 @@ class CustomTextField: UITextField {
             clearErrorState()
             showCheckmark()
         } else {
-            showErrorState(message: validationResult.errorMessage ?? "Invalid input")
+            
+            
+            showErrorState()
+            
+            
         }
     }
 }
 
 extension CustomTextField: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        
         viewModel.validate(input: self.text, for: validationType)
+        
+        
     }
 }
 
 extension CustomTextField: ValidationDelegate {
+    
+    
+    //From View Model
     func validationDidFinish(isValid: Bool, errorMessage: String?) {
+        
+        
+        //Update UI based on Validation result
         validationResult = (isValid, errorMessage)
-        customDelegate?.textFieldDidEndEditing(self, isValid: isValid, errorMessage: errorMessage)
+        
+        
+        if let errorMessage = errorMessage{
+            
+            print("CT: \(errorMessage)")
+            
+            
+            customDelegate?.updateMyLabel(errorMessage)
+        }
+        
+        
+      
     }
 }

@@ -19,7 +19,7 @@
         <attribute name="storageCapacity" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Device" positionX="160" positionY="192" width="128" height="194"/>
         <element name="Asset" positionX="162" positionY="279" width="128" height="74"/>
+        <element name="Device" positionX="160" positionY="192" width="128" height="194"/>
     </elements>
 </model>
