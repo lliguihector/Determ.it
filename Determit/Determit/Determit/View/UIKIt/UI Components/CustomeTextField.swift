@@ -10,8 +10,6 @@ import UIKit
 
 protocol CustomTextFieldDelegate: AnyObject {
 //    func textFieldDidEndEditing(_ textField: CustomTextField, isValid: Bool, errorMessage: String?)
-    
-    
     func updateMyLabel(_ errorMessage: String)
 }
     
@@ -24,9 +22,16 @@ class CustomTextField: UITextField {
     
     private let exclamationmarkImageView = UIImageView(image: UIImage(systemName: "exclamationmark.circle.fill"))
 
-    var validationType: ValidationType = .email {
+    var validationType: ValidationNewDeviceType = .brand {
+        
         didSet { viewModel.validationType = validationType }
+        
+        
+        
     }
+    
+    
+    weak var errorLabel: UILabel?
 
     weak var customDelegate: CustomTextFieldDelegate?
     private let viewModel = InventoryViewModel()
@@ -143,12 +148,13 @@ class CustomTextField: UITextField {
         if validationResult.isValid {
             clearErrorState()
             showCheckmark()
+            errorLabel?.text = ""
         } else {
             
             
             showErrorState()
             
-            
+            errorLabel?.text = validationResult.errorMessage
         }
     }
 }

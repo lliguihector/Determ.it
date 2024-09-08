@@ -16,10 +16,7 @@ protocol ValidationDelegate: AnyObject {
 
 class InventoryViewModel{
     
-  
     //MARK: - Properties
-
-    
     //API
     private let deviceManager = DeviceManagerAPI()
     //Create an empty array to hold the values loaded from api call
@@ -35,7 +32,9 @@ class InventoryViewModel{
     
     
     weak var delegate: ValidationDelegate?
-    var validationType: ValidationType = .email
+    
+    
+    var validationType: ValidationNewDeviceType = .brand
 
     //Form Validation
     private let validation = Validation()
@@ -118,14 +117,7 @@ class InventoryViewModel{
     //Custome Search
     
     public func queryDeviceData(_ searcBarString: String){
-        
-        
-    
-        
         devicesCoreData = coreDataManager.customeSearch(searcBarString)
-        
-        
-   
     }
     
     
@@ -158,16 +150,11 @@ private func handleError(_ error: APIErrors){
         
         let apiMessage = apiStringResponse
         
-     
-        
-        
-        
         //Update the UI on Main thread
                DispatchQueue.main.async {
                   
                    self.onSuccess?(apiMessage)
-                   
-                   
+
                }
     }
     
@@ -191,8 +178,7 @@ private func handleError(_ error: APIErrors){
     
    
 
-    func validate(input: String?, for type: ValidationType){
-        
+    func validate(input: String?, for type: ValidationNewDeviceType){
         
             guard let input = input, !input.isEmpty else {
               isValid = false
@@ -205,21 +191,19 @@ private func handleError(_ error: APIErrors){
         let isValid: Bool
         let errorMessage: String?
         
+        
+        //Switch Statement to validate user input based on type
         switch type {
-                case .email:
+    
+        case .brand:
             
+            isValid = validation.validateBrand(brand: input)
+            errorMessage = isValid ? nil : "Brand must be at least 1 letter long and not empty."
             
-                    isValid =  validation.validateEmail(email: input)
+        case .name:
+            isValid = validation.validateDeviceName(deviceName: input)
+            errorMessage =  isValid ? nil : "DeviceName must be at least 1 letter long and not empty."
             
-                    errorMessage = isValid ? nil : "Invalid email format"
-            
-                  
-                case .password:
-                   
-            isValid = validation.validatePassword(password: input)
-            errorMessage = isValid ? nil : "Password must be at least 6 characters long, with at least one letter and one number"
-            
-            // Add more cases for other validation types if needed
         }
         
         delegate?.validationDidFinish(isValid: isValid, errorMessage: errorMessage)

@@ -55,22 +55,17 @@ class AddNewDeviceVC: UIViewController,Loadable, UITextFieldDelegate, Validation
     
  
     //MARK: -- Error Feedback Labels
-    @IBOutlet weak var nameError: UILabel!
+ 
     
+    @IBOutlet weak var brandErrorLabel: UILabel!
     
-
-    
-    
+    @IBOutlet weak var deviceNameErrorLabel: UILabel!
     
     
     
     private let viewModel = InventoryViewModel()
-    
     weak var delegate: addNewDeviceVCDelegate?
-    
-    
-    
-    
+
     //MARK: -- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,60 +81,56 @@ class AddNewDeviceVC: UIViewController,Loadable, UITextFieldDelegate, Validation
         
         
         // Set the custom delegate for custom text fields
-            if let customTextField = brandTextField as? CustomTextField {
-                customTextField.customDelegate = self
+            if let customBrandTextField = brandTextField as? CustomTextField {
+                customBrandTextField .validationType = .brand
+                customBrandTextField.errorLabel = brandErrorLabel
+                customBrandTextField .customDelegate = self
             }
-            if let customTextField = deviceNameTextField as? CustomTextField {
-                customTextField.customDelegate = self
+        
+        
+        if let customDeviceNameTextField = deviceNameTextField as? CustomTextField {
+        customDeviceNameTextField.validationType = .name
+            customDeviceNameTextField.errorLabel = deviceNameErrorLabel
+        customDeviceNameTextField.customDelegate = self
             }
-            if let customTextField = modelNameTextField as? CustomTextField {
-                customTextField.customDelegate = self
-            }
-            if let customTextField = memoryCpacityTextField as? CustomTextField {
-                customTextField.customDelegate = self
-            }
-            if let customTextField = processorDescriptionTextField as? CustomTextField {
-                customTextField.customDelegate = self
-            }
-            if let customTextField = osTextField as? CustomTextField {
-                customTextField.customDelegate = self
-            }
+//            if let customTextField = modelNameTextField as? CustomTextField {
+//                customTextField.customDelegate = self
+//            }
+//            if let customTextField = memoryCpacityTextField as? CustomTextField {
+//                customTextField.customDelegate = self
+//            }
+//            if let customTextField = processorDescriptionTextField as? CustomTextField {
+//                customTextField.customDelegate = self
+//            }
+//            if let customTextField = osTextField as? CustomTextField {
+//                customTextField.customDelegate = self
+//            }
         
         
         
         
         bindViewModel()
+        
+        
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         tapGesture.cancelsTouchesInView = false
         view.addGestureRecognizer(tapGesture)
         
         viewModel.delegate = self
-        
-       
- 
-    
+
         setupUserInterface()
     }
+
     
-    
-    
-    
-    
+
     func validationDidFinish(isValid: Bool, errorMessage: String?) {
         print("Bolean: \(isValid) + Error Message: \(errorMessage ?? "ok")")
     }
-  
-    
-    
-    
-    
-    
+ 
     //MARK: -- Picker View
     
-    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        
-        
         return 1
     }
     
@@ -165,28 +156,23 @@ class AddNewDeviceVC: UIViewController,Loadable, UITextFieldDelegate, Validation
  
     
     //MARK: -- Custom Text
+    //This method updates the label
     func updateMyLabel(_ errorMessage: String) {
-        
-        
-        nameError.text = errorMessage
+//        nameError.text = errorMessage
     }
     
    
     
     
     //MARK: -- Actions
- 
     @IBAction func selectStorage(_ sender: Any) {
-        
         pickerView.isHidden = !pickerView.isHidden
     }
     
+    
     //MARK: -- Category
     func didSelectCategory(_ category: String, _ sfImage: String) {
-        
-        
-        
-        let sfImage = "chevron.down"
+        let sfImage = ""
         setButtonUI(selectCategoryBtn,category, sfImage)
     }
     
@@ -203,15 +189,12 @@ class AddNewDeviceVC: UIViewController,Loadable, UITextFieldDelegate, Validation
            // Adjust the placement of the image and title
            config.imagePlacement = .trailing // This places the image to the left of the title
            config.imagePadding = 8.0 // Spacing between image and title
-           config.baseForegroundColor = .systemTeal // Set the color of the image and title
+           config.baseForegroundColor = .systemGreen // Set the color of the image and title
            
            // Apply the configuration to the button
            button.configuration = config
            button.contentHorizontalAlignment = .center// Align content to the left
-           
-           // Debug: Print the current configuration
-           print("Button title: \(String(describing: button.configuration?.title))")
-           print("Button image: \(String(describing: button.configuration?.image))")
+    
          
      }
     
@@ -222,23 +205,23 @@ class AddNewDeviceVC: UIViewController,Loadable, UITextFieldDelegate, Validation
             }
         }
     
-    //MARK: -- Mthods
+    //MARK: -- Methods
     func setupUserInterface(){
         //Style Select Category Button
         selectCategoryBtn.layer.borderWidth = 1.0
         selectCategoryBtn.layer.cornerRadius = 4
-        selectCategoryBtn.layer.borderColor = UIColor.systemMint.cgColor
+        selectCategoryBtn.layer.borderColor = UIColor.black.cgColor
+        selectCategoryBtn.tintColor = UIColor.black
         
-        
-        setButtonUI(selectCategoryBtn,"Select Category","chevron.forward")
+        setButtonUI(selectCategoryBtn,"Select Category","")
         
         //Style Secondary Memory Button
         secondaryMemorySelectorBtn.layer.borderWidth = 1.0
         secondaryMemorySelectorBtn.layer.cornerRadius = 4
-        secondaryMemorySelectorBtn.layer.borderColor = UIColor.systemMint.cgColor
-     
+        secondaryMemorySelectorBtn.layer.borderColor = UIColor.black.cgColor
+        secondaryMemorySelectorBtn.tintColor = UIColor.black
         
-        setButtonUI(secondaryMemorySelectorBtn,"Select Storage","chevron.down")
+        setButtonUI(secondaryMemorySelectorBtn,"Select Storage","")
      
 
     }
@@ -264,12 +247,9 @@ class AddNewDeviceVC: UIViewController,Loadable, UITextFieldDelegate, Validation
         osTextField.text?.isEmpty ?? true
 
         
-        if isEmpty {
-            
+        if isEmpty{
             Alert.showBasicAlert(on: self, with: "", message: "One or more fields are missing inputs, Please enter all fields")
-            
             print("One or more text fields are empty. Cannot save.")
-            
         } else {
             
             
@@ -311,48 +291,7 @@ class AddNewDeviceVC: UIViewController,Loadable, UITextFieldDelegate, Validation
             }
       
         }
-        // Observe ViewModel properties for updates
-//               ViewModel.updateValidationStatus = { [weak self] isValid in
-//                   self?.updateValidationStatus(isValid: isValid)
-//               }
-//
-//               ViewModel.updateErrorMessage = { [weak self] errorMessage in
-//                   self?.updateErrorMessage(errorMessage: errorMessage)
-//               }
-
-        
-    }
-    
-    
-//    func updateValidationStatus(isValid: Bool) {
-//
-//
-//        self.ValidationBool = isValid
-//        }
-//
-//        func updateErrorMessage(errorMessage: String?) {
-//
-//        }
-
-
-    
-
-    
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//
-//
-//
-//        viewModel.validate(input: serialNumberTextField.text, for: .email)
-//
-//
-//
-//
-//
-//
-//
-//    }
-    
-    
+  
 
 }
 
@@ -360,5 +299,5 @@ class AddNewDeviceVC: UIViewController,Loadable, UITextFieldDelegate, Validation
 
 
 
-
+}
 

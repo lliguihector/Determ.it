@@ -16,10 +16,19 @@ enum APIErrors: Error{
     
 }
 
-enum ValidationType {
+
+//For Validating user Login and Registration Form
+enum validationLoginType{
     case email
     case password
-//    case username
-//    case phoneNumber
-    // Add more validation types as needed
+    case confirmPassword
+}
+
+
+
+
+//For Validating new Device Form
+enum ValidationNewDeviceType {
+    case brand
+    case name
 }
