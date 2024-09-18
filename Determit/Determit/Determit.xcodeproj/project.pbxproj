@@ -78,6 +78,7 @@
 		C6E88F882C22A3CD000A34D9 /* MockAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E88F872C22A3CD000A34D9 /* MockAPIManager.swift */; };
 		C6E88F8A2C22A9BC000A34D9 /* APIManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E88F892C22A9BC000A34D9 /* APIManagerProtocol.swift */; };
 		C6E88F8D2C22BD4A000A34D9 /* JWTDecode in Frameworks */ = {isa = PBXBuildFile; productRef = C6E88F8C2C22BD4A000A34D9 /* JWTDecode */; };
+		C6EAC5752C8D4DD20041A9ED /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EAC5742C8D4DD20041A9ED /* Organization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +164,7 @@
 		C67CF3382C077ED300DD07FF /* AdminMenuContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMenuContainerView.swift; sourceTree = "<group>"; };
 		C6E88F872C22A3CD000A34D9 /* MockAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIManager.swift; sourceTree = "<group>"; };
 		C6E88F892C22A9BC000A34D9 /* APIManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerProtocol.swift; sourceTree = "<group>"; };
+		C6EAC5742C8D4DD20041A9ED /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +252,7 @@
 				29F8FA722BF53B5200E15D12 /* APITicket.swift */,
 				C64BBDC02BE5B70300D2DBAF /* APIAsset.swift */,
 				C64BBDCB2BE6F55200D2DBAF /* ReadFromFileManager.swift */,
+				C6EAC5742C8D4DD20041A9ED /* Organization.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 				C6E88F882C22A3CD000A34D9 /* MockAPIManager.swift in Sources */,
 				23AA085A28C5298200B1BD99 /* NavigationController.swift in Sources */,
 				C64330052C1A4A1D00AFD233 /* categoryCell.swift in Sources */,
+				C6EAC5752C8D4DD20041A9ED /* Organization.swift in Sources */,
 				C67CF3342C02224700DD07FF /* AdminMenuList.swift in Sources */,
 				29BAC4E82A228B36004369F1 /* usersTableViewCell.swift in Sources */,
 				C64BBDBF2BE5B68100D2DBAF /* AssetCoreDataManager.swift in Sources */,

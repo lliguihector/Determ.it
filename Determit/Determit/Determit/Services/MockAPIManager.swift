@@ -24,7 +24,7 @@ class MockAPIManager: APIManagerProtocol{
     func authenticateWithBackEnd(idToken: String, completion: @escaping (Result<String, Error>) -> Void) {
     
         
-
+print("From Mock APIManager")
            let idToken = decodeJWTAndGetUserID(idToken: idToken)
         
         

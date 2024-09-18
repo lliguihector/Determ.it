@@ -127,7 +127,6 @@ private func navigateBasedOnRole(role: String){
         print("User View")
 
     case "tech":
-        
         DispatchQueue.main.async {
 //        self.performSegue(withIdentifier: "loginToAdmin", sender: self)
             self.hideLoadingView()

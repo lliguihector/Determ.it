@@ -19,13 +19,11 @@ class LoginViewModel{
         case loading
     }
     
-    
     //Dependency Injection allows to inject RealAPIManager or MockAPIManager
-    
     private let apiManager: APIManagerProtocol
     
     
-    init(apiManager: APIManagerProtocol = APIManager.shared){
+    init(apiManager: APIManagerProtocol){
         self.apiManager = apiManager
     }
     
@@ -67,6 +65,8 @@ class LoginViewModel{
 
                 
                 
+                print("Loged in to firebase")
+                
                 guard let user = authResult?.user else{
                     return
                 }
@@ -95,6 +95,11 @@ class LoginViewModel{
     }
     
     private func authenticateWithBackend(idToken: String) {
+        
+        
+        print("Authenticating with back end")
+    
+        
         
           apiManager.authenticateWithBackEnd(idToken: idToken) { [weak self] result in
               switch result {

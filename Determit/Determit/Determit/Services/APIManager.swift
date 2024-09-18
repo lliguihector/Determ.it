@@ -20,12 +20,15 @@ struct APIManager: APIManagerProtocol{
     
 
     
-    //MARK: -- authenticate Fiere Base token with back end server
-    
-    
+    //MARK: -- LOGIN
+
+    //Authenticate with node.js back end
     func authenticateWithBackEnd(idToken: String, completion:  @escaping (Result<String, Error>) -> Void) {
-        guard let url = URL(string: "http://localhost:3000/api/users/authenticate") else { return }
-              
+        
+        
+        guard let url = URL(string: constant.Authenticate_With_Back_End_3000) else { return }
+
+        
               var request = URLRequest(url: url)
               request.httpMethod = "POST"
               request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -44,6 +47,7 @@ struct APIManager: APIManagerProtocol{
                           
                           let role = json["role"] as? String{
                           completion(.success(role))
+                          print("Authenticated with role: \(role)")
                       }else{
                           
                     //Handle the error
@@ -219,6 +223,31 @@ struct APIManager: APIManagerProtocol{
         
 
     }
+    
+    
+    //MARK: -- Organization
+    
+    
+    //GET Organization Details by userID
+    
+    
+    func fetchOrganizationById(userId: String) async {
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
     
 }
 
