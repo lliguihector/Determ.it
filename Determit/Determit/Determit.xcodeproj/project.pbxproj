@@ -81,6 +81,7 @@
 		C67CF3342C02224700DD07FF /* AdminMenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CF3332C02224600DD07FF /* AdminMenuList.swift */; };
 		C67CF3362C02229900DD07FF /* AdminMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CF3352C02229900DD07FF /* AdminMenuRow.swift */; };
 		C67CF3392C077ED400DD07FF /* AdminMenuContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CF3382C077ED300DD07FF /* AdminMenuContainerView.swift */; };
+		C68319392C9D29520065AAD2 /* DetermitDeviceImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68319382C9D29520065AAD2 /* DetermitDeviceImageView.swift */; };
 		C6E88F882C22A3CD000A34D9 /* MockAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E88F872C22A3CD000A34D9 /* MockAPIManager.swift */; };
 		C6E88F8A2C22A9BC000A34D9 /* APIManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E88F892C22A9BC000A34D9 /* APIManagerProtocol.swift */; };
 		C6E88F8D2C22BD4A000A34D9 /* JWTDecode in Frameworks */ = {isa = PBXBuildFile; productRef = C6E88F8C2C22BD4A000A34D9 /* JWTDecode */; };
@@ -174,6 +175,7 @@
 		C67CF3332C02224600DD07FF /* AdminMenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMenuList.swift; sourceTree = "<group>"; };
 		C67CF3352C02229900DD07FF /* AdminMenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMenuRow.swift; sourceTree = "<group>"; };
 		C67CF3382C077ED300DD07FF /* AdminMenuContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMenuContainerView.swift; sourceTree = "<group>"; };
+		C68319382C9D29520065AAD2 /* DetermitDeviceImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetermitDeviceImageView.swift; sourceTree = "<group>"; };
 		C6E88F872C22A3CD000A34D9 /* MockAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIManager.swift; sourceTree = "<group>"; };
 		C6E88F892C22A9BC000A34D9 /* APIManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerProtocol.swift; sourceTree = "<group>"; };
 		C6EAC5742C8D4DD20041A9ED /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 				C6200BE32C9BC0F500ED1808 /* DetermitLabel.swift */,
 				C6200BE52C9C8E0400ED1808 /* DetermitSubLabel.swift */,
 				C6200BE72C9D21BC00ED1808 /* DetermitDeviceCard.swift */,
+				C68319382C9D29520065AAD2 /* DetermitDeviceImageView.swift */,
 			);
 			path = "Reusable Components";
 			sourceTree = "<group>";
@@ -615,6 +618,7 @@
 				C64BBDC12BE5B70300D2DBAF /* APIAsset.swift in Sources */,
 				C66537672C15790000F50F11 /* CreateDeviceViewModel.swift in Sources */,
 				C67CF32E2BFB0AF500DD07FF /* APIManager.swift in Sources */,
+				C68319392C9D29520065AAD2 /* DetermitDeviceImageView.swift in Sources */,
 				C67CF3392C077ED400DD07FF /* AdminMenuContainerView.swift in Sources */,
 				C643300A2C1A4B2200AFD233 /* CategorySelectionView.swift in Sources */,
 				290972C228BBC73F0004B925 /* TabBarController.swift in Sources */,
