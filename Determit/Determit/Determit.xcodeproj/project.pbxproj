@@ -57,6 +57,12 @@
 		29F8FA6C2BEB5EAA00E15D12 /* TicketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8FA6B2BEB5EAA00E15D12 /* TicketViewModel.swift */; };
 		29F8FA6E2BEB653100E15D12 /* AssetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8FA6D2BEB653100E15D12 /* AssetViewModel.swift */; };
 		29F8FA732BF53B5200E15D12 /* APITicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8FA722BF53B5200E15D12 /* APITicket.swift */; };
+		C6200BDD2C9BA9E700ED1808 /* DetermitProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6200BDC2C9BA9E700ED1808 /* DetermitProfileCard.swift */; };
+		C6200BDF2C9BAAB600ED1808 /* DetermitOutlineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6200BDE2C9BAAB600ED1808 /* DetermitOutlineButton.swift */; };
+		C6200BE12C9BB14900ED1808 /* DetermitProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6200BE02C9BB14900ED1808 /* DetermitProfileImageView.swift */; };
+		C6200BE42C9BC0F500ED1808 /* DetermitLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6200BE32C9BC0F500ED1808 /* DetermitLabel.swift */; };
+		C6200BE62C9C8E0400ED1808 /* DetermitSubLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6200BE52C9C8E0400ED1808 /* DetermitSubLabel.swift */; };
+		C6200BE82C9D21BD00ED1808 /* DetermitDeviceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6200BE72C9D21BC00ED1808 /* DetermitDeviceCard.swift */; };
 		C62DEFAA2C10B416003D120C /* apiManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62DEFA92C10B415003D120C /* apiManagerTest.swift */; };
 		C62DEFAC2C10C682003D120C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62DEFAB2C10C682003D120C /* LoginViewModel.swift */; };
 		C64330052C1A4A1D00AFD233 /* categoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64330032C1A4A1D00AFD233 /* categoryCell.swift */; };
@@ -144,6 +150,12 @@
 		29F8FA6B2BEB5EAA00E15D12 /* TicketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewModel.swift; sourceTree = "<group>"; };
 		29F8FA6D2BEB653100E15D12 /* AssetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetViewModel.swift; sourceTree = "<group>"; };
 		29F8FA722BF53B5200E15D12 /* APITicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITicket.swift; sourceTree = "<group>"; };
+		C6200BDC2C9BA9E700ED1808 /* DetermitProfileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetermitProfileCard.swift; sourceTree = "<group>"; };
+		C6200BDE2C9BAAB600ED1808 /* DetermitOutlineButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetermitOutlineButton.swift; sourceTree = "<group>"; };
+		C6200BE02C9BB14900ED1808 /* DetermitProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetermitProfileImageView.swift; sourceTree = "<group>"; };
+		C6200BE32C9BC0F500ED1808 /* DetermitLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetermitLabel.swift; sourceTree = "<group>"; };
+		C6200BE52C9C8E0400ED1808 /* DetermitSubLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetermitSubLabel.swift; sourceTree = "<group>"; };
+		C6200BE72C9D21BC00ED1808 /* DetermitDeviceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetermitDeviceCard.swift; sourceTree = "<group>"; };
 		C62DEFA92C10B415003D120C /* apiManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiManagerTest.swift; sourceTree = "<group>"; };
 		C62DEFAB2C10C682003D120C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C64330032C1A4A1D00AFD233 /* categoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryCell.swift; sourceTree = "<group>"; };
@@ -340,6 +352,19 @@
 			path = "UI Components";
 			sourceTree = "<group>";
 		};
+		C6200BE22C9BBCEB00ED1808 /* Reusable Components */ = {
+			isa = PBXGroup;
+			children = (
+				C6200BDC2C9BA9E700ED1808 /* DetermitProfileCard.swift */,
+				C6200BDE2C9BAAB600ED1808 /* DetermitOutlineButton.swift */,
+				C6200BE02C9BB14900ED1808 /* DetermitProfileImageView.swift */,
+				C6200BE32C9BC0F500ED1808 /* DetermitLabel.swift */,
+				C6200BE52C9C8E0400ED1808 /* DetermitSubLabel.swift */,
+				C6200BE72C9D21BC00ED1808 /* DetermitDeviceCard.swift */,
+			);
+			path = "Reusable Components";
+			sourceTree = "<group>";
+		};
 		C64BBDCA2BE6F4F500D2DBAF /* Ticket */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +377,7 @@
 		C64BBDCD2BE7592E00D2DBAF /* UIKIt */ = {
 			isa = PBXGroup;
 			children = (
+				C6200BE22C9BBCEB00ED1808 /* Reusable Components */,
 				29F8FA712BEB68BA00E15D12 /* UI Components */,
 				C64BBDD12BE75DA400D2DBAF /* Register */,
 				C64BBDD02BE75D8F00D2DBAF /* Login */,
@@ -600,6 +626,7 @@
 				2305663F2983B5500065403D /* Validation.swift in Sources */,
 				C6E88F882C22A3CD000A34D9 /* MockAPIManager.swift in Sources */,
 				23AA085A28C5298200B1BD99 /* NavigationController.swift in Sources */,
+				C6200BE42C9BC0F500ED1808 /* DetermitLabel.swift in Sources */,
 				C64330052C1A4A1D00AFD233 /* categoryCell.swift in Sources */,
 				C6EAC5752C8D4DD20041A9ED /* Organization.swift in Sources */,
 				C67CF3342C02224700DD07FF /* AdminMenuList.swift in Sources */,
@@ -607,12 +634,14 @@
 				C64BBDBF2BE5B68100D2DBAF /* AssetCoreDataManager.swift in Sources */,
 				2911E0CD2B2ECEF10033CC2E /* APIDevice.swift in Sources */,
 				295142262A21B2F5008DC91D /* AddNewAssetVC.swift in Sources */,
+				C6200BE62C9C8E0400ED1808 /* DetermitSubLabel.swift in Sources */,
 				296867DE28BD6FDD00ECA8FB /* HelpWebVC.swift in Sources */,
 				29F8FA6A2BEA7A7A00E15D12 /* AssetVC.swift in Sources */,
 				29F8FA6C2BEB5EAA00E15D12 /* TicketViewModel.swift in Sources */,
 				C66537632C11931E00F50F11 /* EmployeeView.swift in Sources */,
 				2911E0CF2B2ECFD70033CC2E /* DeviceManagerAPI.swift in Sources */,
 				C66537652C1566CA00F50F11 /* CustomeTextField.swift in Sources */,
+				C6200BE82C9D21BD00ED1808 /* DetermitDeviceCard.swift in Sources */,
 				2911E0D72B3271B40033CC2E /* CoreDataManager.swift in Sources */,
 				2966172A2A17B1FD0042D2F9 /* InventoryTableViewCell.swift in Sources */,
 				23AA085228C5293200B1BD99 /* LogInVC.swift in Sources */,
@@ -631,12 +660,15 @@
 				290837B42BF59FF20041B3B5 /* TicketRow.swift in Sources */,
 				C64BBDC52BE5FD8000D2DBAF /* AssetManagerAPI.swift in Sources */,
 				290972C028BBC73F0004B925 /* SceneDelegate.swift in Sources */,
+				C6200BE12C9BB14900ED1808 /* DetermitProfileImageView.swift in Sources */,
 				290837B62BF5A1380041B3B5 /* TicketList.swift in Sources */,
+				C6200BDD2C9BA9E700ED1808 /* DetermitProfileCard.swift in Sources */,
 				23AA085E28C529CB00B1BD99 /* Alert.swift in Sources */,
 				29F8FA732BF53B5200E15D12 /* APITicket.swift in Sources */,
 				2951422C2A21C822008DC91D /* reviewAssetDataVC.swift in Sources */,
 				298F6EC32A217DA0006965C4 /* InHouseInventoryVC.swift in Sources */,
 				2911E0D52B2EF9CD0033CC2E /* InventoryViewModel.swift in Sources */,
+				C6200BDF2C9BAAB600ED1808 /* DetermitOutlineButton.swift in Sources */,
 				296617332A17FECF0042D2F9 /* AddNewDeviceVC.swift in Sources */,
 				2398E4292A05FD89001DBAD7 /* InventoryView.swift in Sources */,
 				23AA085628C5295900B1BD99 /* RegisterVC.swift in Sources */,
