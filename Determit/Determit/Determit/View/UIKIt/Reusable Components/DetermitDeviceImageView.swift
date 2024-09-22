@@ -10,6 +10,10 @@ import UIKit
 class DetermitDeviceImageView: UIImageView {
 
    
+    
+   
+
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -21,9 +25,28 @@ class DetermitDeviceImageView: UIImageView {
     }
     
     private func setupView() {
-        layer.borderWidth = 0.5
-        layer.borderColor = UIColor.lightGray.cgColor
-        contentMode = .scaleAspectFill
+        
+        
+    
+        
+        
+        
+        
+        
+        backgroundColor = UIColor { traits in
+            return traits.userInterfaceStyle == .dark ? UIColor.systemGray2 : UIColor.systemBackground // Adjust colors as needed
+        }
+        
+        
+        tintColor = UIColor.lightGray
+        
+        
+//        layer.borderWidth = 0.5
+//        layer.borderColor = UIColor.lightGray.cgColor
+        
+        
+        
+        contentMode = .scaleAspectFit
         clipsToBounds = true
         translatesAutoresizingMaskIntoConstraints = false
     }

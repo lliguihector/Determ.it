@@ -27,11 +27,24 @@ class DetermitProfileImageView: UIImageView {
     }
     
     private func setupView() {
+        
+        backgroundColor =  UIColor { traits in
+            return traits.userInterfaceStyle == .dark ? UIColor.systemGray2 : UIColor.systemBackground
+        }
+
+        
+        
+        
+        
+        
+        tintColor = UIColor.lightGray 
+
         layer.borderWidth = 0.5
         layer.borderColor = UIColor.lightGray.cgColor
         contentMode = .scaleAspectFit
         clipsToBounds = true
         translatesAutoresizingMaskIntoConstraints = false
+        
     }
     
     override func layoutSubviews() {

@@ -24,9 +24,15 @@ class DetermitLabel: UILabel {
         
         private func setupView() {
             // Default properties
-            font = UIFont.boldSystemFont(ofSize: 16) // Default font size
-            textColor = .black // Default text color
-            textAlignment = .center // Default text alignment
+            font = UIFont.boldSystemFont(ofSize: 20) // Default font size
+            textColor = UIColor { traits in
+                return traits.userInterfaceStyle == .dark ? UIColor.systemCyan : UIColor.black
+            }
+            
+            
+            
+            
+            textAlignment = .justified// Default text alignment
             numberOfLines = 1 // Default number of lines
             translatesAutoresizingMaskIntoConstraints = false // Important for Auto Layout
         }

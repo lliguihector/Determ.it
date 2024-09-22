@@ -14,8 +14,8 @@ class DetermitProfileCard: UIView {
     //UIComponents
     let companyProfilePicture = DetermitProfileImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
     let userNameLabel = DetermitLabel()
-    let callToActionButton = DetermitOutlineButton(title: "My Profile")
-    let subLabel = DetermitSubLabel(title: "UI/UX Designer")
+    let callToActionButton = DetermitOutlineButton(outlineColor: UIColor.systemBlue, title: "View Profile")
+    let subLabel = DetermitSubLabel(title: "UI/UX Designer",fontName: "Futura")
     
     
     override init(frame: CGRect){
@@ -29,7 +29,10 @@ class DetermitProfileCard: UIView {
         }
     
     private func setupView(){
-              backgroundColor = .white
+        backgroundColor = UIColor { traits in
+            return traits.userInterfaceStyle == .dark ? UIColor.systemGray2 : UIColor.white
+        }
+
               layer.cornerRadius = 10
               layer.shadowColor = UIColor.black.cgColor
               layer.shadowOpacity = 0.2
@@ -79,7 +82,10 @@ class DetermitProfileCard: UIView {
     }
     
     private func configureProfileImageView(){
-        companyProfilePicture.image = UIImage(named: "new Logo")
+//        companyProfilePicture.image = UIImage(named: "ig")
+        
+        
+        companyProfilePicture.image = UIImage(systemName: "person.circle.fill")
        addSubview(companyProfilePicture)
         
         // Set up Auto Layout constraints
