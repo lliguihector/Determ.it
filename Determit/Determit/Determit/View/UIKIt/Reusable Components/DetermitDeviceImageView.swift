@@ -26,13 +26,6 @@ class DetermitDeviceImageView: UIImageView {
     
     private func setupView() {
         
-        
-    
-        
-        
-        
-        
-        
         backgroundColor = UIColor { traits in
             return traits.userInterfaceStyle == .dark ? UIColor.systemGray2 : UIColor.systemBackground // Adjust colors as needed
         }
@@ -43,8 +36,6 @@ class DetermitDeviceImageView: UIImageView {
         
 //        layer.borderWidth = 0.5
 //        layer.borderColor = UIColor.lightGray.cgColor
-        
-        
         
         contentMode = .scaleAspectFit
         clipsToBounds = true

@@ -25,6 +25,9 @@ class DetermitLabel: UILabel {
         private func setupView() {
             // Default properties
             font = UIFont.boldSystemFont(ofSize: 20) // Default font size
+            
+            
+            
             textColor = UIColor { traits in
                 return traits.userInterfaceStyle == .dark ? UIColor.systemCyan : UIColor.black
             }

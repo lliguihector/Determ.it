@@ -29,7 +29,7 @@ class DetermitProfileImageView: UIImageView {
     private func setupView() {
         
         backgroundColor =  UIColor { traits in
-            return traits.userInterfaceStyle == .dark ? UIColor.systemGray2 : UIColor.systemBackground
+            return traits.userInterfaceStyle == .dark ? UIColor.lightGray: UIColor.systemBackground
         }
 
         
@@ -37,7 +37,7 @@ class DetermitProfileImageView: UIImageView {
         
         
         
-        tintColor = UIColor.lightGray 
+        tintColor = UIColor.systemGray2
 
         layer.borderWidth = 0.5
         layer.borderColor = UIColor.lightGray.cgColor

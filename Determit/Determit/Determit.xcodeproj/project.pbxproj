@@ -358,11 +358,11 @@
 			isa = PBXGroup;
 			children = (
 				C6200BDC2C9BA9E700ED1808 /* DetermitProfileCard.swift */,
+				C6200BE72C9D21BC00ED1808 /* DetermitDeviceCard.swift */,
 				C6200BDE2C9BAAB600ED1808 /* DetermitOutlineButton.swift */,
 				C6200BE02C9BB14900ED1808 /* DetermitProfileImageView.swift */,
 				C6200BE32C9BC0F500ED1808 /* DetermitLabel.swift */,
 				C6200BE52C9C8E0400ED1808 /* DetermitSubLabel.swift */,
-				C6200BE72C9D21BC00ED1808 /* DetermitDeviceCard.swift */,
 				C68319382C9D29520065AAD2 /* DetermitDeviceImageView.swift */,
 			);
 			path = "Reusable Components";

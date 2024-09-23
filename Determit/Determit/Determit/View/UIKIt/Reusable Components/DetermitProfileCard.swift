@@ -82,10 +82,10 @@ class DetermitProfileCard: UIView {
     }
     
     private func configureProfileImageView(){
-//        companyProfilePicture.image = UIImage(named: "ig")
+        companyProfilePicture.image = UIImage(named: "ig")
         
         
-        companyProfilePicture.image = UIImage(systemName: "person.circle.fill")
+//   companyProfilePicture.image = UIImage(systemName: "person.circle.fill")
        addSubview(companyProfilePicture)
         
         // Set up Auto Layout constraints

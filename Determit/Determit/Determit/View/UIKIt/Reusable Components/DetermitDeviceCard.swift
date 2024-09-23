@@ -83,7 +83,7 @@ class DetermitDeviceCard: UIView {
     private func setUpDeviceNameLabel(){
         
         
-        deviceNameLabel.text = "iPad Mini"
+        deviceNameLabel.text = "Air Pods 4"
         addSubview(deviceNameLabel)
         
         NSLayoutConstraint.activate([
@@ -98,8 +98,8 @@ class DetermitDeviceCard: UIView {
     
     private func setUpDeviceImageView(){
         
- //       deviceImageView.image = UIImage(named: "ipad Mini")
-        deviceImageView.image = UIImage(systemName: "photo")
+        deviceImageView.image = UIImage(named: "airpods 4")
+//        deviceImageView.image = UIImage(systemName: "photo")
         addSubview( deviceImageView)
         
         // Set up Auto Layout constraints
@@ -109,9 +109,8 @@ class DetermitDeviceCard: UIView {
             deviceImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10), // 10 points from the left
             deviceImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10), // 10 points from the right
             deviceImageView.topAnchor.constraint(equalTo: deviceNameLabel.bottomAnchor, constant: 2), // 10 points from the top
-            
-            deviceImageView.widthAnchor.constraint(greaterThanOrEqualToConstant: 100), // Adjust as needed
-            deviceImageView.heightAnchor.constraint(greaterThanOrEqualToConstant: 100) // Adjust as needed
+            deviceImageView.heightAnchor.constraint(greaterThanOrEqualToConstant: 200) // Minimum height//            deviceImageView.widthAnchor.constraint(greaterThanOrEqualToConstant: 100), // Adjust as needed
+//            deviceImageView.heightAnchor.constraint(greaterThanOrEqualToConstant: 100) // Adjust as needed
             ])
             
 
