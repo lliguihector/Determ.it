@@ -82,7 +82,7 @@ class DetermitProfileCard: UIView {
     }
     
     private func configureProfileImageView(){
-        companyProfilePicture.image = UIImage(named: "ig")
+        companyProfilePicture.image = UIImage(named: "Brand icon")
         
         
 //   companyProfilePicture.image = UIImage(systemName: "person.circle.fill")

@@ -89,7 +89,8 @@ class DetermitDeviceCard: UIView {
         NSLayoutConstraint.activate([
             deviceNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             deviceNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10), // 10 points from the right
-            deviceNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10)
+            deviceNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            deviceNameLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 20) // Minimum height
         ])
     }
     
