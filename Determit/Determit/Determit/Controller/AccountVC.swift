@@ -102,16 +102,27 @@ override func tableView(_ tableView: UITableView, viewForHeaderInSection section
     
 
 func signOutUser(){
-print("Signed out user")
+print("Atempting to sign out user...")
     do{
         try Auth.auth().signOut()
-        //Takes you to the initial view controller
-        navigationController?.popToRootViewController(animated: true)
-        // Navigate back to the initial view controller
-//        if let initialViewController = self.navigationController?.viewControllers.first {
-//                self.navigationController?.popToViewController(initialViewController, animated: true)
-//            }
-//
+        print("Signed out user successfully.")
+        
+        // Reset the navigation stack to show the LoginViewController
+             if let navigationController = self.navigationController {
+                 // Pop to root view controller (which is LoginViewController)
+                 navigationController.popToRootViewController(animated: true)
+                 
+//                  Optional: If you need to reset the entire root view controller
+//                  let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                  if let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
+//                      navigationController.setViewControllers([loginVC], animated: false)
+//                  }
+                 
+                 
+             } else {
+                 print("Navigation controller is nil.")
+             }
+
     }catch let signOutError as NSError{
         print("Error signing out: %@", signOutError)
         

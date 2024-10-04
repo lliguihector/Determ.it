@@ -10,6 +10,9 @@ import UIKit
 import Firebase
 
 
+
+
+
 class LogInVC: UIViewController,Loadable {
     //Outlits
     @IBOutlet weak var emailTextField: UITextField!
@@ -71,7 +74,7 @@ class LogInVC: UIViewController,Loadable {
             
             switch state{
             case .authenticated(let role):
-                self?.navigateBasedOnRole(role: role)
+                self?.loadAppropriateViewController(role: role)
             case .unauthenticated(let error):
                 self?.showErrorAlert(error: error)
             case .loading:
@@ -105,46 +108,45 @@ class LogInVC: UIViewController,Loadable {
         
     }
 
+    //Load Proper View Controller
     
-    
-private func navigateBasedOnRole(role: String){
-    
-    switch role {
+    private func loadAppropriateViewController(role: String) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-    case "admin":
         
-        DispatchQueue.main.async {
-        self.performSegue(withIdentifier: "admin", sender: self)
-            self.hideLoadingView()
-        }
-        print("Admin View")
-    case "user":
-        DispatchQueue.main.async {
-        self.performSegue(withIdentifier: "user", sender: self)
-            self.hideLoadingView()
+        
+        // Create the tab bar controller from the storyboard
+              guard let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? UITabBarController,
+                    let navigationController = tabBarController.viewControllers?.first as? UINavigationController else {
+                  return
+              }
+
+        
+        let viewController: UIViewController
+        
+        switch role {
+        case "admin":
+            viewController = storyboard.instantiateViewController(withIdentifier: "AdminViewController")
+        case "user":
+            viewController = storyboard.instantiateViewController(withIdentifier: "UserViewController")
+        default:
+            // Handle unknown role by showing an error message or a default view controller
+            print("Unknown role: \(role)")
+            // Optionally, instantiate a default view controller or return
+            viewController = storyboard.instantiateViewController(withIdentifier: "DefaultViewController") // Replace with your default VC identifier
         }
 
-        print("User View")
-
-    case "tech":
-        DispatchQueue.main.async {
-//        self.performSegue(withIdentifier: "loginToAdmin", sender: self)
-            self.hideLoadingView()
-        }
-        print("Technician View")
-
-    default:
-        
-        //Handle other roles or show an error
-        print("Unknown role: \(role)")
+        // Set the view controller in the navigation stack
+               navigationController.setViewControllers([viewController], animated: false)
+               
+        // Replace the root view controller using the active window scene
+          if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+             let window = windowScene.windows.first {
+              window.rootViewController = tabBarController
+              window.makeKeyAndVisible()
+          }
     }
-                          
-    }
-    
-    
- 
-    
-    
+
     //MARK: - ACTIONS
     @IBAction func LoginPressed(_ sender: Any) {
         

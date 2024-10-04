@@ -72,7 +72,7 @@ class EmployeeView: UIViewController {
     }
     
     private func configureDeviceCardView(){
-        deviceCV.translatesAutoresizingMaskIntoConstraints = false
+//        deviceCV.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(deviceCV)
         
@@ -81,7 +81,9 @@ class EmployeeView: UIViewController {
             deviceCV.topAnchor.constraint(equalTo: myDevicesLabel.bottomAnchor, constant: 1),
             deviceCV.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             deviceCV.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -10),
+            deviceCV.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),// Set the bottom constraint
             deviceCV.heightAnchor.constraint(equalToConstant: 400) // Adjust as needed
+            
             
         ])
         // Ensure the deviceCV is responsive by setting up top and bottom constraints

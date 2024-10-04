@@ -14,17 +14,14 @@ class AdminView: UIViewController, UICollectionViewDataSource, UICollectionViewD
     let sfSymbolTitle = ["laptopcomputer.and.iphone","qrcode.viewfinder","wrench.and.screwdriver.fill","person.fill","person.3.fill"]
     
     //Company Logo Outlit
-    @IBOutlet weak var companyLogo: UIImageView!
     
+    @IBOutlet weak var companyLogo: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     
    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
-        
         collectionView.delegate = self
         collectionView.dataSource = self
         
